@@ -1,0 +1,13 @@
+C:\Users\pablo\git\CefaleasApp\CefaleasApp.DataAccess\bin\Debug\netstandard2.1\CefaleasApp.DataAccess.deps.json
+C:\Users\pablo\git\CefaleasApp\CefaleasApp.DataAccess\bin\Debug\netstandard2.1\CefaleasApp.DataAccess.dll
+C:\Users\pablo\git\CefaleasApp\CefaleasApp.DataAccess\bin\Debug\netstandard2.1\CefaleasApp.DataAccess.pdb
+C:\Users\pablo\git\CefaleasApp\CefaleasApp.DataAccess\bin\Debug\netstandard2.1\CefaleasApp.Entities.dll
+C:\Users\pablo\git\CefaleasApp\CefaleasApp.DataAccess\bin\Debug\netstandard2.1\CefaleasApp.Entities.pdb
+C:\Users\pablo\git\CefaleasApp\CefaleasApp.DataAccess\obj\Debug\netstandard2.1\CefaleasApp.DataAccess.csproj.AssemblyReference.cache
+C:\Users\pablo\git\CefaleasApp\CefaleasApp.DataAccess\obj\Debug\netstandard2.1\CefaleasApp.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pablo\git\CefaleasApp\CefaleasApp.DataAccess\obj\Debug\netstandard2.1\CefaleasApp.DataAccess.AssemblyInfoInputs.cache
+C:\Users\pablo\git\CefaleasApp\CefaleasApp.DataAccess\obj\Debug\netstandard2.1\CefaleasApp.DataAccess.AssemblyInfo.cs
+C:\Users\pablo\git\CefaleasApp\CefaleasApp.DataAccess\obj\Debug\netstandard2.1\CefaleasApp.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\pablo\git\CefaleasApp\CefaleasApp.DataAccess\obj\Debug\netstandard2.1\CefaleasApp.DataAccess.csproj.CopyComplete
+C:\Users\pablo\git\CefaleasApp\CefaleasApp.DataAccess\obj\Debug\netstandard2.1\CefaleasApp.DataAccess.dll
+C:\Users\pablo\git\CefaleasApp\CefaleasApp.DataAccess\obj\Debug\netstandard2.1\CefaleasApp.DataAccess.pdb

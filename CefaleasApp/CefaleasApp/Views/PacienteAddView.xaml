@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<shell:ShellPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CefaleasApp.Views.PacienteAddView"
+             xmlns:shell="clr-namespace:Pitasoft.Shell.Xamarin;assembly=Pitasoft.Shell.Xamarin"
+             xmlns:vm="clr-namespace:Pitasoft.Shell.Xamarin.ViewModels;assembly=Pitasoft.Shell.Xamarin" 
+             xmlns:converters="clr-namespace:Pitasoft.Shell.Xamarin.Converters;assembly=Pitasoft.Shell.Xamarin" 
+             xmlns:behaviors="clr-namespace:Pitasoft.Shell.Xamarin.Behaviors;assembly=Pitasoft.Shell.Xamarin"
+             vm:ViewModelLocator.AutoWireViewModel="True">
+
+
+    <shell:ShellPage.Resources>
+        <ResourceDictionary>
+            <converters:FirstValidationErrorConverter x:Key="FirstValidationErrorConverter"/>
+        </ResourceDictionary>
+    </shell:ShellPage.Resources>
+    <shell:ShellPage.ToolbarItems>
+        <ToolbarItem IconImageSource="correcto.png" Command="{Binding AddPacienteCommand}" Text="Añadir"/>
+    </shell:ShellPage.ToolbarItems>
+    <StackLayout Margin="30">
+        <Label Text="Iniciales:" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center" TextColor="Black"/>
+        <Entry WidthRequest="{OnPlatform Android=100}" Text="{Binding Iniciales, Mode=TwoWay}" HorizontalOptions="StartAndExpand" TextTransform="Uppercase" Placeholder="Iniciales" FontSize="Medium" TextColor="Black" MaxLength="8">
+            <Entry.Behaviors>
+                <behaviors:ValidationBehavior PropertyName="Iniciales" ErrorColor="{StaticResource ErrorColor}"/>
+            </Entry.Behaviors>
+        </Entry>
+        <Label HorizontalOptions="Start" Text="{Binding Errors[Iniciales],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
+
+        <Label Text="Fecha de consulta:" FontSize="Medium" HorizontalOptions="StartAndExpand" VerticalOptions="Center" TextColor="Black"/>
+        <DatePicker Date="{Binding FechaConsulta, Mode=TwoWay}" HorizontalOptions="StartAndExpand" >
+            <DatePicker.Behaviors>
+                <behaviors:ValidationBehavior PropertyName="FechaConsulta" ErrorColor="{StaticResource ErrorColor}"/>
+            </DatePicker.Behaviors>
+        </DatePicker>
+        <Label HorizontalOptions="Start" Text="{Binding Errors[FechaConsulta],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
+
+        <Label Text="Edad:" FontSize="Medium" HorizontalOptions="StartAndExpand" VerticalOptions="Center" TextColor="Black"/>
+
+        <StackLayout Orientation="Horizontal">
+            <Entry FontSize="Medium" WidthRequest="{OnPlatform Android=50}" HorizontalOptions="Start"  BindingContext="{x:Reference stepper}" Text="{Binding Value}"  MaxLength="3" >
+                <Entry.Behaviors>
+                    <behaviors:ValidationBehavior PropertyName="Edad" ErrorColor="{StaticResource ErrorColor}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Stepper Minimum="1" Maximum="150" HorizontalOptions="StartAndExpand" x:Name="stepper" Value="{Binding Edad}" Increment="1" ></Stepper>
+        </StackLayout>
+        <Label HorizontalOptions="Start" Text="{Binding Errors[Edad],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
+
+        <Label Text="Sexo:"  FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center" TextColor="Black"/>
+        <Picker WidthRequest="{OnPlatform Android=30}" HorizontalOptions="Start" x:Name="picker2" FontSize="Medium" SelectedItem="{Binding Sexo}">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:Char}">
+                    <x:Char>F</x:Char>
+                    <x:Char>M</x:Char>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label HorizontalOptions="Start" Text="{Binding Errors[Sexo],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
+
+    </StackLayout>
+
+</shell:ShellPage>

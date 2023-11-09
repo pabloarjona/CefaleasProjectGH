@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<shell:ShellPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CefaleasApp.Views.PacienteView"
+             xmlns:shell="clr-namespace:Pitasoft.Shell.Xamarin;assembly=Pitasoft.Shell.Xamarin"
+             xmlns:vm="clr-namespace:Pitasoft.Shell.Xamarin.ViewModels;assembly=Pitasoft.Shell.Xamarin"
+             vm:ViewModelLocator.AutoWireViewModel="True">
+    <shell:ShellPage.ToolbarItems>
+        <ToolbarItem IconImageSource="form.png" Command="{Binding AddFormCommand}" Text="Añadir formulario"/>
+        <ToolbarItem IconImageSource="edit.png" Command="{Binding UpdateCommand}" Text="Modificar"/>
+        <ToolbarItem IconImageSource="refrescar2.png" Command="{Binding RefreshCommand}" Text="Refrescar"/>
+        <ToolbarItem IconImageSource="add.png" Command="{Binding AddCommand}" Text="Añadir"/>
+        <ToolbarItem IconImageSource="delete.png" Command="{Binding DeleteCommand}" Text="Borrar"/>
+    </shell:ShellPage.ToolbarItems>
+
+    <shell:ShellPage.MainContent>
+        <ScrollView >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+                <StackLayout>
+                    <SearchBar x:Name="seachBar" TextTransform="Uppercase" Placeholder="Buscar por iniciales del paciente..." SearchCommand="{Binding PerformSearch}" SearchCommandParameter="{Binding Text, Source={x:Reference seachBar}}" BackgroundColor="White" />
+                    <Label Margin="0,0,20,0" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" TextColor="{StaticResource NavigationPrimary}"  LineBreakMode="WordWrap">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Nº total de pacientes: "  FontSize="Medium"/>
+                                <Span Text="{Binding TotalPacientes}"  FontSize="Medium"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            <ListView Grid.Row="1"  x:Name="searchResults" SelectedItem="{Binding PacienteSelected}" ItemsSource="{Binding ListaPacientes}" VerticalOptions="FillAndExpand"  HasUnevenRows="true" CachingStrategy="RecycleElement">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                    <Label Grid.Row="0" Text="{Binding Iniciales}" FontSize="Large" TextColor="{StaticResource NavigationPrimary}" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                    <Label Grid.Row="1" Text="{Binding FechaConsulta,StringFormat='{}{0:dd/MM/yyyy}'}" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="Start" TextColor="{StaticResource NavigationPrimary}" FontSize="16" />
+                                </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+        </ScrollView>
+    </shell:ShellPage.MainContent>
+    <!--
+    <ScrollView>
+        <StackLayout >
+            <SearchBar x:Name="searchBar" TextTransform="Uppercase" Placeholder="Buscar pacientes..." SearchCommand="{Binding PerformSearch}" SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}" BackgroundColor="#FBCBF3"/>
+            <Grid Margin="20,20,20,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="180"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="Iniciales" FontSize="Medium" TextColor="Black"/>
+                <Label Grid.Column="1" Text="Fecha de consulta" TextColor="Black" FontSize="Medium"/>
+                <Label Grid.Column="2" Margin="20,0,0,0" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start"  LineBreakMode="WordWrap">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Grid.Column="2" Text="{OnPlatform UWP=Total de pacientes:,Android=Total: }" TextColor="Black" FontSize="Medium"/>
+                            <Span Grid.Column="2" Text="{Binding TotalPacientes}" TextColor="Black"  FontSize="Medium"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Grid>
+            
+            <ListView x:Name="searchResults" ItemsSource="{Binding ListaPacientes}" SelectedItem="{Binding PacienteSelected} ">
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+                        <ViewCell>
+                            <StackLayout Margin="20,20,20,20" Orientation="Horizontal">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="150"/>
+                                        <ColumnDefinition Width="180"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Text="{Binding Iniciales}" FontSize="Large" TextColor="{StaticResource NavigationPrimary}" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                    <Label Grid.Column="1" Text="{Binding FechaConsulta,StringFormat='{}{0:dd/MM/yyyy}'}" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" TextColor="{StaticResource NavigationPrimary}" FontSize="16" />
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>-->
+</shell:ShellPage>

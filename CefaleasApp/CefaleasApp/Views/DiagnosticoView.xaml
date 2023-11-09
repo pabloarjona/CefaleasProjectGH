@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<shell:ShellPage  xmlns:shell="clr-namespace:Pitasoft.Shell.Xamarin;assembly=Pitasoft.Shell.Xamarin" 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CefaleasApp.Views.DiagnosticoView"
+             xmlns:vm="clr-namespace:Pitasoft.Shell.Xamarin.ViewModels;assembly=Pitasoft.Shell.Xamarin"
+             vm:ViewModelLocator.AutoWireViewModel="True">
+
+    <shell:ShellPage.ToolbarItems>
+        <ToolbarItem IconImageSource="correcto.png" Command="{Binding EditCommand}" Text="Modificar"/>
+        <!--<ToolbarItem IconImageSource="canel.png" Command="{Binding DeleteCommand}" Text="Eliminar"/>-->
+    </shell:ShellPage.ToolbarItems>
+    <ScrollView >
+        <StackLayout Margin="20">
+            <Label TextColor="Black" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Iniciales del paciente: " FontSize="18"/>
+                        <Span Text="{Binding Iniciales}" FontSize="18" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label TextColor="Black" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Enfermedad detectada: " FontSize="18"/>
+                        <Span Text="{Binding Nombre_Enfermedad}" FontSize="18" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" TextColor="Black" FontSize="18" Text="Verificado por médico: "/>
+                <CheckBox Grid.Column="1" IsChecked="{Binding Verificado, Mode=TwoWay}" Color="{StaticResource NavigationPrimary}"/>
+            </Grid>
+
+            <Picker HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="18" Title="Selecciona otro diagnóstico si no es correcto" SelectedIndex="{Binding SelectedEnfermedadVerificada}" >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Migraña sin aura</x:String>
+                        <x:String>Desconocida</x:String>
+                        <x:String>Migraña con aura</x:String>
+                        <x:String>Migraña crónica</x:String>
+                        <x:String>Cefalea en racimos</x:String>
+                        <x:String>Cefalea de tensión episódica</x:String>
+                        <x:String>Cefalea de tensión crónica</x:String>
+                        <x:String>Hemicránea paroxística</x:String>
+                        <x:String>Cefalea neuralgiforme unilateral de corta duración (SUNCT y SUNA)</x:String>
+                        <x:String>Hemicránea continua</x:String>
+                        <x:String>Cefalea tusígena primaria</x:String>
+                        <x:String>Cefalea por esfuerzo físico primaria</x:String>
+                        <x:String>Cefalea por actividad sexual primaria</x:String>
+                        <x:String>Cefalea en trueno primaria</x:String>
+                        <x:String>Cefalea punzante primaria</x:String>
+                        <x:String>Cefalea numular</x:String>
+                        <x:String>Cefalea hípnica primaria</x:String>
+                        <x:String>Cefalea diaria persistente de novo</x:String>
+                        <x:String>Epicrania fúgax</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label TextColor="Black" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Tratamiento: " FontSize="18"/>
+                        <Span Text="{Binding Tratamiento}" FontSize="18" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label TextColor="Black" Text="El paciente tiene los siguientes síntomas:" FontSize="18"/>
+            <Label TextColor="Black" Margin="20,0,0,0" IsVisible="{Binding EpisodiosVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Episodios: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Episodios}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label TextColor="Black" Margin="20,0,0,0" IsVisible="{Binding DuracionVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Duración de la cefalea: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Duracion}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding Duracion_EpisodioVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Duración del episodio: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Duracion_episodio}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding LocalizacionVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Localización de la cefalea: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Localizacion}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding DolorVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span  Text="Dolor: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Dolor}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding IntensidadVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Intensidad: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Intensidad}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding ActividadVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Actividad física: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Actividad_fisica}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding NauseasVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span  Text="Náuseas: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Nauseas}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding VomitosVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span  Text="Vómitos: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Vomitos}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding FotofobiaVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span  Text="Fotofobia: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Fotofobia}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding FonofobiaVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span  Text="Fonofobia: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Fonofobia}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding AuraVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Aura: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Aura}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding IpsilateralesVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span  Text="Ipsilaterales: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Ipsilaterales}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding InquietudVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span  Text="Inquietud: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Inquietud}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding Trayectoria_linealVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span  Text="Trayectoria lineal: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Trayectoria_lineal}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding Inicio_bruscoVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Inicio brusco: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Inicio_brusco}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding IndometacinaVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Indometacina: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Indometacina}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding Triptan_ergoticoVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span  Text="Tripán o ergótico: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Triptan_ergotico}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding TosVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Tos: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Tos}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding Esfuerzo_bruscoVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Esfuerzo brusco: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Esfuerzo_brusco}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding ValsalvaVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span  Text="Maniobras de Valsalva: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Valsalva}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding Actividad_sexualVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span  Text="Actividad sexual: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Actividad_sexual}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding SueñoVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Sueño: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Sueño}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="20,0,0,0" TextColor="Black" IsVisible="{Binding Inicio_inconfundibleVisible}" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Inicio inconfundible: " FontSize="18"/>
+                        <Span FontSize="18" Text="{Binding Inicio_inconfundible}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ScrollView>
+</shell:ShellPage>

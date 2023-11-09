@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<shell:ShellPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CefaleasApp.Views.Tablet.SignUpView"
+            xmlns:shell="clr-namespace:Pitasoft.Shell.Xamarin;assembly=Pitasoft.Shell.Xamarin"
+             xmlns:vm="clr-namespace:Pitasoft.Shell.Xamarin.ViewModels;assembly=Pitasoft.Shell.Xamarin" 
+             xmlns:converters="clr-namespace:Pitasoft.Shell.Xamarin.Converters;assembly=Pitasoft.Shell.Xamarin" 
+            xmlns:behaviors="clr-namespace:Pitasoft.Shell.Xamarin.Behaviors;assembly=Pitasoft.Shell.Xamarin"
+            vm:ViewModelLocator.AutoWireViewModel="True">
+
+    <shell:ShellPage.Resources>
+        <ResourceDictionary>
+            <converters:FirstValidationErrorConverter x:Key="FirstValidationErrorConverter"/>
+        </ResourceDictionary>
+    </shell:ShellPage.Resources>
+    <StackLayout Margin="10" Orientation="Vertical">
+        <StackLayout Orientation="Horizontal" BackgroundColor="{StaticResource NavigationPrimary}">
+            <ImageButton Command="{Binding BackCommand}" HorizontalOptions="Start" Source="SmallTile.scale-100.png"/>
+            <Image HorizontalOptions="CenterAndExpand" Source="SmallTile.scale-100.png"/>
+        </StackLayout>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="Nombre:" FontSize="13" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Blue"/>
+            <Entry Grid.Row="0" Grid.Column="1" Text="{Binding Nombre, Mode=TwoWay}" Placeholder="Nombre" FontSize="13" TextColor="blue" HorizontalOptions="FillAndExpand">
+                <Entry.Behaviors>
+                    <behaviors:ValidationBehavior PropertyName="Nombre" ErrorColor="{StaticResource ErrorColor}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Label Grid.Row="1"  Grid.Column="1" HorizontalOptions="Start" Text="{Binding Errors[Nombre],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
+
+            <Label Grid.Row="2" Grid.Column="0" Text="Contraseña:" FontSize="13" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Blue"/>
+            <Entry Grid.Row="2" Grid.Column="1" Text="{Binding Password, Mode=TwoWay}" IsPassword="True" Placeholder="Contraseña" FontSize="13" TextColor="blue" HorizontalOptions="FillAndExpand">
+                <Entry.Behaviors>
+                    <behaviors:ValidationBehavior PropertyName="Password" ErrorColor="{StaticResource ErrorColor}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Label Grid.Row="3"  Grid.Column="1" HorizontalOptions="Start" Text="{Binding Errors[Password],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
+
+            <Label Grid.Row="4" Grid.Column="0" Text="Contraseña2:" FontSize="13" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Blue"/>
+            <Entry Grid.Row="4" Grid.Column="1" Text="{Binding Password2, Mode=TwoWay}" IsPassword="True" Placeholder="Repita la contraseña" FontSize="13" TextColor="blue" HorizontalOptions="FillAndExpand">
+                <Entry.Behaviors>
+                    <behaviors:ValidationBehavior PropertyName="Password2" ErrorColor="{StaticResource ErrorColor}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Label Grid.Row="5"  Grid.Column="1" HorizontalOptions="Start" Text="{Binding Errors[Password2],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
+
+            <Label Grid.Row="6" Grid.Column="0" Text="Correo:" FontSize="13" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Blue"/>
+            <Entry Grid.Row="6" Grid.Column="1" Text="{Binding Correo, Mode=TwoWay}" Placeholder="Correo electrónico" FontSize="13" TextColor="blue" HorizontalOptions="FillAndExpand">
+                <Entry.Behaviors>
+                    <behaviors:ValidationBehavior PropertyName="Correo" ErrorColor="{StaticResource ErrorColor}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Label Grid.Row="7"  Grid.Column="1" HorizontalOptions="Start" Text="{Binding Errors[Correo],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
+
+            <Label Grid.Row="8" Grid.Column="0" Text="Nº médico:" FontSize="13" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Blue"/>
+            <Entry Grid.Row="8" Grid.Column="1" Text="{Binding NColegiado, Mode=TwoWay}" Placeholder="Número de médico" FontSize="13" TextColor="blue" HorizontalOptions="FillAndExpand">
+                <Entry.Behaviors>
+                    <behaviors:ValidationBehavior PropertyName="NColegiado" ErrorColor="{StaticResource ErrorColor}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Label Grid.Row="9"  Grid.Column="1" HorizontalOptions="Start" Text="{Binding Errors[NColegiado],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
+
+            <Label Grid.Row="10" Grid.Column="1" Text="{Binding Message, Mode=OneWay}" TextColor="White" />
+
+            <!--<Button Grid.Column="0" Command="{Binding BackCommand}" Text="Volver" CornerRadius="20" />-->
+            <Button Grid.Row="11" Grid.ColumnSpan="2" Command="{Binding RegistrarmeCommand}"  Text="Registrarme" CornerRadius="20" />
+        </Grid>
+
+    </StackLayout>
+
+</shell:ShellPage>

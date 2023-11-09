@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<shell:ShellPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CefaleasApp.Views.UsuarioView"
+             xmlns:shell="clr-namespace:Pitasoft.Shell.Xamarin;assembly=Pitasoft.Shell.Xamarin"
+             xmlns:vm="clr-namespace:Pitasoft.Shell.Xamarin.ViewModels;assembly=Pitasoft.Shell.Xamarin" 
+             xmlns:behaviors="clr-namespace:Pitasoft.Shell.Xamarin.Behaviors;assembly=Pitasoft.Shell.Xamarin" 
+             xmlns:converters="clr-namespace:Pitasoft.Shell.Xamarin.Converters;assembly=Pitasoft.Shell.Xamarin"
+             vm:ViewModelLocator.AutoWireViewModel="True">
+
+    <shell:ShellPage.Resources>
+        <ResourceDictionary>
+            <converters:FirstValidationErrorConverter x:Key="FirstValidationErrorConverter"/>
+        </ResourceDictionary>
+    </shell:ShellPage.Resources>
+    <shell:ShellPage.ToolbarItems>
+        <!--<ToolbarItem IconImageSource="edit.png" Command="{Binding UpdateCommand}" Text="Modificar"/>
+        <ToolbarItem IconImageSource="save.png" Command="{Binding SaveCommand}" Text="Guardar"/>
+        <ToolbarItem IconImageSource="cancel.png" Command="{Binding CancelCommand}" Text="Cancelar"/>-->
+    </shell:ShellPage.ToolbarItems>
+    <StackLayout Margin="10" Orientation="Vertical" >
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="Nombre:" FontSize="13" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black"/>
+            <Entry Grid.Row="0" Grid.Column="1" IsReadOnly="True" Text="{Binding Nombre, Mode=TwoWay}" Placeholder="Nombre" FontSize="13" TextColor="Black" HorizontalOptions="FillAndExpand">
+                <Entry.Behaviors>
+                    <behaviors:ValidationBehavior PropertyName="Nombre" ErrorColor="{StaticResource ErrorColor}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Label Grid.Row="1"  Grid.Column="1" HorizontalOptions="Start" Text="{Binding Errors[Nombre],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
+
+            <Label Grid.Row="2" Grid.Column="0" Text="Contraseña:" FontSize="13" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black"/>
+            <Entry Grid.Row="2" Grid.Column="1" IsReadOnly="True"  Text="{Binding Password, Mode=TwoWay}" IsPassword="True" Placeholder="Contraseña" FontSize="13" TextColor="Black" HorizontalOptions="FillAndExpand">
+                <Entry.Behaviors>
+                    <behaviors:ValidationBehavior PropertyName="Password" ErrorColor="{StaticResource ErrorColor}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Label Grid.Row="3"  Grid.Column="1" HorizontalOptions="Start" Text="{Binding Errors[Password],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
+
+            <Label Grid.Row="4" Grid.Column="0"  Text="Repetir contraseña:" FontSize="13" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black"/>
+            <Entry Grid.Row="4" Grid.Column="1" IsReadOnly="True"  Text="{Binding Password2, Mode=TwoWay}" IsPassword="True" Placeholder="Contraseña" FontSize="13" TextColor="Black" HorizontalOptions="FillAndExpand">
+                <Entry.Behaviors>
+                    <behaviors:ValidationBehavior PropertyName="Password2" ErrorColor="{StaticResource ErrorColor}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Label Grid.Row="5"  Grid.Column="1" HorizontalOptions="Start" Text="{Binding Errors[Password2],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
+
+            <Label Grid.Row="6" Grid.Column="0" Text="Correo:" FontSize="13" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black"/>
+            <Entry Grid.Row="6" Grid.Column="1" IsReadOnly="True"  Text="{Binding Correo, Mode=TwoWay}" Placeholder="Correo electrónico" FontSize="13" TextColor="Black" HorizontalOptions="FillAndExpand">
+                <Entry.Behaviors>
+                    <behaviors:ValidationBehavior PropertyName="Correo" ErrorColor="{StaticResource ErrorColor}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Label Grid.Row="7"  Grid.Column="1" HorizontalOptions="Start" Text="{Binding Errors[Correo],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
+
+            <Label Grid.Row="8" Grid.Column="0" Text="Nº médico:" FontSize="13" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black"/>
+            <Entry  Grid.Row="8" Grid.Column="1" IsReadOnly="True"  Text="{Binding NColegiado, Mode=TwoWay}" Placeholder="Número de médico" FontSize="13" TextColor="Black" HorizontalOptions="FillAndExpand">
+                <Entry.Behaviors>
+                    <behaviors:ValidationBehavior PropertyName="NColegiado" ErrorColor="{StaticResource ErrorColor}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Label Grid.Row="9"  Grid.Column="1" HorizontalOptions="Start" Text="{Binding Errors[NColegiado],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
+
+            <Label Grid.Row="10" Grid.Column="0"  Text="Nº verificacion:" FontSize="13" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black"/>
+            <Entry Grid.Row="10" Grid.Column="1" IsReadOnly="True"  Text="{Binding NVerificacion, Mode=TwoWay}" Placeholder="Número de médico" FontSize="13" TextColor="Black" HorizontalOptions="FillAndExpand">
+                <Entry.Behaviors>
+                    <behaviors:ValidationBehavior PropertyName="NVerificacion" ErrorColor="{StaticResource ErrorColor}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Label Grid.Row="11"  Grid.Column="1" HorizontalOptions="Start" Text="{Binding Errors[NVerificacion],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
+            <Label Grid.Row="12" Grid.Column="1" Text="{Binding Message, Mode=OneWay}" TextColor="White" />
+            <!--<Label Grid.Row="13" Grid.ColumnSpan="2" HorizontalOptions="Center" Text="¿Quieres eliminar la cuenta? Si elimina la cuenta perderás toda la información que tienes en ella."/>
+            <Button Grid.Row="14" Grid.ColumnSpan="2" Margin="70,-10,70,20" Command="{Binding DeleteCommand}" FontSize="12" Text="Eliminar cuenta" CornerRadius="10" />-->
+        </Grid>
+        
+    </StackLayout>
+</shell:ShellPage>

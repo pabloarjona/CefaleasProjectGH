@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<shell:ShellPage  xmlns:shell="clr-namespace:Pitasoft.Shell.Xamarin;assembly=Pitasoft.Shell.Xamarin" 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CefaleasApp.Views.StartView"
+             xmlns:vm="clr-namespace:Pitasoft.Shell.Xamarin.ViewModels;assembly=Pitasoft.Shell.Xamarin"
+             vm:ViewModelLocator.AutoWireViewModel="True">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#009245</Color>
+            <Color x:Key="Accent">#FFFFFF</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <StackLayout Margin="20">
+            <Label Text="Bienvenido a la aplicación para el diagnóstico de cefaleas primarias. Esta aplicación tiene uso exclusivo para médicos cualificados. Hay que tener en cuenta que han sido modificados los criterios de la IHS para un uso más óptimo de la aplicación. Para consultar las criterios de la IHS pinche en el siguiente botón."/>
+            <Button Margin="0,10,0,0" Text="Ver criterios IHS" Command="{Binding OpenWebCommand}" BackgroundColor="{StaticResource Primary}" TextColor="White" />
+        </StackLayout>
+    </Grid>
+</shell:ShellPage>

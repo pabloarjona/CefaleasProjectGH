@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CefaleasApp.Views.Desktop.LoginView"
+             xmlns:vm="clr-namespace:Pitasoft.Shell.Xamarin.ViewModels;assembly=Pitasoft.Shell.Xamarin" xmlns:viewmodels="clr-namespace:CefaleasApp.ViewModels" x:DataType="viewmodels:LoginViewModel"
+             vm:ViewModelLocator.AutoWireViewModel="True">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource NavigationPrimary}">
+            <StackLayout Margin="20">
+                <Image Source="SmallTile400.png" />
+            </StackLayout>
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="1" Text="Correo:"/>
+                <Entry Grid.Row="2" Text="{Binding Correo}" Placeholder="Usuario"/>
+                <Label Grid.Row="3" Text="Contraseña:"/>
+                <Entry Grid.Row="4" Text="{Binding Password}" Placeholder="Contraseña" IsPassword="True" />
+                <Button Grid.Row="5" BackgroundColor="White" Text="Iniciar" Command="{Binding LoginCommand}" CornerRadius="20"/>
+                <Label Grid.Row="6" Text="{Binding Message, Mode=OneWay}" TextColor="DarkRed" />
+                <Label Grid.Row="7" HorizontalOptions="Center" Text="¿Aún no te has registrado?"/>
+                <Button Grid.Row="8" BackgroundColor="White" Command="{Binding RegistrarmeCommand}"  Text="Registrarme" CornerRadius="20" />
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
