@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B71NBnTjJ+7aC8dZaNi3VYVBsKesNIR9WqZGiHcsMoVFqTKv7Ycew6gl8BntklEctDxhMxJq1nHemKcJ3WN3HQ==",
+  "dgSpecHash": "+CD3+1ftoW+gi9Iwh074jsUmreXI23WqGlyEJqF9oKy8BYAjU5faMgRyFjIMF2T+ITASYNJOKuGqJWvCV9YkYA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pablo\\git\\CefaleasApp\\CefaleasApp\\CefaleasApp.UWP\\CefaleasApp.UWP.csproj",
+  "projectFilePath": "C:\\Users\\pablo\\Source\\Repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.UWP\\CefaleasApp.UWP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pablo\\.nuget\\packages\\acr.userdialogs\\7.1.0.514\\acr.userdialogs.7.1.0.514.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\coding4fun.toolkit.controls\\2.1.8\\coding4fun.toolkit.controls.2.1.8.nupkg.sha512",

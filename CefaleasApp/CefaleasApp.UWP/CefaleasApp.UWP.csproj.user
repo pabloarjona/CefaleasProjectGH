@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Source>C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\cefaleaslogotipo.png</Source>
+    <SmallTileSource>C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\cefaleaslogotipo.png</SmallTileSource>
+    <MediumTileSource>C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\cefaleaslogotipo.png</MediumTileSource>
+    <WideTileSource>C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\cefaleaslogotipo.png</WideTileSource>
+    <LargeTileSource>C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\cefaleaslogotipo.png</LargeTileSource>
+    <AppIconSource>C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\cefaleaslogotipo.png</AppIconSource>
+    <SplashScreenSource>C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\cefaleaslogotipo.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\cefaleaslogotipo.png</PackageLogoSource>
+  </PropertyGroup>
+</Project>

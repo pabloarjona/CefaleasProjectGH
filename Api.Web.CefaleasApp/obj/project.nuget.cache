@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5viI2+6rvaP+nhvPLQKdDCh56UtQEM6BpKfVzO9FmWu4pnoImVk327kbYjLPV7Zdq5BTZAmHeGCHzw+DqnBLuQ==",
+  "dgSpecHash": "IHMuOvucolVTVPDRC8DI7sE370L7e9RiPtpuH/2+SZJlKVaUCKB2MYXzM7wTeDpuHKPSUMcWGdWI5Jdp9e0GbA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pablo\\git\\CefaleasApp\\Api.Web.CefaleasApp\\Api.Web.CefaleasApp.csproj",
+  "projectFilePath": "C:\\Users\\pablo\\Source\\Repos\\CefaleasProjectLVX\\Api.Web.CefaleasApp\\Api.Web.CefaleasApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pablo\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

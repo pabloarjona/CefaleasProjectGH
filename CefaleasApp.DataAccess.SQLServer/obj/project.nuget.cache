@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BTctBaKRLfHCAAtduZdMG/xiena6jBcILbHwIaktMn0kST6eYHCfFNeaLHGdup97aLNCqw2Vx8i1R1GY/zOo/g==",
+  "dgSpecHash": "Iv0xBsuI/VFv0lsTxDhIuM7AvNqaittl1o2ZQKGExLBiCZmlCCz6uwWgAb64u86P5WyBexfb+wcNESFKWTcx6w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pablo\\git\\CefaleasApp\\CefaleasApp.DataAccess.SQLServer\\CefaleasApp.DataAccess.SQLServer.csproj",
+  "projectFilePath": "C:\\Users\\pablo\\Source\\Repos\\CefaleasProjectLVX\\CefaleasApp.DataAccess.SQLServer\\CefaleasApp.DataAccess.SQLServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pablo\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

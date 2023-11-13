@@ -19,19 +19,17 @@ namespace CefaleasApp.Services
             };
             services.AddSingleton(new SettingRestService
             {
-                UriString = "https://apiwebcefaleasbackend.azurewebsites.net",
+                UriString = "http://localhost:5000",
+                //UriString = "https://apiwebcefaleasbackend.azurewebsites.net",
                 JsonSeializerOptions = settings,
             });
 
             // Registro de servicios
+            services.AddSingleton<CefaleasRestService>();
             services.AddSingleton<INavigationService, NavigationService>();
             services.AddSingleton<IXamarin1SettingsService, Xamarin1SettingsService>();
             services.AddSingleton<IDialogService, DialogService>();
             services.AddSingleton<IMenuService, MenuService>();
-            services.AddSingleton<IUsuarioRestService, UsuarioRestService>();
-            services.AddSingleton<IPacienteRestService, PacienteRestService>();
-            services.AddSingleton<ICuestionarioRestService, CuestionarioRestService>();
-            services.AddSingleton<IEnfermedadRestService, EnfermedadRestService>();
             services.AddSingleton<ICriteriosCefalea, CriteriosCefalea>();
             
             // Registrar la ViewModels

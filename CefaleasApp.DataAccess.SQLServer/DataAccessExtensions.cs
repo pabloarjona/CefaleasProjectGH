@@ -10,7 +10,7 @@ namespace CefaleasApp.DataAccess.SQLServer
 {
     public static class DataAccessExtensions
     {
-        public static IServiceCollection AddDataAccess(this IServiceCollection services, string connectionString)
+        public static IServiceCollection AddDataAccess(this IServiceCollection services, string? connectionString)
         {
             if (string.IsNullOrEmpty(connectionString))
             {

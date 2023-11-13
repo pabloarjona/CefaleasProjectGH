@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CefaleasApp.Views;
+using Pitasoft.Shell.Services;
 
 namespace CefaleasApp.Services
 {

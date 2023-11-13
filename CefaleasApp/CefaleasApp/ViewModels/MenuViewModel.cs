@@ -18,5 +18,9 @@ namespace CefaleasApp.ViewModels
         }
         private Task LogoutAsync() => NavigationService.NavigateToAsync<LoginViewModel>(new LogoutParameter { Logout = true });
 
+        private string title;
+
+        public string Title { get => title; set => SetProperty(ref title, value); }
+
     }
 }

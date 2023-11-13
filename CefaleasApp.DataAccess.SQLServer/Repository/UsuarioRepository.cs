@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using CefaleasApp.Entities;
+using CefaleasApp.Entities.Interfaces;
 
 namespace CefaleasApp.DataAccess.SQLServer.Repository
 {
@@ -53,6 +54,19 @@ namespace CefaleasApp.DataAccess.SQLServer.Repository
             catch
             {
                 return ResultEntities<Usuario>.DatabaseError();
+            }
+        }
+
+        public async Task<ResultEntity<Usuario>> GetUsuarioAsync(int id)
+        {
+            try
+            {
+                var entity = await _context.Usuario.SingleAsync(x => x.IdUsuario == id);
+                return ResultEntity<Usuario>.Ok(entity);
+            }
+            catch
+            {
+                return ResultEntity<Usuario>.DatabaseError();
             }
         }
 

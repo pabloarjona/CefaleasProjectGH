@@ -1,1 +1,1 @@
-C:\Users\pablo\git\CefaleasApp\CefaleasApp\CefaleasApp.UWP\CefaleasApp.UWP.csproj;x64
+C:\Users\pablo\Source\Repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\CefaleasApp.UWP.csproj;x64

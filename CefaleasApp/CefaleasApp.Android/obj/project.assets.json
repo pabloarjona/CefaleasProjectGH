@@ -5447,11 +5447,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pablo\\git\\CefaleasApp\\CefaleasApp\\CefaleasApp.Android\\CefaleasApp.Android.csproj",
+      "projectUniqueName": "C:\\Users\\pablo\\Source\\Repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.Android\\CefaleasApp.Android.csproj",
       "projectName": "CefaleasApp.Android",
-      "projectPath": "C:\\Users\\pablo\\git\\CefaleasApp\\CefaleasApp\\CefaleasApp.Android\\CefaleasApp.Android.csproj",
+      "projectPath": "C:\\Users\\pablo\\Source\\Repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.Android\\CefaleasApp.Android.csproj",
       "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pablo\\git\\CefaleasApp\\CefaleasApp\\CefaleasApp.Android\\obj\\",
+      "outputPath": "C:\\Users\\pablo\\Source\\Repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -5472,8 +5472,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "C:\\Users\\pablo\\git\\CefaleasApp\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj": {
-              "projectPath": "C:\\Users\\pablo\\git\\CefaleasApp\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj"
+            "C:\\Users\\pablo\\Source\\Repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj": {
+              "projectPath": "C:\\Users\\pablo\\Source\\Repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj"
             }
           }
         }

@@ -8,12 +8,13 @@ using System.Windows.Input;
 using CefaleasApp.Entities;
 using CefaleasApp.Models;
 using CefaleasApp.Services.Interfaces;
+using CefaleasApp.Services;
 
 namespace CefaleasApp.ViewModels
 {
     public class LoginViewModel : PageBase
     {
-        private readonly IUsuarioRestService _usuarioService;
+        private readonly CefaleasRestService _restService;
         private readonly IXamarin1SettingsService _settingService;
         private string _correo;
         public string Correo
@@ -36,9 +37,9 @@ namespace CefaleasApp.ViewModels
         public ICommand LoginCommand { get; }
         public ICommand RegistrarmeCommand { get; }
 
-        public LoginViewModel(IUsuarioRestService usuarioService, IXamarin1SettingsService settingsService) : base()
+        public LoginViewModel(CefaleasRestService restService, IXamarin1SettingsService settingsService) : base()
         {
-            _usuarioService = usuarioService;
+            _restService = restService;
             _settingService = settingsService;
             LoginCommand = new DelegateCommand(() => DoTask(LoginCommandExecute()));
             RegistrarmeCommand = new DelegateCommand(RegistrarmeCommandExecute);
@@ -57,7 +58,7 @@ namespace CefaleasApp.ViewModels
         public async Task LoginCommandExecute()
         {
             UserDialogs.Instance.ShowLoading("Cargando...");
-            ResultEntities<Usuario> result = await this._usuarioService.GetUsuariosAsync();
+            ResultEntities<Usuario> result = await this._restService.GetUsuariosAsync();
             _settingService.AuthAccessToken = "access_token";
             if (result.IsSuccess())
             {
@@ -65,9 +66,9 @@ namespace CefaleasApp.ViewModels
                 {
                     if (item.Correo == Correo && item.Password== Password)
                     {
-                        _usuarioService.usuario = item;
                         UserDialogs.Instance.HideLoading();
                         await NavigationService.NavigateToAsync<MainViewModel>(item);
+                        break;
                     }
 
                 }

@@ -8,6 +8,7 @@ namespace CefaleasApp.DataAccess
     {
         Task<ResultEntity<Usuario>> AddUsuarioAsync(Usuario usuario);
         Task<ResultEntities<Usuario>> GetUsuariosAsync();
+        Task<ResultEntity<Usuario>> GetUsuarioAsync(int id);
         Task<ResultEntity<Usuario>> UpdateUsuarioAsync(Usuario usuario);
         Task<Result> DeleteUsuarioAsync(int UsuarioId);
 

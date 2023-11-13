@@ -3,7 +3,7 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"                        
             xmlns:views="clr-namespace:CefaleasApp.Views"
             x:Class="CefaleasApp.Views.MainView"
-            xmlns:vm="clr-namespace:Pitasoft.Shell.Xamarin.ViewModels;assembly=Pitasoft.Shell.Xamarin"
+            xmlns:vm="clr-namespace:Pitasoft.Shell.Xamarin.ViewModels;assembly=Pitasoft.Shell.Xamarin" xmlns:viewmodels="clr-namespace:CefaleasApp.ViewModels" x:DataType="viewmodels:MainViewModel"
             vm:ViewModelLocator.AutoWireViewModel="True">
 
     <FlyoutPage.Flyout>

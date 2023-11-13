@@ -17,6 +17,9 @@ namespace Api.Web.CefaleasApp.Controllers
         [HttpGet]
         public Task<ResultEntities<Usuario>> GetUsuariosAsync() => _usuarioRepository.GetUsuariosAsync();
 
+        [HttpGet("{id}")]
+        public Task<ResultEntity<Usuario>> GetUsuarioAsync(int id) => _usuarioRepository.GetUsuarioAsync(id);
+
         // POST api/<controller>
         [HttpPost]
         public Task<ResultEntity<Usuario>> AddUsuarioAsync(Usuario usuario) => _usuarioRepository.AddUsuarioAsync(usuario);
