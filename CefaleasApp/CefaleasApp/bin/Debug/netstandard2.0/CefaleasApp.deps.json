@@ -13,11 +13,11 @@
           "CefaleasApp.DataAccess": "1.0.0",
           "CefaleasApp.Entities": "1.0.0",
           "NETStandard.Library": "2.0.3",
-          "Pitasoft.Client": "5.1.0",
+          "Pitasoft.Client": "5.0.0",
           "Pitasoft.Collections": "1.2.0",
           "Pitasoft.Shell.Xamarin": "1.1.8",
           "Xamarin.Essentials": "1.8.0",
-          "Xamarin.Forms": "5.0.0.2612"
+          "Xamarin.Forms": "5.0.0.2622"
         },
         "runtime": {
           "CefaleasApp.dll": {}
@@ -117,17 +117,16 @@
           }
         }
       },
-      "Pitasoft.Client/5.1.0": {
+      "Pitasoft.Client/5.0.0": {
         "dependencies": {
-          "Pitasoft.Error": "3.0.1",
           "Pitasoft.Result": "5.1.0",
           "System.Net.Http.Json": "7.0.1",
           "System.Text.Json": "7.0.3"
         },
         "runtime": {
           "lib/netstandard2.0/Pitasoft.Client.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
           }
         }
       },
@@ -198,7 +197,7 @@
       "Pitasoft.Shell.Xamarin/1.1.8": {
         "dependencies": {
           "Pitasoft.Shell": "1.1.8",
-          "Xamarin.Forms": "5.0.0.2612"
+          "Xamarin.Forms": "5.0.0.2622"
         },
         "runtime": {
           "lib/netstandard2.0/Pitasoft.Shell.Xamarin.dll": {
@@ -359,19 +358,19 @@
           }
         }
       },
-      "Xamarin.Forms/5.0.0.2612": {
+      "Xamarin.Forms/5.0.0.2622": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "5.0.0.993"
+            "fileVersion": "5.0.0.999"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "5.0.0.993"
+            "fileVersion": "5.0.0.999"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "5.0.0.993"
+            "fileVersion": "5.0.0.999"
           }
         }
       },
@@ -477,12 +476,12 @@
       "path": "pitasoft/1.0.4",
       "hashPath": "pitasoft.1.0.4.nupkg.sha512"
     },
-    "Pitasoft.Client/5.1.0": {
+    "Pitasoft.Client/5.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Wz4qtWoeEf27o+U3hMGlGYToGdxI0MtV4LyLy0kauS8gd8pjyiq7S/h5h5L5k3C9e0OBXIxcoIe15qf0kseIdw==",
-      "path": "pitasoft.client/5.1.0",
-      "hashPath": "pitasoft.client.5.1.0.nupkg.sha512"
+      "sha512": "sha512-DSy/yb/JJng/NDUG1xe7iGFWzXJ6rbpsY1U3vBbxcqxSwpHzzuusbm/OtjRm1BvPOupY3wcfoQ5EIy87+prHxw==",
+      "path": "pitasoft.client/5.0.0",
+      "hashPath": "pitasoft.client.5.0.0.nupkg.sha512"
     },
     "Pitasoft.Collections/1.2.0": {
       "type": "package",
@@ -631,12 +630,12 @@
       "path": "xamarin.essentials/1.8.0",
       "hashPath": "xamarin.essentials.1.8.0.nupkg.sha512"
     },
-    "Xamarin.Forms/5.0.0.2612": {
+    "Xamarin.Forms/5.0.0.2622": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-zQcy3NJgRJnLRWQZ2TZPCgDoTDHoYskHLutKDvz1pVNtvJ8U7kkg4mE2XATs3dAkQ+oWoqB4VOBGRk9uAfoRMw==",
-      "path": "xamarin.forms/5.0.0.2612",
-      "hashPath": "xamarin.forms.5.0.0.2612.nupkg.sha512"
+      "sha512": "sha512-vuhBbYbYM2fir0HkKeWBt3r+KzfJmXQQj4SlRYqRD/3MG9WS385T2VPuvakXMKgsGEkamaRyZacQ8ZPdac6cpA==",
+      "path": "xamarin.forms/5.0.0.2622",
+      "hashPath": "xamarin.forms.5.0.0.2622.nupkg.sha512"
     },
     "CefaleasApp.DataAccess/1.0.0": {
       "type": "project",

@@ -8,7 +8,7 @@ namespace CefaleasApp.ViewModels
 {
     public class AboutViewModel : PageBase
     {
-        public AboutViewModel()
+        public AboutViewModel() : base()
         {
             Title = "Acerca de nosotros";
             OpenWebCommand = new DelegateCommand(OpenWebCommandExecute);

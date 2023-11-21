@@ -6,7 +6,7 @@ namespace CefaleasApp.Services.Interfaces
 {
     public interface IPacienteRestService : IRestService, IPacienteRepository
     {
-        Paciente paciente { get; set; }
+        
 
     }
 }

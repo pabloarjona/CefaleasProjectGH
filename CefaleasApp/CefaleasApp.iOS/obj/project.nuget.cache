@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FxNuThNsmmRxxm59NuK/UuxdTgiMLHdVtqHooIKFcE+yAPXi3CSq7TNljMvBPfHWCC4QvddXjImCLKP4Sa6oJQ==",
+  "dgSpecHash": "18lnqqWpLYuymp3kDdph3msuMyGA5hqeVTRsQkHuSQQNJzv+wPa0Q0oq9dKX3nCxUxPI/IWS32gqkid7epLZtA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pablo\\Source\\Repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.iOS\\CefaleasApp.iOS.csproj",
+  "projectFilePath": "C:\\Users\\pablo\\source\\repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.iOS\\CefaleasApp.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pablo\\.nuget\\packages\\acr.userdialogs\\7.1.0.514\\acr.userdialogs.7.1.0.514.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\btprogresshud\\1.3.1\\btprogresshud.1.3.1.nupkg.sha512",
@@ -13,7 +13,7 @@
     "C:\\Users\\pablo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\pitasoft\\1.0.4\\pitasoft.1.0.4.nupkg.sha512",
-    "C:\\Users\\pablo\\.nuget\\packages\\pitasoft.client\\5.1.0\\pitasoft.client.5.1.0.nupkg.sha512",
+    "C:\\Users\\pablo\\.nuget\\packages\\pitasoft.client\\5.0.0\\pitasoft.client.5.0.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\pitasoft.collections\\1.2.0\\pitasoft.collections.1.2.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\pitasoft.commands\\1.0.0\\pitasoft.commands.1.0.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\pitasoft.error\\3.0.1\\pitasoft.error.3.0.1.nupkg.sha512",
@@ -34,7 +34,7 @@
     "C:\\Users\\pablo\\.nuget\\packages\\system.text.json\\7.0.3\\system.text.json.7.0.3.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\xamarin.essentials\\1.8.0\\xamarin.essentials.1.8.0.nupkg.sha512",
-    "C:\\Users\\pablo\\.nuget\\packages\\xamarin.forms\\5.0.0.2612\\xamarin.forms.5.0.0.2612.nupkg.sha512"
+    "C:\\Users\\pablo\\.nuget\\packages\\xamarin.forms\\5.0.0.2622\\xamarin.forms.5.0.0.2622.nupkg.sha512"
   ],
   "logs": []
 }

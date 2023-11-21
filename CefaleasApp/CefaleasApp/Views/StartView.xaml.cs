@@ -12,6 +12,6 @@ namespace CefaleasApp.Views
         {
             InitializeComponent();
         }
-        //public IViewModel ViewModel { get; set; }
+
     }
 }

@@ -14,16 +14,17 @@ using CefaleasApp.Entities;
 using CefaleasApp.Entities.Interfaces;
 using CefaleasApp.Models;
 using CefaleasApp.Services.Interfaces;
+using CefaleasApp.Services;
 
 namespace CefaleasApp.ViewModels
 {
     public class SignUpViewModel : PageValidatableBase, IUsuario
     {
+        private readonly CefaleasRestService _restService;
         Random rnd = new Random();
         //    private readonly IXamarin1SettingsService _settingService;
 
         public Usuario Usuario { get; private set; }
-        private readonly IUsuarioRestService _usuarioService;
         [Validate(Type = ValidateType.Skip)]
         public ICommand BackCommand { get; }
         public ICommand RegistrarmeCommand { get; }
@@ -83,10 +84,10 @@ namespace CefaleasApp.ViewModels
             get => _message;
             set => SetProperty(ref _message, value);
         }
-        public SignUpViewModel(IUsuarioRestService usuarioService/*,IXamarin1SettingsService settingsService*/) : base()
+        public SignUpViewModel(CefaleasRestService restService/*,IXamarin1SettingsService settingsService*/) : base()
         {
             // _settingService = settingsService;
-            _usuarioService = usuarioService;
+            _restService= restService;
             RegistrarmeCommand = new DelegateCommand(() => DoTask(RegistrarmeCommandExecute()));
             BackCommand = new DelegateCommand(BackCommandExecute);
             _ = new ObjectValidator(this);
@@ -125,7 +126,7 @@ namespace CefaleasApp.ViewModels
                     NVerificacion = rnd.Next(1000, 10000),
                     Verificado = this.Verificado
                 };
-                ResultEntity<Usuario> result = await _usuarioService.AddUsuarioAsync(usuario);
+                ResultEntity<Usuario> result = await _restService.AddUsuarioAsync(usuario);
                 if (result.IsSuccess())
                 {
                     UserDialogs.Instance.HideLoading();

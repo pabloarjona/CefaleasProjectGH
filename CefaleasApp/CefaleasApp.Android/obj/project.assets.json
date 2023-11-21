@@ -135,11 +135,10 @@
           "lib/netstandard2.0/Pitasoft.dll": {}
         }
       },
-      "Pitasoft.Client/5.1.0": {
+      "Pitasoft.Client/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Error": "3.0.1",
-          "Pitasoft.Result": "5.1.0",
+          "Pitasoft.Result": "5.0.0",
           "System.Net.Http.Json": "7.0.1",
           "System.Text.Json": "7.0.3"
         },
@@ -2305,7 +2304,7 @@
           }
         }
       },
-      "Xamarin.Forms/5.0.0.2612": {
+      "Xamarin.Forms/5.0.0.2622": {
         "type": "package",
         "dependencies": {
           "Xamarin.AndroidX.AppCompat": "[1.6.0, 1.7.0)",
@@ -2634,11 +2633,11 @@
           "Acr.UserDialogs": "7.1.0.514",
           "CefaleasApp.DataAccess": "1.0.0",
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Client": "5.1.0",
+          "Pitasoft.Client": "5.0.0",
           "Pitasoft.Collections": "1.2.0",
           "Pitasoft.Shell.Xamarin": "1.1.8",
           "Xamarin.Essentials": "1.8.0",
-          "Xamarin.Forms": "5.0.0.2612"
+          "Xamarin.Forms": "5.0.0.2622"
         },
         "compile": {
           "bin/placeholder/CefaleasApp.dll": {}
@@ -2866,10 +2865,10 @@
         "pitasoft.nuspec"
       ]
     },
-    "Pitasoft.Client/5.1.0": {
-      "sha512": "Wz4qtWoeEf27o+U3hMGlGYToGdxI0MtV4LyLy0kauS8gd8pjyiq7S/h5h5L5k3C9e0OBXIxcoIe15qf0kseIdw==",
+    "Pitasoft.Client/5.0.0": {
+      "sha512": "DSy/yb/JJng/NDUG1xe7iGFWzXJ6rbpsY1U3vBbxcqxSwpHzzuusbm/OtjRm1BvPOupY3wcfoQ5EIy87+prHxw==",
       "type": "package",
-      "path": "pitasoft.client/5.1.0",
+      "path": "pitasoft.client/5.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2878,7 +2877,7 @@
         "lib/net6.0/Pitasoft.Client.dll",
         "lib/net7.0/Pitasoft.Client.dll",
         "lib/netstandard2.0/Pitasoft.Client.dll",
-        "pitasoft.client.5.1.0.nupkg.sha512",
+        "pitasoft.client.5.0.0.nupkg.sha512",
         "pitasoft.client.nuspec"
       ]
     },
@@ -4999,10 +4998,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/5.0.0.2612": {
-      "sha512": "zQcy3NJgRJnLRWQZ2TZPCgDoTDHoYskHLutKDvz1pVNtvJ8U7kkg4mE2XATs3dAkQ+oWoqB4VOBGRk9uAfoRMw==",
+    "Xamarin.Forms/5.0.0.2622": {
+      "sha512": "vuhBbYbYM2fir0HkKeWBt3r+KzfJmXQQj4SlRYqRD/3MG9WS385T2VPuvakXMKgsGEkamaRyZacQ8ZPdac6cpA==",
       "type": "package",
-      "path": "xamarin.forms/5.0.0.2612",
+      "path": "xamarin.forms/5.0.0.2622",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5213,7 +5212,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.5.0.0.2612.nupkg.sha512",
+        "xamarin.forms.5.0.0.2622.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -5437,7 +5436,7 @@
     "MonoAndroid,Version=v13.0": [
       "CefaleasApp >= 1.0.0",
       "Xamarin.Essentials >= 1.8.0",
-      "Xamarin.Forms >= 5.0.0.2612"
+      "Xamarin.Forms >= 5.0.0.2622"
     ]
   },
   "packageFolders": {
@@ -5447,11 +5446,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pablo\\Source\\Repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.Android\\CefaleasApp.Android.csproj",
+      "projectUniqueName": "C:\\Users\\pablo\\source\\repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.Android\\CefaleasApp.Android.csproj",
       "projectName": "CefaleasApp.Android",
-      "projectPath": "C:\\Users\\pablo\\Source\\Repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.Android\\CefaleasApp.Android.csproj",
+      "projectPath": "C:\\Users\\pablo\\source\\repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.Android\\CefaleasApp.Android.csproj",
       "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pablo\\Source\\Repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.Android\\obj\\",
+      "outputPath": "C:\\Users\\pablo\\source\\repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -5472,8 +5471,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "C:\\Users\\pablo\\Source\\Repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj": {
-              "projectPath": "C:\\Users\\pablo\\Source\\Repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj"
+            "C:\\Users\\pablo\\source\\repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj": {
+              "projectPath": "C:\\Users\\pablo\\source\\repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj"
             }
           }
         }
@@ -5488,7 +5487,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[5.0.0.2612, )"
+            "version": "[5.0.0.2622, )"
           }
         }
       }

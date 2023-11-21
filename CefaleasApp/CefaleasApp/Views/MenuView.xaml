@@ -2,11 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:Pitasoft.Shell.Xamarin.ViewModels;assembly=Pitasoft.Shell.Xamarin" 
-             xmlns:viewmodels="clr-namespace:CefaleasApp.ViewModels" x:DataType="viewmodels:MenuViewModel"
              x:Class="CefaleasApp.Views.MenuView"
-             Title="Menu"
-             vm:ViewModelLocator.AutoWireViewModel="True">
-
+             vm:ViewModelLocator.AutoWireViewModel="True"
+             Title="Menu">
     <StackLayout VerticalOptions="FillAndExpand">
         <Grid>
             <Grid.RowDefinitions>
@@ -14,13 +12,8 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <StackLayout Padding="5,90,5,10" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource NavigationPrimary}">
-                <ContentView>
-                    <Image Source="Imagen.png"/>
-                </ContentView>
-            </StackLayout>
-            <Button Grid.Row="1" Text="Cerrar sesión" Command="{Binding LogoutCommand}"/>
-            <ListView Grid.Row="2" HasUnevenRows="True" ItemsSource="{Binding Menu}" SelectedItem="{Binding SelectedMenuItem, Mode=TwoWay}">
+
+            <ListView Grid.Row="1" HasUnevenRows="True" ItemsSource="{Binding Menu}" SelectedItem="{Binding SelectedMenuItem, Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

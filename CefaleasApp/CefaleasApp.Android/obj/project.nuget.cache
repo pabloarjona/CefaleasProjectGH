@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v6vW8yj5li1KySvHDNLMODFS/H29ydmcuZvPEDFb8vAbwaq31t9W2PXj40dg5J9gEfoQqp4OeAh3OWioqG/O+g==",
+  "dgSpecHash": "6U/7YpqWKpOZpECHPFx2W9IZVxKE2tZBHQf6qfp9RRxxMbvugCgrRCVLim9dQwyiuOxXmLmzAirFptHFFVbTng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pablo\\Source\\Repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.Android\\CefaleasApp.Android.csproj",
+  "projectFilePath": "C:\\Users\\pablo\\source\\repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.Android\\CefaleasApp.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pablo\\.nuget\\packages\\acr.userdialogs\\7.1.0.514\\acr.userdialogs.7.1.0.514.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\andhud\\1.4.2\\andhud.1.4.2.nupkg.sha512",
@@ -13,7 +13,7 @@
     "C:\\Users\\pablo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\pitasoft\\1.0.4\\pitasoft.1.0.4.nupkg.sha512",
-    "C:\\Users\\pablo\\.nuget\\packages\\pitasoft.client\\5.1.0\\pitasoft.client.5.1.0.nupkg.sha512",
+    "C:\\Users\\pablo\\.nuget\\packages\\pitasoft.client\\5.0.0\\pitasoft.client.5.0.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\pitasoft.collections\\1.2.0\\pitasoft.collections.1.2.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\pitasoft.commands\\1.0.0\\pitasoft.commands.1.0.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\pitasoft.error\\3.0.1\\pitasoft.error.3.0.1.nupkg.sha512",
@@ -94,7 +94,7 @@
     "C:\\Users\\pablo\\.nuget\\packages\\xamarin.androidx.viewpager\\1.0.0.15\\xamarin.androidx.viewpager.1.0.0.15.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\xamarin.androidx.viewpager2\\1.0.0.10\\xamarin.androidx.viewpager2.1.0.0.10.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\xamarin.essentials\\1.8.0\\xamarin.essentials.1.8.0.nupkg.sha512",
-    "C:\\Users\\pablo\\.nuget\\packages\\xamarin.forms\\5.0.0.2612\\xamarin.forms.5.0.0.2612.nupkg.sha512",
+    "C:\\Users\\pablo\\.nuget\\packages\\xamarin.forms\\5.0.0.2622\\xamarin.forms.5.0.0.2622.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\xamarin.google.android.material\\1.4.0.2\\xamarin.google.android.material.1.4.0.2.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.12\\xamarin.google.guava.listenablefuture.1.0.0.12.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\xamarin.jetbrains.annotations\\24.0.1.1\\xamarin.jetbrains.annotations.24.0.1.1.nupkg.sha512",

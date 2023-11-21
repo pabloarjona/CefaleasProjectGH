@@ -35,9 +35,6 @@ namespace CefaleasApp.Services
         //PUT
         public Task<ResultEntity<Paciente>> UpdatePacienteAsync(Paciente paciente) => PutAsync("/api/Paciente", paciente);
 
-        public Usuario usuario { get; set; }
-        public Paciente paciente { get; set; }
-
         //POST
         public Task<ResultEntity<Usuario>> AddUsuarioAsync(Entities.Usuario usuario) => PostAsync("/api/Usuario", usuario);
         //DELETE

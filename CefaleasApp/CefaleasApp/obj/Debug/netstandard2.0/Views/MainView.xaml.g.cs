@@ -14,7 +14,7 @@ namespace CefaleasApp.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\MainView.xaml")]
-    public partial class MainView : global::Xamarin.Forms.FlyoutPage {
+    public partial class MainView : global::Xamarin.Forms.MasterDetailPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {

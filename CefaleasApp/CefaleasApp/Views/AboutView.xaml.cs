@@ -1,5 +1,6 @@
 ﻿using Pitasoft.Shell.Xamarin;
 using System.ComponentModel;
+using Xamarin.Forms;
 
 namespace CefaleasApp.Views
 {

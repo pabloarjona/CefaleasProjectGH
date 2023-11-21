@@ -99,7 +99,7 @@ namespace CefaleasApp.ViewModels
         }
         public override Task InitializeAsync(object navigationData)
         {
-            CopyUsuario((this.Usuario = _usuarioService.usuario), this);
+            CopyUsuario((this.Usuario = Usuario), this);
             this.Password2 = this.Password;
             return base.InitializeAsync(navigationData);
         }

@@ -86,7 +86,7 @@ namespace CefaleasApp.ViewModels
         private async Task RefreshCommandAsync()
         {
             UserDialogs.Instance.ShowLoading("Cargando...");
-            ResultEntities<Paciente> result = await _pacienteService.GetPacientesAsyncId(_usuarioService.usuario.IdUsuario);
+            ResultEntities<Paciente> result = await _pacienteService.GetPacientesAsyncId(_paciente.IdUsuario);
             if (result.IsSuccess())
             {
                 if (result.Entities.Count() != 0)

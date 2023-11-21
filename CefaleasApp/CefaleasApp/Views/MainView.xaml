@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"                        
             xmlns:views="clr-namespace:CefaleasApp.Views"
             x:Class="CefaleasApp.Views.MainView"
-            xmlns:vm="clr-namespace:Pitasoft.Shell.Xamarin.ViewModels;assembly=Pitasoft.Shell.Xamarin" xmlns:viewmodels="clr-namespace:CefaleasApp.ViewModels" x:DataType="viewmodels:MainViewModel"
+            xmlns:vm="clr-namespace:Pitasoft.Shell.Xamarin.ViewModels;assembly=Pitasoft.Shell.Xamarin"
             vm:ViewModelLocator.AutoWireViewModel="True">
 
-    <FlyoutPage.Flyout>
+    <MasterDetailPage.Master>
         <views:MenuView />
-    </FlyoutPage.Flyout>
+    </MasterDetailPage.Master>
 
-    <FlyoutPage.Detail>
+    <MasterDetailPage.Detail>
         <NavigationPage>
             <x:Arguments>
                 <views:StartView/>
@@ -21,6 +21,6 @@
                 </OnPlatform>
             </NavigationPage.Icon>
         </NavigationPage>
-    </FlyoutPage.Detail>
+    </MasterDetailPage.Detail>
     
-</FlyoutPage>
+</MasterDetailPage>

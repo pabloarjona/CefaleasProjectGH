@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using CefaleasApp.Views;
 using Pitasoft.Shell.Services;
+using CefaleasApp.ViewModels;
+using Xamarin.Essentials;
 
 namespace CefaleasApp.Services
 {
@@ -16,10 +18,11 @@ namespace CefaleasApp.Services
                 new MenuViewModelInstance("Inicio", typeof(StartView))
                 {
                     Launch = true
+                
                 },
-                new MenuViewModelInstance("Pacientes", typeof(PacienteView)),
-                new MenuViewModelInstance("Mi cuenta",typeof(UsuarioView)),
-                new MenuViewModelInstance("Acerca de nosotros",typeof(AboutView))
+                //new MenuViewModelInstance("Pacientes", typeof(PacienteView)),
+                //new MenuViewModelInstance("Mi cuenta",typeof(UsuarioView)),
+                new MenuViewModelInstance("Acerca de nosotros", typeof(AboutView))
             };
             return base.LoadMenuAsync();
         }

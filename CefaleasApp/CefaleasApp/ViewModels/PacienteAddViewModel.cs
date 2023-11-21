@@ -132,7 +132,7 @@ namespace CefaleasApp.ViewModels
             {
                 Paciente pacient = new Paciente()
                 {
-                    IdUsuario = _usuarioRestService.usuario.IdUsuario,
+                    IdUsuario = Paciente.IdUsuario,
                     Iniciales = Iniciales,
                     FechaConsulta = FechaConsulta,
                     Edad = Edad,
