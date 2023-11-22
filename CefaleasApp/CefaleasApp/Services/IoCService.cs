@@ -31,8 +31,9 @@ namespace CefaleasApp.Services
             services.AddSingleton<IDialogService, DialogService>();
             services.AddSingleton<IMenuService, MenuService>();
             services.AddSingleton<ICriteriosCefalea, CriteriosCefalea>();
-            
+
             // Registrar la ViewModels
+            services.AddSingleton<UsuarioViewModel>();
             services.AddSingleton<MainViewModel>();
             services.AddSingleton<MenuViewModel>();
             services.AddSingleton<StartViewModel>();
@@ -42,7 +43,6 @@ namespace CefaleasApp.Services
             services.AddSingleton<PacienteAddViewModel>();
             services.AddSingleton<PacienteUpdateViewModel>();
             services.AddSingleton<SignUpViewModel>();
-            services.AddSingleton<UsuarioViewModel>();
             services.AddSingleton<FormularioViewModel>();
             services.AddSingleton<DiagnosticoViewModel>();
 

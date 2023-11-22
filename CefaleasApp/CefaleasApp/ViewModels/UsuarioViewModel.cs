@@ -14,6 +14,10 @@ using CefaleasApp.Entities;
 using CefaleasApp.Entities.Interfaces;
 using CefaleasApp.Models;
 using CefaleasApp.Services.Interfaces;
+using CefaleasApp.Services;
+using Xamarin.Forms;
+using System.Threading;
+using System.Diagnostics;
 
 namespace CefaleasApp.ViewModels
 {
@@ -23,9 +27,9 @@ namespace CefaleasApp.ViewModels
         private readonly IXamarin1SettingsService _settingsService;
         private readonly INavigationService _navigationService;
         public const string OtroUsuario = "OtroUsuario";
-        public ObservableCollection<Usuario> Employees { get; } = new ObservableCollection<Usuario>();
+        private readonly CefaleasRestService _restService;
+        
         public Usuario Usuario { get; set; }
-        private readonly IUsuarioRestService _usuarioService;
         [Validate(Type = ValidateType.Skip)]
 
         private string _nombre;
@@ -83,23 +87,26 @@ namespace CefaleasApp.ViewModels
             get => _message;
             set => SetProperty(ref _message, value);
         }
+        public string UserIdMessage { get; set; }
         public ICommand UpdateCommand { get; }
         public ICommand SaveCommand { get; }
         public ICommand DeleteCommand { get; }
-        public UsuarioViewModel(IUsuarioRestService usuarioService, IXamarin1SettingsService settingsService, IDialogService dialogService, INavigationService navigationService) : base()
+        public UsuarioViewModel(CefaleasRestService restService, IDialogService dialogService, INavigationService navigationService, IXamarin1SettingsService settingsService) : base()
         {
             _navigationService = navigationService;
             _settingsService = settingsService;
-            _usuarioService = usuarioService;
+            _restService = restService;
             _dialogService = dialogService;
             _ = new ObjectValidator(this);
             //UpdateCommand = new DelegateCommand(() => DoTask(UpdateCommandExecute()));
             SaveCommand = new DelegateCommand(() => DoTask(SaveCommandExecute()));
             DeleteCommand = new DelegateCommand(() => DoTask(DeleteCommandExecute()));
         }
+
         public override Task InitializeAsync(object navigationData)
         {
-            CopyUsuario((this.Usuario = Usuario), this);
+            //if(_navigationService.NavigateFromMenuAsync(MenuViewModel, navigationData)) return Task.CompletedTask;
+            CopyUsuario((this.Usuario = _settingsService.Usuario), this);
             this.Password2 = this.Password;
             return base.InitializeAsync(navigationData);
         }
@@ -110,7 +117,7 @@ namespace CefaleasApp.ViewModels
 
             if (result)
             {
-                Result result1 = await _usuarioService.DeleteUsuarioAsync(this.Usuario.IdUsuario);
+                Result result1 = await _restService.DeleteUsuarioAsync(this.Usuario.IdUsuario);
                 if (result1.IsSuccess())
                 {
                     await _dialogService.ShowAlertAsync("Se ha eliminado correctamente", "Eliminación correcta", "Aceptar");
@@ -138,7 +145,7 @@ namespace CefaleasApp.ViewModels
                     Verificado = this.Usuario.Verificado,
                     IdUsuario = this.Usuario.IdUsuario,
                 }) as Usuario;
-                ResultEntity<Usuario> result = await _usuarioService.UpdateUsuarioAsync(user);
+                ResultEntity<Usuario> result = await _restService.UpdateUsuarioAsync(user);
                 if (result.IsSuccess())
                 {
                     UserDialogs.Instance.HideLoading();

@@ -1,6 +1,7 @@
 ﻿using Pitasoft.Shell.Xamarin.Services;
 using CefaleasApp.Entities;
 using CefaleasApp.Services.Interfaces;
+using System.Dynamic;
 
 namespace CefaleasApp.Services
 {
@@ -17,6 +18,15 @@ namespace CefaleasApp.Services
             get => GetValueOrDefault(AccessToken, AccessTokenDefault);
             set => AddOrUpdateValue(AccessToken, value);
         }
+
+        private Usuario _usuario;
+
+        public Usuario Usuario
+        {
+            get => _usuario;
+            set => _usuario = value;
+        }
+
 
     }
 }

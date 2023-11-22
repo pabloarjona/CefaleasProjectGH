@@ -9,13 +9,19 @@ using CefaleasApp.Entities;
 using CefaleasApp.Models;
 using CefaleasApp.Services.Interfaces;
 using CefaleasApp.Services;
+using Xamarin.Forms;
+using System.Threading;
+using System.Diagnostics;
+using Pitasoft.Shell.Xamarin.Services;
 
 namespace CefaleasApp.ViewModels
 {
     public class LoginViewModel : PageBase
     {
+
         private readonly CefaleasRestService _restService;
-        private readonly IXamarin1SettingsService _settingService;
+        private readonly INavigationService _navigationService;
+        private readonly IXamarin1SettingsService _settingsService;
         private string _correo;
         public string Correo
         {
@@ -37,12 +43,13 @@ namespace CefaleasApp.ViewModels
         public ICommand LoginCommand { get; }
         public ICommand RegistrarmeCommand { get; }
 
-        public LoginViewModel(CefaleasRestService restService, IXamarin1SettingsService settingsService) : base()
+        public LoginViewModel(CefaleasRestService restService, INavigationService navigationService, IXamarin1SettingsService settingsService) : base()
         {
             _restService = restService;
-            _settingService = settingsService;
-            //LoginCommand = new DelegateCommand(() => DoTask(LoginCommandExecute()));
-            LoginCommand = new DelegateCommand(LoginCommandExecute2);
+            _navigationService = navigationService;
+            _settingsService = settingsService;
+            LoginCommand = new DelegateCommand(() => DoTask(LoginCommandExecute()));
+            //LoginCommand = new DelegateCommand(LoginCommandExecute);
             RegistrarmeCommand = new DelegateCommand(RegistrarmeCommandExecute);
         }
 
@@ -52,24 +59,26 @@ namespace CefaleasApp.ViewModels
             {
                 if (logoutParameter.Logout)
                 {
-                    _settingService.AuthAccessToken = string.Empty;
+                    _settingsService.AuthAccessToken = string.Empty;
                 }
             }
             return base.InitializeAsync(navigationData);
         }
+
         public async Task LoginCommandExecute()
         {
             UserDialogs.Instance.ShowLoading("Cargando...");
             ResultEntities<Usuario> result = await this._restService.GetUsuariosAsync();
-            _settingService.AuthAccessToken = "access_token";
+            _settingsService.AuthAccessToken = "access_token";
             if (result.IsSuccess())
             {
                 foreach (var item in result.Entities)
                 {
                     if (item.Correo == Correo && item.Password== Password)
-                    {
+                    { 
                         UserDialogs.Instance.HideLoading();
-                        await NavigationService.NavigateToAsync<MainViewModel>(item);
+                        _settingsService.Usuario = item;
+                        await _navigationService.NavigateToAsync<MainViewModel>(item, true);
                         break;
                     }
 

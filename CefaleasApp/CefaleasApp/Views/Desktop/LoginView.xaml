@@ -9,11 +9,12 @@
              xmlns:viewmodels="clr-namespace:CefaleasApp.ViewModels" x:DataType="viewmodels:LoginViewModel"
              vm:ViewModelLocator.AutoWireViewModel="True">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout BackgroundColor="{StaticResource NavigationPrimary}">
-            <StackLayout>
+            <StackLayout HeightRequest="250" Padding="0">
                 <Image Source="LogoLogin.png" />
             </StackLayout>
-            <Grid Margin="30,0,30,15">
+            <Grid Margin="30,0,30,15"  >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -25,15 +26,15 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Label  Grid.Row="1" Text="Correo" FontSize="Medium"  />
-                <Entry Grid.Row="2" Text="{Binding Correo}" />
-                <Label Grid.Row="3" Text="Contraseña" FontSize="Medium"/>
-                <Entry Grid.Row="4" Text="{Binding Password}"  IsPassword="True"  />
-                <Label Grid.Row="5" Text="{Binding Message, Mode=OneWay}" TextColor="DarkRed" />
-                <Button Grid.Row="6" BackgroundColor="White" Text="Iniciar" Command="{Binding LoginCommand}" CornerRadius="10" Margin="100,10,100,0"/>
-                <Label Grid.Row="7" HorizontalOptions="Center" Text="¿Aún no te has registrado?"/>
-                <Button Grid.Row="8" BackgroundColor="White" Command="{Binding RegistrarmeCommand}"  Text="Registrarme" CornerRadius="10" Margin="100,0,100,0" />
+                <Label  Grid.Row="1" Text="Inicio de sesión" HorizontalOptions="CenterAndExpand" FontSize="Large"  />
+                <Entry Grid.Row="2" Placeholder="Correo" WidthRequest="300" HorizontalOptions="CenterAndExpand" Text="{Binding Correo}" />
+                <Entry Grid.Row="4" Text="{Binding Password}" Placeholder="Contraseña" WidthRequest="300"  HorizontalOptions="CenterAndExpand" IsPassword="True"  />
+                <Label Grid.Row="5" Text="{Binding Message, Mode=OneWay}" WidthRequest="210" HorizontalOptions="CenterAndExpand"  TextColor="DarkRed" />
+                <Button Grid.Row="6" BackgroundColor="White" Text="Iniciar" WidthRequest="200" HorizontalOptions="CenterAndExpand"  Command="{Binding LoginCommand}" CornerRadius="10" Margin="100,10,100,0"/>
+                <Label Grid.Row="7" HorizontalOptions="Center" Text="¿Aún no te has registrado?" />
+                <Button Grid.Row="8" BackgroundColor="White" Command="{Binding RegistrarmeCommand}" WidthRequest="200" HorizontalOptions="CenterAndExpand"   Text="Registrarme" CornerRadius="10" Margin="100,0,100,0" />
             </Grid>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

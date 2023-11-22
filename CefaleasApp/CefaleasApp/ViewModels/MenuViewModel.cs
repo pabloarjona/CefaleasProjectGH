@@ -15,8 +15,8 @@ namespace CefaleasApp.ViewModels
 {
     public class MenuViewModel : MenuViewModelBase
     {
-        public ICommand LogoutCommand { get; }   
-        
+        public ICommand LogoutCommand { get; }
+
         public MenuViewModel(IMenuService menuService) : base(menuService)
         {
             LogoutCommand = new DelegateCommand(() => DoTask(LogoutAsync()));

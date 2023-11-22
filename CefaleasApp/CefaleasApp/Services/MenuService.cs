@@ -15,13 +15,13 @@ namespace CefaleasApp.Services
         public override Task<bool> LoadMenuAsync()
         {
             _menu = new MenuBase[] {
-                new MenuViewModelInstance("Inicio", typeof(StartView))
-                {
-                    Launch = true
-                
-                },
+                new MenuViewModelInstance("Inicio", typeof(StartView)),
                 //new MenuViewModelInstance("Pacientes", typeof(PacienteView)),
-                //new MenuViewModelInstance("Mi cuenta",typeof(UsuarioView)),
+                new MenuViewModelInstance("Mi cuenta",typeof(UsuarioView))
+                {
+                    Launch = true,
+
+                },
                 new MenuViewModelInstance("Acerca de nosotros", typeof(AboutView))
             };
             return base.LoadMenuAsync();

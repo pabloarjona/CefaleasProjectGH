@@ -13,7 +13,7 @@
     <MasterDetailPage.Detail>
         <NavigationPage>
             <x:Arguments>
-                <views:StartView/>
+                <views:UsuarioView/>
             </x:Arguments>            
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
