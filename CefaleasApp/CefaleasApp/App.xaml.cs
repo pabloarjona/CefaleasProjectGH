@@ -32,6 +32,7 @@ namespace CefaleasApp
         }
         protected override async void OnStart()
         {
+            
             if (Device.RuntimePlatform != Device.UWP)
             {
                 await InitializeNavigation();

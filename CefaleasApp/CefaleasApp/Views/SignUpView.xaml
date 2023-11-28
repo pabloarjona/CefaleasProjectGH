@@ -46,7 +46,7 @@
                     <behaviors:ValidationBehavior PropertyName="Nombre" ErrorColor="{StaticResource ErrorColor}"/>
                 </Entry.Behaviors>
             </Entry>
-            <Label Grid.Row="1"  Grid.Column="1" HorizontalOptions="Start" Text="{Binding Errors[Nombre],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
+            <Label Grid.Row="1"  Grid.Column="1" HorizontalOptions="Start" Text="{Binding Errors[Nombre],  Converter={StaticResource FirstValidationErrorConverter}}"  Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
 
             <Label Grid.Row="2" Grid.Column="0" Text="Contraseña:" FontSize="13" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Blue"/>
             <Entry Grid.Row="2" Grid.Column="1" Text="{Binding Password, Mode=TwoWay}" IsPassword="True" Placeholder="Contraseña" FontSize="13" TextColor="blue" HorizontalOptions="FillAndExpand">
@@ -83,7 +83,7 @@
             <Label Grid.Row="10" Grid.Column="1" Text="{Binding Message, Mode=OneWay}" TextColor="White" />
 
             <!--<Button Grid.Column="0" Command="{Binding BackCommand}" Text="Volver" CornerRadius="20" />-->
-            <Button Grid.Row="11" Grid.ColumnSpan="2" Command="{Binding RegistrarmeCommand}"  Text="Registrarme" CornerRadius="20" />
+            <Button Grid.Row="11" Grid.ColumnSpan="2" Command="{Binding RegistrarmeCommand}"  WidthRequest="200" HorizontalOptions="CenterAndExpand"  Text="Registrarme" CornerRadius="20" />
         </Grid>
 
     </StackLayout>

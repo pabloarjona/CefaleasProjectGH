@@ -16,8 +16,8 @@ namespace CefaleasApp.Services
         {
             _menu = new MenuBase[] {
                 new MenuViewModelInstance("Inicio", typeof(StartView)),
-                //new MenuViewModelInstance("Pacientes", typeof(PacienteView)),
-                new MenuViewModelInstance("Mi cuenta",typeof(UsuarioView))
+                //new MenuViewModelInstance("Mi Cuenta", typeof(UsuarioView)),
+                new MenuViewModelInstance("Pacientes",typeof(PacienteView))
                 {
                     Launch = true,
 

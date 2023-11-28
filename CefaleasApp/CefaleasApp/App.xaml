@@ -1,9 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CefaleasApp.App">
+             x:Class="CefaleasApp.App"
+             >
     <Application.Resources>
         <ResourceDictionary>
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="Lobster-Regular" />
+            </Style>
             <!--Global Styles-->
             <Color x:Key="NavigationPrimary">#2196F3</Color>
             <Color x:Key="PrimaryBackgroundColor">#F0F0F0</Color>
@@ -18,6 +22,9 @@
             <Color x:Key="ErrorColor">#A41D00</Color>
             <Color x:Key="WarningBackgroundColor">#F96D00</Color>
             <Color x:Key="WarningTextColor">#FFFFFF</Color>
+            <Style x:Key="ValidationErrorLabelStyle" TargetType="{x:Type Label}">
+                <Setter Property="TextColor" Value="{StaticResource ErrorColor}" />
+            </Style>
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}"/>
                 <Setter Property="BarTextColor" Value="{StaticResource PrimaryTextColor}"/>

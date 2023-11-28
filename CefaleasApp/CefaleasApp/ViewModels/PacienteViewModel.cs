@@ -13,6 +13,7 @@ using Xamarin.Forms;
 using CefaleasApp.Entities;
 using CefaleasApp.Models;
 using CefaleasApp.Services.Interfaces;
+using CefaleasApp.Services;
 
 namespace CefaleasApp.ViewModels
 {
@@ -21,10 +22,9 @@ namespace CefaleasApp.ViewModels
         Paciente _paciente = new Paciente();
         public static List<Paciente> listapac { get; set; } = new List<Paciente>{};
         static Paciente paciente1 = new Paciente();
-
+        private readonly IXamarin1SettingsService _settingsService;
         private static ObservableCollection<Paciente> Pacientes { get; set; }
-        private readonly IPacienteRestService _pacienteService;
-        private readonly IUsuarioRestService _usuarioService;
+        private readonly CefaleasRestService _cefaleasRestService;
         private ObservableCollection<Paciente> _listaPacientes;
         public ObservableCollection<Paciente> ListaPacientes 
         {   get=>_listaPacientes;
@@ -63,10 +63,10 @@ namespace CefaleasApp.ViewModels
         public ICommand UpdateCommand { get; }
         public ICommand SelectedCommand { get; }
         public ICommand AddFormCommand { get; }
-        public PacienteViewModel(IPacienteRestService pacienteService, IUsuarioRestService usuarioRestService) : base()
+        public PacienteViewModel(CefaleasRestService cefaleasRestService, IXamarin1SettingsService settingsService) : base()
         {
-            _pacienteService = pacienteService;
-            _usuarioService = usuarioRestService;
+            _settingsService = settingsService;
+            _cefaleasRestService = cefaleasRestService;
             ListaPacientes = new ObservableCollection<Paciente>();
             Title = "Pacientes";
             RefreshCommand = new DelegateCommand(() => DoTask(RefreshCommandAsync()));
@@ -78,15 +78,13 @@ namespace CefaleasApp.ViewModels
 
         public override Task InitializeAsync(object navigationData)
         {
-            if (navigationData is Paciente paciente)
-                _paciente = paciente;
             DoTask(RefreshCommandAsync());
             return base.InitializeAsync(navigationData);
         }
         private async Task RefreshCommandAsync()
         {
             UserDialogs.Instance.ShowLoading("Cargando...");
-            ResultEntities<Paciente> result = await _pacienteService.GetPacientesAsyncId(_paciente.IdUsuario);
+            ResultEntities<Paciente> result = await _cefaleasRestService.GetPacientesAsyncId(_settingsService.Usuario.IdUsuario);
             if (result.IsSuccess())
             {
                 if (result.Entities.Count() != 0)
@@ -124,7 +122,7 @@ namespace CefaleasApp.ViewModels
         private async Task DeleteCommandExecuteAsync()
         {
             UserDialogs.Instance.ShowLoading("Cargando...");
-            Result result = await _pacienteService.DeletePacienteAsync(PacienteSelected.IdPaciente);
+            Result result = await _cefaleasRestService.DeletePacienteAsync(PacienteSelected.IdPaciente);
             if (result.IsSuccess())
             {
                 UserDialogs.Instance.HideLoading();

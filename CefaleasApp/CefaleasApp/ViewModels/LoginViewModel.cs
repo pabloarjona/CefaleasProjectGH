@@ -51,6 +51,7 @@ namespace CefaleasApp.ViewModels
             LoginCommand = new DelegateCommand(() => DoTask(LoginCommandExecute()));
             //LoginCommand = new DelegateCommand(LoginCommandExecute);
             RegistrarmeCommand = new DelegateCommand(RegistrarmeCommandExecute);
+            Message = "";
         }
 
         public override Task InitializeAsync(object navigationData)
@@ -72,19 +73,24 @@ namespace CefaleasApp.ViewModels
             _settingsService.AuthAccessToken = "access_token";
             if (result.IsSuccess())
             {
+                bool login = false;
                 foreach (var item in result.Entities)
                 {
                     if (item.Correo == Correo && item.Password== Password)
                     { 
                         UserDialogs.Instance.HideLoading();
                         _settingsService.Usuario = item;
+                        login = true;
+                        Message = string.Empty;
                         await _navigationService.NavigateToAsync<MainViewModel>(item, true);
                         break;
                     }
-
                 }
-                UserDialogs.Instance.HideLoading();
-                Message = "Usuario o contraseña incorrectos.";
+                if (!login)
+                {
+                    UserDialogs.Instance.HideLoading();
+                    Message = "Usuario o contraseña incorrectos.";
+                }
             }
             else
             {

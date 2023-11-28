@@ -351,6 +351,30 @@
     <AppxPackagedFile Include="C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\cefaleaslogotipo.png">
       <PackagePath>cefaleaslogotipo.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\add.png">
+      <PackagePath>Icons\add.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\person.png">
+      <PackagePath>Icons\person.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\home.png">
+      <PackagePath>Icons\home.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\delete.png">
+      <PackagePath>Icons\delete.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\refresh.png">
+      <PackagePath>Icons\refresh.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\form.png">
+      <PackagePath>Icons\form.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\edit.png">
+      <PackagePath>Icons\edit.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\save.png">
+      <PackagePath>Icons\save.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\LogoLogin.png">
       <PackagePath>LogoLogin.png</PackagePath>
     </AppxPackagedFile>

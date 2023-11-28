@@ -53,5 +53,13 @@ App.xbf
 CefaleasApp.UWP.xr.xml
 MainPage.xbf
 cefaleaslogotipo.png
+Icons\add.png
+Icons\delete.png
+Icons\edit.png
+Icons\form.png
+Icons\home.png
+Icons\person.png
+Icons\refresh.png
+Icons\save.png
 LogoLogin.png
 Properties\Default.rd.xml

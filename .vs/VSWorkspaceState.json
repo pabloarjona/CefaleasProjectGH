@@ -4,8 +4,9 @@
     "\\CefaleasApp",
     "\\CefaleasApp\\CefaleasApp",
     "\\CefaleasApp\\CefaleasApp\\ViewModels",
-    "\\CefaleasApp\\CefaleasApp\\Views"
+    "\\CefaleasApp\\CefaleasApp\\Views",
+    "\\CefaleasApp\\CefaleasApp\\Views\\Desktop"
   ],
-  "SelectedNode": "\\CefaleasApp\\CefaleasApp\\ViewModels\\MenuViewModel.cs",
+  "SelectedNode": "\\CefaleasApp\\CefaleasApp\\Views\\PacienteView.xaml",
   "PreviewInSolutionExplorer": false
 }

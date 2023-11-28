@@ -93,6 +93,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Effects\RoundCornersEffect.cs" />
     <Compile Include="MainPage.xaml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -153,6 +154,14 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="cefaleaslogotipo.png" />
+    <Content Include="Icons\add.png" />
+    <Content Include="Icons\person.png" />
+    <Content Include="Icons\home.png" />
+    <Content Include="Icons\delete.png" />
+    <Content Include="Icons\refresh.png" />
+    <Content Include="Icons\form.png" />
+    <Content Include="Icons\edit.png" />
+    <Content Include="Icons\save.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="LogoLogin.png" />
   </ItemGroup>
