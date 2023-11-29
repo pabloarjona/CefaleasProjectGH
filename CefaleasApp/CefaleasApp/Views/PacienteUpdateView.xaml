@@ -17,8 +17,8 @@
         </ResourceDictionary>
     </shell:ShellPage.Resources>
     <shell:ShellPage.ToolbarItems>
-        <ToolbarItem IconImageSource="save.png" Command="{Binding SaveCommand}" Text="Guardar"/>
-        <ToolbarItem IconImageSource="cancel.png" Command="{Binding CancelCommand}" Text="Cancelar"/>
+        <ToolbarItem IconImageSource="Icons/save.png" Command="{Binding SaveCommand}" Text="Guardar"/>
+        <ToolbarItem IconImageSource="Icons/cancel.png" Command="{Binding CancelCommand}" Text="Cancelar"/>
     </shell:ShellPage.ToolbarItems>
 
     <StackLayout Margin="30">

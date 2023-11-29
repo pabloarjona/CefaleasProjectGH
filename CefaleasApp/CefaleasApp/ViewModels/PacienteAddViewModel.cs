@@ -12,13 +12,13 @@ using System.Windows.Input;
 using CefaleasApp.Entities;
 using CefaleasApp.Entities.Interfaces;
 using CefaleasApp.Services.Interfaces;
+using CefaleasApp.Services;
 
 namespace CefaleasApp.ViewModels
 {
     public class PacienteAddViewModel : PageValidatableBase, IPaciente
     {
-        private readonly IUsuarioRestService _usuarioRestService;
-        private readonly IPacienteRestService _pacienteService;
+        private readonly CefaleasRestService _restService;
         [Validate(Type = ValidateType.Skip)]
         Paciente Paciente = new Paciente();
         public ICommand AddPacienteCommand { get; }
@@ -38,7 +38,7 @@ namespace CefaleasApp.ViewModels
             set => SetProperty(ref _fechaConsulta, value);
         }
         private short _edad;
-        // [RegularExpression(@"^[0-9]+$",ErrorMessage = "Tiene que especificar un número, no se aceptan letras")]
+        [RegularExpression(@"^[0-9]+$",ErrorMessage = "Tiene que especificar un número, no se aceptan letras")]
         // [DataType(DataType.Date, ErrorMessage ="Tiene que poner una edad")]
         [Required(ErrorMessage = "Tiene que especificar la edad del paciente")]
         public short Edad
@@ -60,10 +60,9 @@ namespace CefaleasApp.ViewModels
             get => _message;
             set => SetProperty(ref _message, value);
         }
-        public PacienteAddViewModel(IPacienteRestService pacienteService, IUsuarioRestService usuarioService) : base()
+        public PacienteAddViewModel(CefaleasRestService restService) : base()
         {
-            _usuarioRestService = usuarioService;
-            _pacienteService = pacienteService;
+            _restService = restService;
             Title = "Añadir paciente";
             AddPacienteCommand = new DelegateCommand(() => DoTask(AddPacienteCommandExecute())/*,PacienteAdded*/);
             _ = new ObjectValidator(this);
@@ -83,6 +82,12 @@ namespace CefaleasApp.ViewModels
                     if (Sexo== '\0')
                     {
                         SetError("Este campo es obligatorio", nameof(Sexo));
+                    }
+                    break;
+                case nameof(Edad):
+                    if(short.TryParse(Edad.ToString(), out _))
+                    {
+                        SetError("Tiene que insertar un valor numérico", nameof(Edad));
                     }
                     break;
                 case nameof(Iniciales):
@@ -138,7 +143,7 @@ namespace CefaleasApp.ViewModels
                     Edad = Edad,
                     Sexo = Sexo,
                 };
-                ResultEntity<Paciente> result = await _pacienteService.AddPacienteAsync(pacient);
+                ResultEntity<Paciente> result = await _restService.AddPacienteAsync(pacient);
                 if (result.IsSuccess())
                 {
                     UserDialogs.Instance.HideLoading();

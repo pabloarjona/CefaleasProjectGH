@@ -155,7 +155,8 @@
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="cefaleaslogotipo.png" />
     <Content Include="Icons\add.png" />
-    <Content Include="Icons\person.png" />
+    <Content Include="Icons\cancel.png" />
+    <Content Include="Icons\correct.png" />
     <Content Include="Icons\home.png" />
     <Content Include="Icons\delete.png" />
     <Content Include="Icons\refresh.png" />

@@ -18,11 +18,12 @@
         </ResourceDictionary>
     </shell:ShellPage.Resources>
     <shell:ShellPage.ToolbarItems>
-        <ToolbarItem IconImageSource="correcto.png" Command="{Binding AddPacienteCommand}" Text="Añadir"/>
+        <ToolbarItem IconImageSource="Icons/correct.png" Command="{Binding AddPacienteCommand}" Text="Añadir"/>
     </shell:ShellPage.ToolbarItems>
+    
     <StackLayout Margin="30">
         <Label Text="Iniciales:" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center" TextColor="Black"/>
-        <Entry WidthRequest="{OnPlatform Android=100}" Text="{Binding Iniciales, Mode=TwoWay}" HorizontalOptions="StartAndExpand" TextTransform="Uppercase" Placeholder="Iniciales" FontSize="Medium" TextColor="Black" MaxLength="8">
+        <Entry WidthRequest="{OnPlatform Android=100, UWP=100}"  Text="{Binding Iniciales, Mode=TwoWay}" HorizontalOptions="StartAndExpand" TextTransform="Uppercase" FontSize="Medium" TextColor="Black" MaxLength="8">
             <Entry.Behaviors>
                 <behaviors:ValidationBehavior PropertyName="Iniciales" ErrorColor="{StaticResource ErrorColor}"/>
             </Entry.Behaviors>
@@ -40,12 +41,11 @@
         <Label Text="Edad:" FontSize="Medium" HorizontalOptions="StartAndExpand" VerticalOptions="Center" TextColor="Black"/>
 
         <StackLayout Orientation="Horizontal">
-            <Entry FontSize="Medium" WidthRequest="{OnPlatform Android=50}" HorizontalOptions="Start"  BindingContext="{x:Reference stepper}" Text="{Binding Value}"  MaxLength="3" >
+            <Entry FontSize="Medium" Keyboard="Numeric" WidthRequest="{OnPlatform Android=50}" HorizontalOptions="Start" Text="{Binding Edad}" MaxLength="3" >
                 <Entry.Behaviors>
                     <behaviors:ValidationBehavior PropertyName="Edad" ErrorColor="{StaticResource ErrorColor}"/>
                 </Entry.Behaviors>
             </Entry>
-            <Stepper Minimum="1" Maximum="150" HorizontalOptions="StartAndExpand" x:Name="stepper" Value="{Binding Edad}" Increment="1" ></Stepper>
         </StackLayout>
         <Label HorizontalOptions="Start" Text="{Binding Errors[Edad],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
 

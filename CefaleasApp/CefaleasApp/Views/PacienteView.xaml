@@ -5,7 +5,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CefaleasApp.Views.PacienteView"
-             xmlns:effects="clr-namespace:CefaleasApp.Views.Effects;assembly=CefaleasApp"
              xmlns:vm="clr-namespace:Pitasoft.Shell.Xamarin.ViewModels;assembly=Pitasoft.Shell.Xamarin"
              vm:ViewModelLocator.AutoWireViewModel="True">
     <shell:ShellPage.ToolbarItems>
@@ -17,9 +16,10 @@
     </shell:ShellPage.ToolbarItems>
 
     <shell:ShellPage.MainContent>
-        <ScrollView >
+        
             <Grid>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
@@ -34,29 +34,33 @@
                         </Label.FormattedText>
                     </Label>
                 </StackLayout>
-                <ListView Grid.Row="1"  x:Name="searchResults" SelectedItem="{Binding PacienteSelected}" ItemsSource="{Binding ListaPacientes}" VerticalOptions="FillAndExpand"  HasUnevenRows="true" CachingStrategy="RecycleElement">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout  Orientation="Horizontal" Margin="0,10">
-                                    <Image Source="Icons/person.png" WidthRequest="60" HeightRequest="60" Aspect="AspectFit" VerticalOptions="Center" Margin="10,0,0,0" />
 
-                                    <Label Style="{StaticResource LabelStyle}" Margin="0,0,40,0" HorizontalOptions="FillAndExpand" VerticalOptions="End" HorizontalTextAlignment="Start" TextColor="{StaticResource SecondaryTextColor}"  LineBreakMode="WordWrap">
-                                        <Label.FormattedText>
-                                            <FormattedString>
-                                                <Span Text="{Binding Iniciales}" FontSize="Large"/>
-                                                <Span Text="    "/>
-                                                <Span Text="{Binding FechaConsulta,StringFormat='{}{0:dd/MM/yyyy}'}"   FontSize="12"/>
-                                            </FormattedString>
-                                        </Label.FormattedText>
-                                    </Label>
-                                </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                    
-                </ListView>
-            </Grid>
-        </ScrollView>
+            <StackLayout Grid.Row="1">
+                <ScrollView  VerticalOptions="FillAndExpand">
+                    <StackLayout>
+                        <ListView x:Name="searchResults" SelectedItem="{Binding PacienteSelected}" ItemsSource="{Binding ListaPacientes}" VerticalOptions="FillAndExpand"  HasUnevenRows="true" CachingStrategy="RecycleElement">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout  Orientation="Horizontal" Margin="0,10">
+                                            <!--<Image Source="Icons/person2.png" WidthRequest="60" HeightRequest="60" Aspect="AspectFit" VerticalOptions="Center" Margin="10,0,0,0" />-->
+                                            <Label Style="{StaticResource LabelStyle}" Margin="30,0,40,0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource SecondaryTextColor}"  LineBreakMode="WordWrap">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="{Binding Iniciales}" FontSize="Large"/>
+                                                        <Span Text="    "/>
+                                                        <Span Text="{Binding FechaConsulta,StringFormat='{}{0:dd/MM/yyyy}'}"   FontSize="12"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
     </shell:ShellPage.MainContent>
 </shell:ShellPage>

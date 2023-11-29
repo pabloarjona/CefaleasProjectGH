@@ -10,6 +10,7 @@ using CefaleasApp.Entities;
 using CefaleasApp.Entities.Interfaces;
 using CefaleasApp.Models;
 using CefaleasApp.Services.Interfaces;
+using CefaleasApp.Services;
 
 namespace CefaleasApp.ViewModels
 {
@@ -19,7 +20,7 @@ namespace CefaleasApp.ViewModels
         bool validar = false;
         private int? _idEnfermedadVerificada;
         public Paciente _paciente { get; set; }
-        private readonly ICuestionarioRestService _cuestionarioRestService;
+        private readonly CefaleasRestService _cefaleasRestService;
         private readonly IDialogService _dialogService;
         private readonly INavigationService _navigationService;
         private readonly ICriteriosCefalea _criteriosCefalea;
@@ -180,13 +181,13 @@ namespace CefaleasApp.ViewModels
         public ICommand RefreshCommand { get; }
         public ICommand DeleteCommand { get; }
         public ICommand VerDiagnostico { get; }
-        public FormularioViewModel(ICriteriosCefalea criteriosCefalea, ICuestionarioRestService cuestionarioRestService, IDialogService dialogService, INavigationService navigationService) : base()
+        public FormularioViewModel(ICriteriosCefalea criteriosCefalea, CefaleasRestService cefaleasRestSerice, IDialogService dialogService, INavigationService navigationService) : base()
         {
             RefreshCommand = new DelegateCommand(() => DoTask(RefreshCommandAsync()));
             DeleteCommand = new DelegateCommand(() => DoTask(DeleteCommandAsync()));
             VerDiagnostico = new DelegateCommand(() => DoTask(VerDiagnosticoAsync()));
             SaveCommand = new DelegateCommand(() => DoTask(SaveCommandAsync()));
-            _cuestionarioRestService = cuestionarioRestService;
+            _cefaleasRestService = cefaleasRestSerice;
             _dialogService = dialogService;
             _navigationService = navigationService;
             _criteriosCefalea = criteriosCefalea;
@@ -198,7 +199,7 @@ namespace CefaleasApp.ViewModels
             if (confirmado)
             {
                 UserDialogs.Instance.ShowLoading("Cargando...");
-                Result result = await _cuestionarioRestService.DeleteCuestionarioAsync(_paciente.IdPaciente);
+                Result result = await _cefaleasRestService.DeleteCuestionarioAsync(_paciente.IdPaciente);
                 if (result.IsOk())
                 {
                     DoTask(RefreshCommandAsync());
@@ -226,7 +227,7 @@ namespace CefaleasApp.ViewModels
         public async Task RefreshCommandAsync()
         {
             UserDialogs.Instance.ShowLoading("Cargando...");
-            ResultEntity<Cuestionario> result = await _cuestionarioRestService.GetCuestionariosAsync(_paciente.IdPaciente);
+            ResultEntity<Cuestionario> result = await _cefaleasRestService.GetCuestionariosAsync(_paciente.IdPaciente);
             if (result.IsSuccess())
             {
                 this._idEnfermedadVerificada = result.Entity.IdEnfermedadVerificada;
@@ -258,7 +259,7 @@ namespace CefaleasApp.ViewModels
                 if (this.nuevo == true)
                 {
                     cuestionario.IdEnfermedad = _criteriosCefalea.ComprobarCefalea(cuestionario);
-                    ResultEntity<Cuestionario> result = await _cuestionarioRestService.AddCuestionarioAsync(cuestionario);
+                    ResultEntity<Cuestionario> result = await _cefaleasRestService.AddCuestionarioAsync(cuestionario);
                     if (result.IsSuccess())
                     {
                         this.nuevo = false;
@@ -279,7 +280,7 @@ namespace CefaleasApp.ViewModels
                 {
                     cuestionario.IdEnfermedadVerificada = this._idEnfermedadVerificada;
                     cuestionario.IdEnfermedad = _criteriosCefalea.ComprobarCefalea(cuestionario);
-                    ResultEntity<Cuestionario> result2 = await _cuestionarioRestService.UpdateCuestionarioAsync(cuestionario);
+                    ResultEntity<Cuestionario> result2 = await _cefaleasRestService.UpdateCuestionarioAsync(cuestionario);
                     if (result2.IsSuccess())
                     {
 

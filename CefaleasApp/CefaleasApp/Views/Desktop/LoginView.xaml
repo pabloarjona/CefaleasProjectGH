@@ -30,7 +30,7 @@
                     <Entry Margin="0" Grid.Row="2" Placeholder="Correo" WidthRequest="300" HorizontalOptions="CenterAndExpand" Text="{Binding Correo}" Keyboard="Email" ></Entry>
                     <Entry Grid.Row="4" Text="{Binding Password}" Placeholder="Contraseña" WidthRequest="300"  HorizontalOptions="CenterAndExpand" IsPassword="True"  />
                     <Label Grid.Row="5" Text="{Binding Message, Mode=OneWay}" WidthRequest="210" HorizontalOptions="CenterAndExpand"  TextColor="DarkRed" />
-                    <Button Grid.Row="6" BackgroundColor="White" Text="Iniciar" WidthRequest="200" HorizontalOptions="CenterAndExpand"  Command="{Binding LoginCommand}" CornerRadius="10" Margin="100,10,100,0"/>
+                    <Button Grid.Row="6" BackgroundColor="White" Text="Iniciar" WidthRequest="200" HorizontalOptions="CenterAndExpand"  Command="{Binding LoginCommand}" CornerRadius="10" Margin="100,0"/>
                     <!-- <Label Grid.Row="7" HorizontalOptions="Center" Text="¿Aún no te has registrado?" />
                     <Button Grid.Row="8" BackgroundColor="White" Command="{Binding RegistrarmeCommand}" WidthRequest="200" HorizontalOptions="CenterAndExpand"   Text="Registrarme" CornerRadius="10" Margin="100,0,100,0" />-->
                 </Grid>

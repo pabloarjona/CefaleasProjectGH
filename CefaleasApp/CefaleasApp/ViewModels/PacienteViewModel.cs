@@ -19,9 +19,7 @@ namespace CefaleasApp.ViewModels
 {
     public class PacienteViewModel : PageBase
     {
-        Paciente _paciente = new Paciente();
-        public static List<Paciente> listapac { get; set; } = new List<Paciente>{};
-        static Paciente paciente1 = new Paciente();
+        public static List<Paciente> Listapac { get; set; } = new List<Paciente>{};
         private readonly IXamarin1SettingsService _settingsService;
         private static ObservableCollection<Paciente> Pacientes { get; set; }
         private readonly CefaleasRestService _cefaleasRestService;
@@ -46,9 +44,9 @@ namespace CefaleasApp.ViewModels
         public static ObservableCollection<Paciente> GetSearchResults(string queryString)
         {
             var normalizedQuery = queryString?.ToLower() ?? "";
-            listapac= listapac.Where(f => f.Iniciales.ToLowerInvariant().Contains(normalizedQuery)).ToList();
+            Listapac= Listapac.Where(f => f.Iniciales.ToLowerInvariant().Contains(normalizedQuery)).ToList();
             var oc = new ObservableCollection<Paciente>();
-            foreach (var item in listapac)
+            foreach (var item in Listapac)
                 oc.Add(item);
             return oc;
         }
@@ -89,12 +87,10 @@ namespace CefaleasApp.ViewModels
             {
                 if (result.Entities.Count() != 0)
                 {
-
-                    Pacientes = ListaPacientes;
                     DoAction(() =>
                     {
-                        listapac.Clear();
-                        listapac.AddRange(result.Entities);
+                        Listapac.Clear();
+                        Listapac.AddRange(result.Entities);
                         ListaPacientes.Clear();
                         ListaPacientes.AddRange(result.Entities);
                     });
@@ -104,7 +100,7 @@ namespace CefaleasApp.ViewModels
                 else
                 {
                     ListaPacientes.Clear();
-                    listapac.Clear();                    
+                    Listapac.Clear();                    
                     UserDialogs.Instance.HideLoading();
                 }
             }

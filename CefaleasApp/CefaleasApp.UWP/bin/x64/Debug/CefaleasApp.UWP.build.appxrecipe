@@ -354,8 +354,11 @@
     <AppxPackagedFile Include="C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\add.png">
       <PackagePath>Icons\add.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\person.png">
-      <PackagePath>Icons\person.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\cancel.png">
+      <PackagePath>Icons\cancel.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\correct.png">
+      <PackagePath>Icons\correct.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\source\repos\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\home.png">
       <PackagePath>Icons\home.png</PackagePath>

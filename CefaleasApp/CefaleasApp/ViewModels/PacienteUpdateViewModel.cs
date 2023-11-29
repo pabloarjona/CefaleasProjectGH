@@ -12,6 +12,7 @@ using System.Windows.Input;
 using CefaleasApp.Entities;
 using CefaleasApp.Entities.Interfaces;
 using CefaleasApp.Services.Interfaces;
+using CefaleasApp.Services;
 
 namespace CefaleasApp.ViewModels
 {
@@ -19,7 +20,7 @@ namespace CefaleasApp.ViewModels
     {
         public Paciente Paciente { get; private set; }
 
-        private readonly IPacienteRestService _pacienteService;
+        private readonly CefaleasRestService _restService;
         [Validate(Type = ValidateType.Skip)]
 
         public ICommand CancelCommand { get; }
@@ -60,9 +61,9 @@ namespace CefaleasApp.ViewModels
             get => _message;
             set => SetProperty(ref _message, value);
         }
-        public PacienteUpdateViewModel(IPacienteRestService pacienteService) : base()
+        public PacienteUpdateViewModel(CefaleasRestService restService) : base()
         {
-            _pacienteService = pacienteService;
+            _restService = restService;
             SaveCommand = new DelegateCommand(() => DoTask(SaveCommandExecute()));
             CancelCommand = new DelegateCommand(() => DoAction(CancelCommandExecute));
             _ = new ObjectValidator(this);
@@ -145,7 +146,7 @@ namespace CefaleasApp.ViewModels
                     IdPaciente = this.Paciente.IdPaciente,
                     IdUsuario = this.Paciente.IdUsuario
                 }) as Paciente;
-                ResultEntity<Paciente> result = await _pacienteService.UpdatePacienteAsync(pacienteNew);
+                ResultEntity<Paciente> result = await _restService.UpdatePacienteAsync(pacienteNew);
                 if (result.IsSuccess())
                 {
                     UserDialogs.Instance.HideLoading();
