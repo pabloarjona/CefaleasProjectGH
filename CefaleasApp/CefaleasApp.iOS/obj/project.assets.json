@@ -4157,11 +4157,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pablo\\source\\repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.iOS\\CefaleasApp.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\pablo\\git\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.iOS\\CefaleasApp.iOS.csproj",
       "projectName": "CefaleasApp.iOS",
-      "projectPath": "C:\\Users\\pablo\\source\\repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.iOS\\CefaleasApp.iOS.csproj",
+      "projectPath": "C:\\Users\\pablo\\git\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.iOS\\CefaleasApp.iOS.csproj",
       "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pablo\\source\\repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.iOS\\obj\\",
+      "outputPath": "C:\\Users\\pablo\\git\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -4182,8 +4182,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\pablo\\source\\repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj": {
-              "projectPath": "C:\\Users\\pablo\\source\\repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj"
+            "C:\\Users\\pablo\\git\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj": {
+              "projectPath": "C:\\Users\\pablo\\git\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj"
             }
           }
         }

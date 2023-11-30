@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "18lnqqWpLYuymp3kDdph3msuMyGA5hqeVTRsQkHuSQQNJzv+wPa0Q0oq9dKX3nCxUxPI/IWS32gqkid7epLZtA==",
+  "dgSpecHash": "gKhaa722nwTtzJaw2RoSB8SIPd9kdJmHBcsX5lZAiY/LJoQeRGzqSs1yLymG4zErLVif1OAdZLVSTZBWakmp8g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pablo\\source\\repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.iOS\\CefaleasApp.iOS.csproj",
+  "projectFilePath": "C:\\Users\\pablo\\git\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.iOS\\CefaleasApp.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pablo\\.nuget\\packages\\acr.userdialogs\\7.1.0.514\\acr.userdialogs.7.1.0.514.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\btprogresshud\\1.3.1\\btprogresshud.1.3.1.nupkg.sha512",

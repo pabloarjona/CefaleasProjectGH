@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6U/7YpqWKpOZpECHPFx2W9IZVxKE2tZBHQf6qfp9RRxxMbvugCgrRCVLim9dQwyiuOxXmLmzAirFptHFFVbTng==",
+  "dgSpecHash": "TwkKQ0OOPGNIjyqJQKO+EXIPpETa/DO7e4fcuirBM5oC30nIEw2P4n5lpHUCNWb7vTaycFJPFBxzqoxTn+LVCw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pablo\\source\\repos\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.Android\\CefaleasApp.Android.csproj",
+  "projectFilePath": "C:\\Users\\pablo\\git\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.Android\\CefaleasApp.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pablo\\.nuget\\packages\\acr.userdialogs\\7.1.0.514\\acr.userdialogs.7.1.0.514.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\andhud\\1.4.2\\andhud.1.4.2.nupkg.sha512",
