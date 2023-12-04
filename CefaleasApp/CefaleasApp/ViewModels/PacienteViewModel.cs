@@ -113,7 +113,7 @@ namespace CefaleasApp.ViewModels
         }
         private Task AddCommandFormExecute()=> NavigationService.NavigateToAsync<FormularioViewModel>(PacienteSelected);
         
-        private Task AddCommandExecute() => NavigationService.NavigateToAsync<PacienteAddViewModel>();
+        private Task AddCommandExecute() => NavigationService.NavigateToAsync<PacienteAddViewModel>(_settingsService.Usuario.IdUsuario);
         private Task UpdateCommandExecute() => NavigationService.NavigateToAsync<PacienteUpdateViewModel>(PacienteSelected);
         private async Task DeleteCommandExecuteAsync()
         {

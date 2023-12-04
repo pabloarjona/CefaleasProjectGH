@@ -18,7 +18,7 @@
         </ResourceDictionary>
     </shell:ShellPage.Resources>
     <shell:ShellPage.ToolbarItems>
-        <ToolbarItem IconImageSource="Icons/correct.png" Command="{Binding AddPacienteCommand}" Text="Añadir"/>
+        <ToolbarItem IconImageSource="Icons/add.png" Command="{Binding AddPacienteCommand}" Text="Añadir"/>
     </shell:ShellPage.ToolbarItems>
     
     <StackLayout Margin="30">
@@ -40,14 +40,12 @@
 
         <Label Text="Edad:" FontSize="Medium" HorizontalOptions="StartAndExpand" VerticalOptions="Center" TextColor="Black"/>
 
-        <StackLayout Orientation="Horizontal">
-            <Entry FontSize="Medium" Keyboard="Numeric" WidthRequest="{OnPlatform Android=50}" HorizontalOptions="Start" Text="{Binding Edad}" MaxLength="3" >
-                <Entry.Behaviors>
-                    <behaviors:ValidationBehavior PropertyName="Edad" ErrorColor="{StaticResource ErrorColor}"/>
-                </Entry.Behaviors>
-            </Entry>
-        </StackLayout>
-        <Label HorizontalOptions="Start" Text="{Binding Errors[Edad],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
+        <Entry FontSize="Medium" WidthRequest="{OnPlatform Android=50}" Keyboard="Numeric" HorizontalOptions="Start" Text="{Binding EdadString, Mode=TwoWay}" MaxLength="3" >
+            <Entry.Behaviors>
+                <behaviors:ValidationBehavior PropertyName="EdadString" ErrorColor="{StaticResource ErrorColor}"/>
+            </Entry.Behaviors>
+        </Entry>
+        <Label HorizontalOptions="Start" Text="{Binding Errors[EdadString],  Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" FontSize="Small"/>
 
         <Label Text="Sexo:"  FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center" TextColor="Black"/>
         <Picker WidthRequest="{OnPlatform Android=30}" HorizontalOptions="Start" x:Name="picker2" FontSize="Medium" SelectedItem="{Binding Sexo}">

@@ -19,8 +19,7 @@ namespace CefaleasApp.ViewModels
     public class PacienteAddViewModel : PageValidatableBase, IPaciente
     {
         private readonly CefaleasRestService _restService;
-        [Validate(Type = ValidateType.Skip)]
-        Paciente Paciente = new Paciente();
+        private int IdUsuario { get; set; }
         public ICommand AddPacienteCommand { get; }
         private string _iniciales;
         [Required(ErrorMessage = "Tiene que especificar las iniciales del paciente")]
@@ -37,15 +36,15 @@ namespace CefaleasApp.ViewModels
             get => _fechaConsulta;
             set => SetProperty(ref _fechaConsulta, value);
         }
-        private short _edad;
-        [RegularExpression(@"^[0-9]+$",ErrorMessage = "Tiene que especificar un número, no se aceptan letras")]
-        // [DataType(DataType.Date, ErrorMessage ="Tiene que poner una edad")]
+
+        private string _edadString;
         [Required(ErrorMessage = "Tiene que especificar la edad del paciente")]
-        public short Edad
+        public string EdadString
         {
-            get => _edad;
-            set => SetProperty(ref _edad, value);
+            get => _edadString;
+            set => SetProperty(ref _edadString, value);
         }
+        public short Edad { get; set; }
         public char _sexo;
         [DataType(DataType.Text)]
         [Required(ErrorMessage = "Tiene que especificar el sexo del paciente")]
@@ -62,12 +61,20 @@ namespace CefaleasApp.ViewModels
         }
         public PacienteAddViewModel(CefaleasRestService restService) : base()
         {
+            
             _restService = restService;
             Title = "Añadir paciente";
-            AddPacienteCommand = new DelegateCommand(() => DoTask(AddPacienteCommandExecute())/*,PacienteAdded*/);
+            AddPacienteCommand = new DelegateCommand(() => DoTask(AddPacienteCommandExecute()), PacienteValidated)
+                .ObservesProperty(() => FechaConsulta)
+                .ObservesProperty(() => Edad)
+                .ObservesProperty(() => Sexo)
+                .ObservesProperty(() => Iniciales); 
             _ = new ObjectValidator(this);
             FechaConsulta = DateTime.Today;
         }
+
+        private bool PacienteValidated() => Validate();
+
         protected override void OnValidatedProperty(ValidatedPropertyEventArgs args)
         {
             switch (args.PropertyName)
@@ -84,10 +91,15 @@ namespace CefaleasApp.ViewModels
                         SetError("Este campo es obligatorio", nameof(Sexo));
                     }
                     break;
-                case nameof(Edad):
-                    if(short.TryParse(Edad.ToString(), out _))
+                case nameof(EdadString):
+                    short result;
+                   if(!short.TryParse(EdadString, out result))
                     {
-                        SetError("Tiene que insertar un valor numérico", nameof(Edad));
+                        SetError("Tiene que insertar un valor numérico", nameof(EdadString));
+                    }
+                    else
+                    {
+                        Edad = result;
                     }
                     break;
                 case nameof(Iniciales):
@@ -117,14 +129,16 @@ namespace CefaleasApp.ViewModels
                         }
                     }
                     break;
+                default:
+                    break;
             }
             base.OnValidatedProperty(args);
         }
         
          public override Task InitializeAsync(object navigationData)
          {
-            if (navigationData is Paciente paciente)
-                Paciente = paciente;
+            if (navigationData is int idUsuario)
+                IdUsuario = idUsuario;
              return base.InitializeAsync(navigationData);
          }
         private async Task AddPacienteCommandExecute()
@@ -137,18 +151,17 @@ namespace CefaleasApp.ViewModels
             {
                 Paciente pacient = new Paciente()
                 {
-                    IdUsuario = Paciente.IdUsuario,
-                    Iniciales = Iniciales,
-                    FechaConsulta = FechaConsulta,
-                    Edad = Edad,
-                    Sexo = Sexo,
+                    IdUsuario = this.IdUsuario,
+                    Iniciales = this.Iniciales,
+                    FechaConsulta = this.FechaConsulta,
+                    Edad = this.Edad,
+                    Sexo = this.Sexo,
                 };
                 ResultEntity<Paciente> result = await _restService.AddPacienteAsync(pacient);
                 if (result.IsSuccess())
                 {
                     UserDialogs.Instance.HideLoading();
                     this.IsBusy = false;
-                    //await UserDialogs.Instance.ConfirmAsync("El paciente se ha añadido correctamente", "Paciente añadido", "Aceptar");
                     bool confirmado = await UserDialogs.Instance.ConfirmAsync("El paciente se ha añadido correctamente, ¿quieres ir a su formulario?", "¡Añadido!", "Aceptar", "Cancelar");
                     if (confirmado)
                     {
@@ -158,12 +171,12 @@ namespace CefaleasApp.ViewModels
                 else
                 {
                     UserDialogs.Instance.HideLoading();
-                    Message = "Hay algún fallo de red inténtelo más tarde del tipo";
+                    Message = "Hay algún fallo de red inténtelo más tarde.";
                     this.IsBusy = false;
                 }
             }
             UserDialogs.Instance.HideLoading();
-            Message = "Hay algún fallo de red inténtelo más tarde del tipo";
+            Message = "Hay algún fallo de red inténtelo más tarde.";
             this.IsBusy = false;
         }     
     }
