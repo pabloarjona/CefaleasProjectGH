@@ -13,13 +13,16 @@ using CefaleasApp.Entities;
 using CefaleasApp.Entities.Interfaces;
 using CefaleasApp.Services.Interfaces;
 using CefaleasApp.Services;
+using Xamarin.Forms;
 
 namespace CefaleasApp.ViewModels
 {
-    public class PacienteAddViewModel : PageValidatableBase, IPaciente
+    public class PacienteDetailViewModel : PageValidatableBase, IPaciente
     {
         private readonly CefaleasRestService _restService;
+        private bool addMode = true;
         private int IdUsuario { get; set; }
+        private int IdPaciente { get; set; }
         public ICommand AddPacienteCommand { get; }
         private string _iniciales;
         [Required(ErrorMessage = "Tiene que especificar las iniciales del paciente")]
@@ -45,6 +48,7 @@ namespace CefaleasApp.ViewModels
             set => SetProperty(ref _edadString, value);
         }
         public short Edad { get; set; }
+
         public char _sexo;
         [DataType(DataType.Text)]
         [Required(ErrorMessage = "Tiene que especificar el sexo del paciente")]
@@ -59,21 +63,42 @@ namespace CefaleasApp.ViewModels
             get => _message;
             set => SetProperty(ref _message, value);
         }
-        public PacienteAddViewModel(CefaleasRestService restService) : base()
+        public PacienteDetailViewModel(CefaleasRestService restService) : base()
         {
-            
             _restService = restService;
-            Title = "Añadir paciente";
-            AddPacienteCommand = new DelegateCommand(() => DoTask(AddPacienteCommandExecute()), PacienteValidated)
+            AddPacienteCommand = new DelegateCommand(() => DoTask(SavePacienteCommandExecute()))
                 .ObservesProperty(() => FechaConsulta)
                 .ObservesProperty(() => Edad)
                 .ObservesProperty(() => Sexo)
                 .ObservesProperty(() => Iniciales); 
             _ = new ObjectValidator(this);
-            FechaConsulta = DateTime.Today;
         }
 
-        private bool PacienteValidated() => Validate();
+        public override Task InitializeAsync(object navigationData)
+        {
+            if (navigationData is int idUsuario)
+            {
+                Title = "Añadir paciente";
+                this.IdUsuario = idUsuario;
+                this.Iniciales = string.Empty;
+                this.FechaConsulta = DateTime.Today;
+                this.EdadString = string.Empty;
+                this.Sexo = 'F';
+                addMode = true;
+            }
+            else if(navigationData is Paciente paciente)
+            {
+                Title = paciente.Iniciales;
+                this.IdPaciente = paciente.IdPaciente;
+                this.IdUsuario = paciente.IdUsuario;
+                this.Iniciales = paciente.Iniciales;
+                this.FechaConsulta = paciente.FechaConsulta;
+                this.Sexo = paciente.Sexo;
+                this.EdadString = paciente.Edad.ToString();
+                addMode = false;
+            }
+            return base.InitializeAsync(navigationData);
+        }
 
         protected override void OnValidatedProperty(ValidatedPropertyEventArgs args)
         {
@@ -134,50 +159,70 @@ namespace CefaleasApp.ViewModels
             }
             base.OnValidatedProperty(args);
         }
-        
-         public override Task InitializeAsync(object navigationData)
-         {
-            if (navigationData is int idUsuario)
-                IdUsuario = idUsuario;
-             return base.InitializeAsync(navigationData);
-         }
-        private async Task AddPacienteCommandExecute()
+        private async Task UpdateCommandExecute()
         {
-            if (this.IsBusy)
-                return;
-            this.IsBusy = true;
             UserDialogs.Instance.ShowLoading("Cargando...");
             if (Validate())
             {
-                Paciente pacient = new Paciente()
+                Paciente pacienteNew = new Paciente
                 {
-                    IdUsuario = this.IdUsuario,
-                    Iniciales = this.Iniciales,
-                    FechaConsulta = this.FechaConsulta,
-                    Edad = this.Edad,
-                    Sexo = this.Sexo,
+                    Iniciales= this.Iniciales,
+                    Edad= this.Edad,
+                    Sexo= this.Sexo,
+                    FechaConsulta= this.FechaConsulta,
+                    IdPaciente = this.IdPaciente,
+                    IdUsuario = this.IdUsuario
                 };
-                ResultEntity<Paciente> result = await _restService.AddPacienteAsync(pacient);
+                ResultEntity<Paciente> result = await _restService.UpdatePacienteAsync(pacienteNew);
                 if (result.IsSuccess())
                 {
                     UserDialogs.Instance.HideLoading();
-                    this.IsBusy = false;
-                    bool confirmado = await UserDialogs.Instance.ConfirmAsync("El paciente se ha añadido correctamente, ¿quieres ir a su formulario?", "¡Añadido!", "Aceptar", "Cancelar");
-                    if (confirmado)
-                    {
-                        await NavigationService.NavigateToAsync<FormularioViewModel>(result.Entity );
-                    }
+                    await UserDialogs.Instance.ConfirmAsync("El paciente se ha modificado correctamente", "Paciente modificado", "Aceptar");
                 }
                 else
                 {
                     UserDialogs.Instance.HideLoading();
-                    Message = "Hay algún fallo de red inténtelo más tarde.";
-                    this.IsBusy = false;
+                    Message = "Hay algún fallo de red inténtelo más tarde";
                 }
             }
-            UserDialogs.Instance.HideLoading();
-            Message = "Hay algún fallo de red inténtelo más tarde.";
-            this.IsBusy = false;
+        }
+        private async Task SavePacienteCommandExecute()
+        {
+            if (!addMode)
+            {
+                DoTask(UpdateCommandExecute());
+            }
+            else
+            {
+                if (this.IsBusy)
+                    return;
+                this.IsBusy = true;
+                UserDialogs.Instance.ShowLoading("Cargando...");
+                if (Validate())
+                {
+                    Paciente pacient = new Paciente(){IdUsuario = this.IdUsuario,Iniciales = this.Iniciales,FechaConsulta = this.FechaConsulta,Edad = this.Edad,Sexo = this.Sexo,};
+                    ResultEntity<Paciente> result = await _restService.AddPacienteAsync(pacient);
+                    if (result.IsSuccess())
+                    {
+                        UserDialogs.Instance.HideLoading();
+                        this.IsBusy = false;
+                        bool confirmado = await UserDialogs.Instance.ConfirmAsync("El paciente se ha añadido correctamente, ¿quieres ir a su formulario?", "¡Añadido!", "Aceptar", "Cancelar");
+                        if (confirmado)
+                        {
+                            await NavigationService.NavigateToAsync<FormularioViewModel>(result.Entity);
+                        }
+                    }
+                    else
+                    {
+                        UserDialogs.Instance.HideLoading();
+                        Message = "Hay algún fallo de red inténtelo más tarde.";
+                        this.IsBusy = false;
+                    }
+                }
+                UserDialogs.Instance.HideLoading();
+                Message = "Hay algún fallo de red inténtelo más tarde.";
+                this.IsBusy = false;
+            }
         }     
     }
 }

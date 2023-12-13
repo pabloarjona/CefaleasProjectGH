@@ -16,24 +16,23 @@
     </shell:ShellPage.ToolbarItems>
 
     <shell:ShellPage.MainContent>
-        
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <StackLayout>
-                    <SearchBar x:Name="seachBar" TextTransform="Uppercase" Placeholder="Buscar por iniciales del paciente..." SearchCommand="{Binding PerformSearch}" SearchCommandParameter="{Binding Text, Source={x:Reference seachBar}}" BackgroundColor="White" />
-                    <Label Margin="0,0,20,0" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" TextColor="{StaticResource SecondaryTextColor}"  LineBreakMode="WordWrap">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Nº total de pacientes: "  FontSize="Medium"/>
-                                <Span Text="{Binding TotalPacientes}"  FontSize="Medium"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
+        <Grid>
+           <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+           </Grid.RowDefinitions>
+           <StackLayout>
+                <SearchBar x:Name="seachBar" TextTransform="Uppercase" Placeholder="Buscar por iniciales del paciente..." SearchCommand="{Binding PerformSearch}" SearchCommandParameter="{Binding Text, Source={x:Reference seachBar}}" BackgroundColor="White" />
+                <Label Margin="0,0,20,0" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" TextColor="{StaticResource SecondaryTextColor}"  LineBreakMode="WordWrap">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Nº total de pacientes: "  FontSize="Medium"/>
+                            <Span Text="{Binding TotalPacientes}"  FontSize="Medium"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+           </StackLayout>
 
             <StackLayout Grid.Row="1">
                 <ScrollView  VerticalOptions="FillAndExpand">

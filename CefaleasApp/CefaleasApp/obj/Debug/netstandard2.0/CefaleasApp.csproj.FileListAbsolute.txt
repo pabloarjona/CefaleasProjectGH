@@ -89,8 +89,6 @@ C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\obj\Debug\netstand
 C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\obj\Debug\netstandard2.0\Views\LoginView.xaml.g.cs
 C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\obj\Debug\netstandard2.0\Views\MainView.xaml.g.cs
 C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\obj\Debug\netstandard2.0\Views\MenuView.xaml.g.cs
-C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\obj\Debug\netstandard2.0\Views\PacienteAddView.xaml.g.cs
-C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\obj\Debug\netstandard2.0\Views\PacienteUpdateView.xaml.g.cs
 C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\obj\Debug\netstandard2.0\Views\PacienteView.xaml.g.cs
 C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\obj\Debug\netstandard2.0\Views\SettingsView.xaml.g.cs
 C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\obj\Debug\netstandard2.0\Views\SignUpView.xaml.g.cs
@@ -106,3 +104,4 @@ C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\obj\Debug\netstand
 C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\obj\Debug\netstandard2.0\CefaleasApp.dll
 C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\obj\Debug\netstandard2.0\refint\CefaleasApp.dll
 C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\obj\Debug\netstandard2.0\CefaleasApp.pdb
+C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\obj\Debug\netstandard2.0\Views\PacienteDetailView.xaml.g.cs

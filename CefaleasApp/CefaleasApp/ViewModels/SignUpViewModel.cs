@@ -21,8 +21,7 @@ namespace CefaleasApp.ViewModels
     public class SignUpViewModel : PageValidatableBase, IUsuario
     {
         private readonly CefaleasRestService _restService;
-        Random rnd = new Random();
-        //    private readonly IXamarin1SettingsService _settingService;
+        private readonly Random rnd = new Random();
 
         public Usuario Usuario { get; private set; }
         [Validate(Type = ValidateType.Skip)]

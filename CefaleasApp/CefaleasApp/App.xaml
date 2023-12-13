@@ -29,6 +29,6 @@
                 <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}"/>
                 <Setter Property="BarTextColor" Value="{StaticResource PrimaryTextColor}"/>
             </Style>
-        </ResourceDictionary>        
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

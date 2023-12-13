@@ -48,8 +48,10 @@ namespace CefaleasApp.ViewModels
             _restService = restService;
             _navigationService = navigationService;
             _settingsService = settingsService;
-            LoginCommand = new DelegateCommand(() => DoTask(LoginCommandExecute()));
-            //LoginCommand = new DelegateCommand(LoginCommandExecute);
+            if (_restService.DEVELOPMENT_ENVIROMENT.Equals(EnvironmentDevelopment.LOCAL))
+                LoginCommand = new DelegateCommand(() => LoginCommandExecuteLocal());
+            else 
+                LoginCommand = new DelegateCommand(() => DoTask(LoginCommandExecute()));
             RegistrarmeCommand = new DelegateCommand(RegistrarmeCommandExecute);
             Message = "";
         }
@@ -105,14 +107,21 @@ namespace CefaleasApp.ViewModels
             //_settingService.AuthAccessToken = "TOKEN";
             NavigationService.NavigateToAsync<SignUpViewModel>();
         }
-        public void LoginCommandExecute2()
+        //LOCAL 
+        public void LoginCommandExecuteLocal()
         {
             Message = string.Empty;
             //_settingService.AuthAccessToken = "TOKEN";
-            Usuario usuario = new Usuario();
-            usuario.Correo = "prueba@gmail.com";
-            usuario.Password = "prueba";
-            NavigationService.NavigateToAsync<MainViewModel>(usuario);
+            Usuario usuario = new Usuario {
+                Correo = "prueba@gmail.com",
+                Password = "prueba",
+                IdUsuario = 1,
+                NColegiado = 1,
+                NVerificacion = 1,
+                Nombre = "admin"
+            };
+            _settingsService.Usuario = usuario;
+            NavigationService.NavigateToAsync<MainViewModel>(usuario, true);
         }
     }
 }

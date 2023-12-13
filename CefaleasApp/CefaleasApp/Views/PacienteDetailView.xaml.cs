@@ -11,9 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace CefaleasApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PacienteUpdateView : ShellPage
+    public partial class PacienteDetailView : ShellPage
     {
-        public PacienteUpdateView()
+        public PacienteDetailView()
         {
             InitializeComponent();
         }
