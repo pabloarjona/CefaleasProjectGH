@@ -15,255 +15,83 @@
     </shell:ShellPage.ToolbarItems>
     <ScrollView >
         <StackLayout  Margin="20" Orientation="Vertical">
-        <Label Text="Pregunta 1: ¿Cuántos episodios de cefalea ha tenido el paciente?"  FontSize="18" TextColor="Black"/>
-            <Picker Title="Obligatoria*" WidthRequest="{OnPlatform Android=150}" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker1" TitleColor="Black"  SelectedItem="{Binding Episodios}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Menos de 5</x:String>
-                    <x:String>Entre 5 y 9</x:String>
-                    <x:String>Entre 10 y 20</x:String>
-                    <x:String>Más de 20</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-        <Label  Text="Pregunta 1.1. ¿Cuál es la frecuencia/duración de la cefalea desde que el paciente comenzó a tenerla?"  TextColor="Black" FontSize="18" />
-            <Picker Title="Obligatoria*"  HorizontalOptions="{OnPlatform Android=FillAndExpand, UWP=StartAndExpand}" x:Name="picker2" TitleColor="Black" SelectedItem="{Binding Duracion}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Menos de 3 meses</x:String>
-                    <x:String>0-15 días/mes durante más de 3 meses</x:String>
-                    <x:String>Más de 15 días/mes durante más de 3 meses</x:String>
-                    <x:String>Indeterminado</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
+            <Label Text="Pregunta 1: ¿Cuántos episodios de cefalea ha tenido el paciente?*"  FontSize="18" TextColor="Black"/>
+                <Picker WidthRequest="{OnPlatform Android=150}" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker1" TitleColor="Black"  SelectedItem="{Binding Episodios}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Menos de 5</x:String>
+                        <x:String>Entre 5 y 9</x:String>
+                        <x:String>Entre 10 y 20</x:String>
+                        <x:String>Más de 20</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label  Text="Pregunta 1.1. ¿Cuál es la frecuencia/duración de la cefalea desde que el paciente comenzó a tenerla?*"  TextColor="Black" FontSize="18" />
+                <Picker HorizontalOptions="{OnPlatform Android=FillAndExpand, UWP=StartAndExpand}" x:Name="picker2" TitleColor="Black" SelectedItem="{Binding Duracion}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Menos de 3 meses</x:String>
+                        <x:String>0-15 días/mes durante más de 3 meses</x:String>
+                        <x:String>Más de 15 días/mes durante más de 3 meses</x:String>
+                        <x:String>Indeterminado</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
 
-        <Label Text="Pregunta 2: ¿Cuánto tiempo dura el episodio?"  TextColor="Black" FontSize="18" />
-            <Picker Title="Obligatoria*" WidthRequest="{OnPlatform Android=250}" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker3" TitleColor="Black" SelectedItem="{Binding Duracion_episodio}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>De 1 a 10 segundos</x:String>
-                    <x:String>De 10 segundos a 2 minutos</x:String>
-                    <x:String>De 2 minutos a 10 minutos</x:String>
-                    <x:String>De 10 minutos a 30 minutos</x:String>
-                    <x:String>De 30 minutos a 3 horas</x:String>
-                    <x:String>De 3 horas a 4 horas</x:String>
-                    <x:String>De 4 horas a 72 horas</x:String>
-                    <x:String>Más de 72 horas</x:String>
-                    <x:String>Indeterminado</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
+            <Label Text="Pregunta 2: ¿Cuánto tiempo dura el episodio?*"  TextColor="Black" FontSize="18" />
+                <Picker WidthRequest="{OnPlatform Android=250}" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker3" TitleColor="Black" SelectedItem="{Binding Duracion_episodio}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>De 1 a 10 segundos</x:String>
+                        <x:String>De 10 segundos a 2 minutos</x:String>
+                        <x:String>De 2 minutos a 10 minutos</x:String>
+                        <x:String>De 10 minutos a 30 minutos</x:String>
+                        <x:String>De 30 minutos a 3 horas</x:String>
+                        <x:String>De 3 horas a 4 horas</x:String>
+                        <x:String>De 4 horas a 72 horas</x:String>
+                        <x:String>Más de 72 horas</x:String>
+                        <x:String>Indeterminado</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
 
-        <Label Text="Pregunta 3: ¿Qué caracteristicas tiene la cefalea?"  TextColor="Black" FontSize="18" />
-        <Label Margin="30,0,0,0" Text="3.1. ¿Qué localización tiene la cefalea?"  TextColor="Black" FontSize="18" />
-            <Picker Title="Obligatoria*" WidthRequest="{OnPlatform Android=250}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker4" TitleColor="Black" SelectedItem="{Binding Localizacion}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Unilateral</x:String>
-                    <x:String>Bilateral</x:String>
-                    <x:String>En área de cuero cabelludo</x:String>
-                    <x:String>Indeterminado</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-        <Label Margin="30,0,0,0" Text="3.2. ¿Qué caracter tiene el dolor? "  TextColor="Black" FontSize="18" />
-            <Picker Title="Obligatoria*" WidthRequest="{OnPlatform Android=100}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker5" TitleColor="Black" SelectedItem="{Binding Dolor}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Pulsátil</x:String>
-                    <x:String>Opresivo</x:String>
-                    <x:String>Otro</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
+            <Label Text="Pregunta 3: ¿Qué características tiene la cefalea?"  TextColor="Black" FontSize="18" />
+            <Label Margin="30,0,0,0" Text="3.1. ¿Qué localización tiene la cefalea?*"  TextColor="Black" FontSize="18" />
+                <Picker WidthRequest="{OnPlatform Android=250}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker4" TitleColor="Black" SelectedItem="{Binding Localizacion}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Unilateral</x:String>
+                        <x:String>Bilateral</x:String>
+                        <x:String>En área de cuero cabelludo</x:String>
+                        <x:String>Indeterminado</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label Margin="30,0,0,0" Text="3.2. ¿Qué carácter tiene el dolor?*"  TextColor="Black" FontSize="18" />
+                <Picker WidthRequest="{OnPlatform Android=100}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker5" TitleColor="Black" SelectedItem="{Binding Dolor}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Pulsátil</x:String>
+                        <x:String>Opresivo</x:String>
+                        <x:String>Otro</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
 
-        <Label Margin="30,0,0,0" Text="3.3. Nivel de intensidad:"  TextColor="Black" FontSize="18" />
-            <Picker Title="Obligatoria*" WidthRequest="{OnPlatform Android=140}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker6" TitleColor="Black" SelectedItem="{Binding Intensidad}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Leve</x:String>
-                    <x:String>Moderado</x:String>
-                    <x:String>Grave</x:String>
-                    <x:String>Indeterminado</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
+            <Label Margin="30,0,0,0" Text="3.3. Nivel de intensidad:*"  TextColor="Black" FontSize="18" />
+                <Picker WidthRequest="{OnPlatform Android=140}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker6" TitleColor="Black" SelectedItem="{Binding Intensidad}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Leve</x:String>
+                        <x:String>Moderado</x:String>
+                        <x:String>Grave</x:String>
+                        <x:String>Indeterminado</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
 
-        <Label Margin="30,0,0,0" Text="3.4. ¿Impide o empeora con la actividad física?"  TextColor="Black" FontSize="18" />
-            <Picker Title="Obligatoria*" WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker7" TitleColor="Black" SelectedItem="{Binding Actividad_fisica}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Si</x:String>
-                    <x:String>No</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-
-        <Label Text="Pregunta 4: ¿Se acompaña de alguno de los siguientes síntomas?"  TextColor="Black" FontSize="18" />
-        <Label Margin="30,0,0,0" Text="4.1. Náuseas: "  TextColor="Black" FontSize="18" />
-            <Picker Title="Obligatoria*" WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker8" TitleColor="Black" SelectedItem="{Binding Nauseas}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Si</x:String>
-                    <x:String>No</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-
-        <Label Margin="30,0,0,0" Text="4.2. Vómitos: "  TextColor="Black" FontSize="18" />
-            <Picker Title="Obligatoria*" WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker9" TitleColor="Black" SelectedItem="{Binding Vomitos}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Si</x:String>
-                    <x:String>No</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-
-        <Label Margin="30,0,0,0" Text="4.3. Fotofobia: "  TextColor="Black" FontSize="18" />
-            <Picker Title="Obligatoria*" WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker10" TitleColor="Black" SelectedItem="{Binding Fotofobia}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Si</x:String>
-                    <x:String>No</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-
-        <Label Margin="30,0,0,0" Text="4.4. Fonofobia: "  TextColor="Black" FontSize="18" />
-            <Picker Title="Obligatoria*" WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker11" TitleColor="Black" SelectedItem="{Binding Fonofobia}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Si</x:String>
-                    <x:String>No</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-
-        <Label Margin="30,0,0,0" Text="4.5. Aura: "  TextColor="Black" FontSize="18" />
-            <Picker Title="Obligatoria*" WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker12" TitleColor="Black" SelectedItem="{Binding Aura}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Si</x:String>
-                    <x:String>No</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-
-        <Label Margin="30,0,0,0" Text="4.6. ¿Tiene síntomas autonómicos ipsilaterales?"  TextColor="Black" FontSize="18" />
-            <Picker  Title="Obligatoria*" WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker13" TitleColor="Black" SelectedItem="{Binding Ipsilaterales}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Si</x:String>
-                    <x:String>No</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-
-        <Label Margin="30,0,0,0" Text="4.7. Inquietud o agitación:"  TextColor="Black" FontSize="18" />
-            <Picker Title="Obligatoria*" TitleColor="Black" WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker14"  SelectedItem="{Binding Inquietud}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Si</x:String>
-                    <x:String>No</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-
-        <Label Margin="30,0,0,0" Text="4.8. ¿El dolor se desplaza por una trayectoria lineal o en zig-zag por la superficie de un hemicráneo?"  TextColor="Black" FontSize="18" />
-            <Picker Title="Obligatoria*" TitleColor="Black" WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker15"  SelectedItem="{Binding Trayectoria_lineal}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Si</x:String>
-                    <x:String>No</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-
-        <Label Text="Pregunta 5: ¿Es la cefalea de inicio brusco y alcanza la intensidad máxima en menos de un minuto?"  TextColor="Black" FontSize="18" />
-            <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker16" TitleColor="Red" SelectedItem="{Binding Inicio_brusco}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Si</x:String>
-                    <x:String>No</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-
-        <Label Text="Pregunta 6: ¿Los episodios responden a los siguientes tratamientos?"  TextColor="Black" FontSize="18" />
-        <Label Margin="30,0,0,0" Text="6.1. Indometacina:"  TextColor="Black" FontSize="18" />
-            <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker17" TitleColor="Red" SelectedItem="{Binding Indometacina}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Si</x:String>
-                    <x:String>No</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-        <Label Margin="30,0,0,0" Text="6.2. Triptan o ergótico:"  TextColor="Black" FontSize="18" />
-            <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker18" TitleColor="Red" SelectedItem="{Binding Triptan_ergotico}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Si</x:String>
-                    <x:String>No</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-
-        <Label Text="Pregunta 7: ¿La cefalea está provocada por algunos de estos factores y solo ocurre con ellos?"  TextColor="Black" FontSize="18" />
-        <Label Margin="30,0,0,0" Text="7.1. Tos:"  TextColor="Black" FontSize="18" />
-            <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker19" TitleColor="Red" SelectedItem="{Binding Tos}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Si</x:String>
-                    <x:String>No</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-
-        <Label  Margin="30,0,0,0" Text="7.2. Esfuerzo físico vigoroso:"  TextColor="Black" FontSize="18" />
-            <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker20" TitleColor="Red" SelectedItem="{Binding Esfuerzo_brusco}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Si</x:String>
-                    <x:String>No</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-
-        <Label Margin="30,0,0,0" Text="7.3. Maniobras de Valsalva:"  TextColor="Black" FontSize="18" />
-            <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker21" TitleColor="Red" SelectedItem="{Binding Valsalva}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Si</x:String>
-                    <x:String>No</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-
-        <Label Margin="30,0,0,0" Text="7.4. Actividad sexual:"  TextColor="Black" FontSize="18" />
-            <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker22" TitleColor="Red" SelectedItem="{Binding Actividad_sexual}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Si</x:String>
-                    <x:String>No</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-
-        <Label Margin="30,0,0,0" Text="7.5. Ocurre en el sueño y despierta al paciente"  TextColor="Black" FontSize="18" />
-            <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker23" TitleColor="Red"  SelectedItem="{Binding Sueño}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Si</x:String>
-                    <x:String>No</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-
-        <Label Margin="30,0,0,0" Text="7.6. Inicio inconfundible y que se recuerda con claridad, con dolor continuo sin remisión durante 24 horas"  TextColor="Black" FontSize="18" />
-            <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}" x:Name="picker24" TitleColor="Red"  SelectedItem="{Binding Inicio_inconfundible}">
+            <Label Margin="30,0,0,0" Text="3.4. ¿Impide o empeora con la actividad física?*"  TextColor="Black" FontSize="18" />
+                <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker7" TitleColor="Black" SelectedItem="{Binding Actividad_fisica}">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>Si</x:String>
@@ -271,6 +99,180 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
+
+            <Label Text="Pregunta 4: ¿Se acompaña de alguno de los siguientes síntomas?*"  TextColor="Black" FontSize="18" />
+            <Label Margin="30,0,0,0" Text="4.1. Náuseas:*"  TextColor="Black" FontSize="18" />
+                <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker8" TitleColor="Black" SelectedItem="{Binding Nauseas}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Si</x:String>
+                        <x:String>No</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Margin="30,0,0,0" Text="4.2. Vómitos:*"  TextColor="Black" FontSize="18" />
+                <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker9" TitleColor="Black" SelectedItem="{Binding Vomitos}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Si</x:String>
+                        <x:String>No</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Margin="30,0,0,0" Text="4.3. Fotofobia:*"  TextColor="Black" FontSize="18" />
+                <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker10" TitleColor="Black" SelectedItem="{Binding Fotofobia}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Si</x:String>
+                        <x:String>No</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Margin="30,0,0,0" Text="4.4. Fonofobia:*"  TextColor="Black" FontSize="18" />
+                <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker11" TitleColor="Black" SelectedItem="{Binding Fonofobia}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Si</x:String>
+                        <x:String>No</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Margin="30,0,0,0" Text="4.5. Aura:*"  TextColor="Black" FontSize="18" />
+                <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker12" TitleColor="Black" SelectedItem="{Binding Aura}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Si</x:String>
+                        <x:String>No</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Margin="30,0,0,0" Text="4.6. ¿Tiene síntomas autonómicos ipsilaterales?*"  TextColor="Black" FontSize="18" />
+                <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker13" TitleColor="Black" SelectedItem="{Binding Ipsilaterales}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Si</x:String>
+                        <x:String>No</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Margin="30,0,0,0" Text="4.7. Inquietud o agitación:*"  TextColor="Black" FontSize="18" />
+                <Picker TitleColor="Black" WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker14"  SelectedItem="{Binding Inquietud}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Si</x:String>
+                        <x:String>No</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Margin="30,0,0,0" Text="4.8. ¿El dolor se desplaza por una trayectoria lineal o en zigzag por la superficie de un hemicráneo?*"  TextColor="Black" FontSize="18" />
+                <Picker TitleColor="Black" WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker15"  SelectedItem="{Binding Trayectoria_lineal}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Si</x:String>
+                        <x:String>No</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Pregunta 5: ¿Es la cefalea de inicio brusco y alcanza la intensidad máxima en menos de un minuto?*"  TextColor="Black" FontSize="18" />
+                <Picker TitleColor="Black" WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker16" SelectedItem="{Binding Inicio_brusco}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Si</x:String>
+                        <x:String>No</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Pregunta 6: ¿La cefalea está provocada por algunos de estos factores y solo ocurre con ellos?*"  TextColor="Black" FontSize="18" />
+            <Label Margin="30,0,0,0" Text="6.1. Tos:"  TextColor="Black" FontSize="18" />
+                <Picker TitleColor="Black" WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker19" SelectedItem="{Binding Tos}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Si</x:String>
+                        <x:String>No</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label  Margin="30,0,0,0" Text="6.2. Esfuerzo físico vigoroso:*"  TextColor="Black" FontSize="18" />
+                <Picker TitleColor="Black"  WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker20" SelectedItem="{Binding Esfuerzo_brusco}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Si</x:String>
+                        <x:String>No</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Margin="30,0,0,0" Text="6.3. Maniobras de Valsalva:*"  TextColor="Black" FontSize="18" />
+                <Picker TitleColor="Black"  WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker21" SelectedItem="{Binding Valsalva}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Si</x:String>
+                        <x:String>No</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Margin="30,0,0,0" Text="6.4. Actividad sexual:*"  TextColor="Black" FontSize="18" />
+                <Picker TitleColor="Black"  WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker22" SelectedItem="{Binding Actividad_sexual}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Si</x:String>
+                        <x:String>No</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Margin="30,0,0,0" Text="6.5. Ocurre en el sueño y despierta al paciente:*"  TextColor="Black" FontSize="18" />
+            <Picker TitleColor="Black"  WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker23" SelectedItem="{Binding Sueño}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Si</x:String>
+                        <x:String>No</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="7. ¿Es la cefalea de inicio inconfundible con dolor continuo desde el principio y sin remisión?"  TextColor="Black" FontSize="18" />
+            <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}" x:Name="picker24" SelectedItem="{Binding Inicio_inconfundible}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Si</x:String>
+                        <x:String>No</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Pregunta 8: ¿Los episodios responden a los siguientes tratamientos?"  TextColor="Black" FontSize="18" />
+            <Label Margin="30,0,0,0" Text="8.1. Indometacina:"  TextColor="Black" FontSize="18" />
+            <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker17" SelectedItem="{Binding Indometacina}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Si</x:String>
+                        <x:String>No</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            
+            <Label Margin="30,0,0,0" Text="8.2. Triptán o ergótico:"  TextColor="Black" FontSize="18" />
+            <Picker WidthRequest="{OnPlatform Android=50}" Margin="30,0,0,0" HorizontalOptions="{OnPlatform Android=Start, UWP=StartAndExpand}"  x:Name="picker18" SelectedItem="{Binding Triptan_ergotico}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Si</x:String>
+                        <x:String>No</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            
             <Button Margin="0,0,0,20" Text="Ver resultados" Command="{Binding VerDiagnostico}" />
         </StackLayout>
     </ScrollView>

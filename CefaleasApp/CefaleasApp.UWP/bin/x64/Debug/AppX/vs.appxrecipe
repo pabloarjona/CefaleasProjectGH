@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-12-13T19:27:52.407</Modified>
+      <Modified>2024-01-11T17:13:36.580</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\CefaleasApp.UWP.exe">
       <PackagePath>entrypoint\CefaleasApp.UWP.exe</PackagePath>
-      <Modified>2023-12-13T19:11:19.298</Modified>
+      <Modified>2024-01-11T17:03:23.031</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\acr.userdialogs\7.1.0.514\lib\uap10.0.16299\Acr.UserDialogs.dll">
       <PackagePath>Acr.UserDialogs.dll</PackagePath>
@@ -164,7 +164,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\bin\Debug\netstandard2.0\CefaleasApp.dll">
       <PackagePath>CefaleasApp.dll</PackagePath>
-      <Modified>2023-12-13T19:27:44.390</Modified>
+      <Modified>2024-01-11T17:13:27.477</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\bin\Debug\netstandard2.0\CefaleasApp.Entities.dll">
       <PackagePath>CefaleasApp.Entities.dll</PackagePath>
@@ -502,11 +502,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-12-13T19:27:51.310</Modified>
+      <Modified>2024-01-11T17:13:35.526</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-12-13T19:27:51.310</Modified>
+      <Modified>2024-01-11T17:13:35.526</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.22621.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -526,7 +526,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\Core\CefaleasApp.UWP.exe">
       <PackagePath>CefaleasApp.UWP.exe</PackagePath>
-      <Modified>2023-12-13T19:27:52.401</Modified>
+      <Modified>2024-01-11T17:13:36.575</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

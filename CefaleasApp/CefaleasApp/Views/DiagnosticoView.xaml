@@ -10,7 +10,7 @@
              vm:ViewModelLocator.AutoWireViewModel="True">
 
     <shell:ShellPage.ToolbarItems>
-        <ToolbarItem IconImageSource="correcto.png" Command="{Binding EditCommand}" Text="Modificar"/>
+        <ToolbarItem IconImageSource="Icons/save.png" Command="{Binding EditCommand}" Text="Guardar"/>
         <!--<ToolbarItem IconImageSource="canel.png" Command="{Binding DeleteCommand}" Text="Eliminar"/>-->
     </shell:ShellPage.ToolbarItems>
     <ScrollView >

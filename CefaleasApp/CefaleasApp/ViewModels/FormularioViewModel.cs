@@ -293,7 +293,8 @@ namespace CefaleasApp.ViewModels
             }
             else
             {
-                await _dialogService.ShowAlertAsync("Todas las preguntas entre la 1 y la 4.5 son obligatorias.", "Error", "Aceptar");
+                UserDialogs.Instance.HideLoading();
+                await _dialogService.ShowAlertAsync("Todas las preguntas entre la 1 y la 6.5 son obligatorias.", "Error", "Aceptar");
             }
         }
 
@@ -331,21 +332,23 @@ namespace CefaleasApp.ViewModels
             destino.Trayectoria_lineal = origen.Trayectoria_lineal;
             if(destino.Trayectoria_lineal != null) cont++;
             destino.Inicio_brusco = origen.Inicio_brusco;
+            if(destino.Inicio_brusco != null) cont++;
+            destino.Tos = origen.Tos;
+            if(destino.Tos != null) cont++;
+            destino.Esfuerzo_brusco = origen.Esfuerzo_brusco;
+            if(destino.Esfuerzo_brusco != null) cont++; 
+            destino.Valsalva = origen.Valsalva;
+            if(destino.Valsalva != null) cont++;
+            destino.Actividad_sexual = origen.Actividad_sexual;
+            if(destino.Actividad_sexual != null) cont++;
+            destino.Sueño = origen.Sueño;
+            if (destino.Sueño != null) cont++;
+            destino.Inicio_inconfundible = origen.Inicio_inconfundible;
             destino.Indometacina = origen.Indometacina;
             destino.Triptan_ergotico = origen.Triptan_ergotico;
-            destino.Tos = origen.Tos;
-            destino.Esfuerzo_brusco = origen.Esfuerzo_brusco;
-            destino.Valsalva = origen.Valsalva;
-            destino.Actividad_sexual = origen.Actividad_sexual;
-            destino.Sueño = origen.Sueño;
-            destino.Inicio_inconfundible = origen.Inicio_inconfundible;
             destino.Verificado = origen.Verificado;
-            if (cont == 15)
-                validar = true;
-            else
-                validar = false;
+            validar = cont == 21;
             return destino;
         }
-
     }
 }

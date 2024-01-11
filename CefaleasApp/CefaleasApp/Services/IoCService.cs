@@ -20,8 +20,8 @@ namespace CefaleasApp.Services
             services.AddSingleton(new SettingRestService
             {
                 //UriString="http://local",
-                UriString = "http://localhost:5000",
-                //UriString = "https://apiwebcefaleasbackend.azurewebsites.net",
+                //UriString = "http://localhost:5000",
+                UriString = "https://apiwebcefaleasbackend.azurewebsites.net",
                 JsonSeializerOptions = settings,
             });
 

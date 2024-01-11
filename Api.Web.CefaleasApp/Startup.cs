@@ -20,8 +20,8 @@ namespace Api.Web.CefaleasApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDataAccess(Configuration.GetConnectionString("LocalDatabaseConnection"));
             services.AddDataAccess(Configuration.GetConnectionString("DataBaseConnection"));
+            //services.AddDataAccess(Configuration.GetConnectionString("LocalDatabaseConnection"));
             services.AddControllers();
         }
 

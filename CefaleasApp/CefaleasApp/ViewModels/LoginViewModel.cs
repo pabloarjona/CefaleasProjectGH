@@ -73,7 +73,7 @@ namespace CefaleasApp.ViewModels
             UserDialogs.Instance.ShowLoading("Cargando...");
             ResultEntities<Usuario> result = await this._restService.GetUsuariosAsync();
             _settingsService.AuthAccessToken = "access_token";
-            if (result.IsSuccess())
+            if (result.IsSuccess() && result.Entities != null)
             {
                 bool login = false;
                 foreach (var item in result.Entities)

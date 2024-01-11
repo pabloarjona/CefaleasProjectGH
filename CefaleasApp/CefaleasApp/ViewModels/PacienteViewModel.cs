@@ -95,6 +95,7 @@ namespace CefaleasApp.ViewModels
                     {
                         Listapac.Clear();
                         Listapac.AddRange(list);
+                        //Listapac.OrderByDescending(x => x.FechaConsulta).ToList();
                         ListaPacientes.Clear();
                         ListaPacientes.AddRange(list);
                     });
@@ -126,8 +127,10 @@ namespace CefaleasApp.ViewModels
                     {
                         Listapac.Clear();
                         Listapac.AddRange(result.Entities);
+                        Listapac.OrderBy(x => x.FechaConsulta).ToList();
                         ListaPacientes.Clear();
                         ListaPacientes.AddRange(result.Entities);
+                        ListaPacientes.OrderBy(x => x.FechaConsulta).ToList();
                     });
                     this.TotalPacientes = ListaPacientes.Count;
                     UserDialogs.Instance.HideLoading();
