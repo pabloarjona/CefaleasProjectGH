@@ -16,7 +16,7 @@ namespace CefaleasApp.ViewModels
 {
     public class FormularioViewModel : PageBase, ICuestionario
     {
-        bool nuevo = false;
+        bool newForm = true;
         bool validar = false;
         private int? _idEnfermedadVerificada;
         public Paciente _paciente { get; set; }
@@ -25,12 +25,6 @@ namespace CefaleasApp.ViewModels
         private readonly INavigationService _navigationService;
         private readonly ICriteriosCefalea _criteriosCefalea;
         #region
-        //private int? _enfermedadVerificada;
-        //public int? IdEnfermedadVerificada
-        //{
-        //    get => _enfermedadVerificada;
-        //    set => SetProperty(ref _enfermedadVerificada, value);
-        //}
         private string _episodios;
         public string Episodios
         {
@@ -220,7 +214,11 @@ namespace CefaleasApp.ViewModels
             {
                 Title = "Formulario de: " + paciente.Iniciales;
                 _paciente = paciente;
-                DoTask(RefreshCommandAsync());
+                if (_paciente.Cuestionario != null)
+                {
+                    this.newForm = false;
+                    DoTask(RefreshCommandAsync());
+                }
             }
             return base.InitializeAsync(navigationData);
         }
@@ -237,10 +235,6 @@ namespace CefaleasApp.ViewModels
                 });
                 UserDialogs.Instance.HideLoading();
             }
-            else if(result.Status==StatusResult.NoExist)
-            {
-                this.nuevo = true;
-            }
             else
             {
                 await _dialogService.ShowAlertAsync("No se ha mostrado el formulario por un error de conexión de red", "Error", "Aceptar");
@@ -250,19 +244,20 @@ namespace CefaleasApp.ViewModels
         }
         private async Task SaveCommandAsync()
         {
+            UserDialogs.Instance.ShowLoading("Cargando...");
             Cuestionario cuestionario = CopyCuestionario(this, new Cuestionario
             {
                 IdPaciente = _paciente.IdPaciente
             }) as Cuestionario;
             if (this.validar)
             {
-                if (this.nuevo == true)
+                if (this.newForm)
                 {
                     cuestionario.IdEnfermedad = _criteriosCefalea.ComprobarCefalea(cuestionario);
                     ResultEntity<Cuestionario> result = await _cefaleasRestService.AddCuestionarioAsync(cuestionario);
                     if (result.IsSuccess())
                     {
-                        this.nuevo = false;
+                        this.newForm = false;
                         UserDialogs.Instance.HideLoading();
                         bool confirmado = await UserDialogs.Instance.ConfirmAsync("El formulario se ha añadido correctamente, ¿quieres ver los resultados del formulario?", "¡Añadido!", "Aceptar", "Cancelar");
                         if (confirmado)
@@ -298,7 +293,8 @@ namespace CefaleasApp.ViewModels
             }
             else
             {
-                await _dialogService.ShowAlertAsync("Todas las preguntas entre la 1 y la 4.5 deben ser obligatorias.", "Error", "Aceptar");
+                UserDialogs.Instance.HideLoading();
+                await _dialogService.ShowAlertAsync("Todas las preguntas entre la 1 y la 6.5 son obligatorias.", "Error", "Aceptar");
             }
         }
 
@@ -330,24 +326,29 @@ namespace CefaleasApp.ViewModels
             destino.Aura = origen.Aura;
             if (destino.Aura != null) cont++;
             destino.Ipsilaterales = origen.Ipsilaterales;
+            if(destino.Ipsilaterales != null) cont++;
             destino.Inquietud = origen.Inquietud;
+            if(destino.Inquietud != null) cont++; 
             destino.Trayectoria_lineal = origen.Trayectoria_lineal;
+            if(destino.Trayectoria_lineal != null) cont++;
             destino.Inicio_brusco = origen.Inicio_brusco;
+            if(destino.Inicio_brusco != null) cont++;
+            destino.Tos = origen.Tos;
+            if(destino.Tos != null) cont++;
+            destino.Esfuerzo_brusco = origen.Esfuerzo_brusco;
+            if(destino.Esfuerzo_brusco != null) cont++; 
+            destino.Valsalva = origen.Valsalva;
+            if(destino.Valsalva != null) cont++;
+            destino.Actividad_sexual = origen.Actividad_sexual;
+            if(destino.Actividad_sexual != null) cont++;
+            destino.Sueño = origen.Sueño;
+            if (destino.Sueño != null) cont++;
+            destino.Inicio_inconfundible = origen.Inicio_inconfundible;
             destino.Indometacina = origen.Indometacina;
             destino.Triptan_ergotico = origen.Triptan_ergotico;
-            destino.Tos = origen.Tos;
-            destino.Esfuerzo_brusco = origen.Esfuerzo_brusco;
-            destino.Valsalva = origen.Valsalva;
-            destino.Actividad_sexual = origen.Actividad_sexual;
-            destino.Sueño = origen.Sueño;
-            destino.Inicio_inconfundible = origen.Inicio_inconfundible;
             destino.Verificado = origen.Verificado;
-            if (cont == 12)
-                validar = true;
-            else
-                validar = false;
+            validar = cont == 21;
             return destino;
         }
-
     }
 }

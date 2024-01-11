@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using CefaleasApp.Services.Interfaces;
+using CefaleasApp.Services;
 
 namespace CefaleasApp.ViewModels
 {
     public class DiagnosticoViewModel : PageBase, ICuestionario, IEnfermedad
     {
-        private readonly IEnfermedadRestService _enfermedadRestService;
-        private readonly ICuestionarioRestService _cuestionarioRestService;
+        private readonly CefaleasRestService _restService;
+
         public Paciente _paciente { get; set; }
         public Cuestionario _cuestionario { get; set; }
         public int? _idCuestionarioVerificado;
@@ -347,11 +348,10 @@ namespace CefaleasApp.ViewModels
         #endregion
         public ICommand EditCommand { get; }
 
-        public DiagnosticoViewModel(ICuestionarioRestService cuestionarioRestService, IEnfermedadRestService enfermedadRestService) : base()
+        public DiagnosticoViewModel(CefaleasRestService restService) : base()
         {
+            _restService = restService;
             EditCommand = new DelegateCommand(() => DoTask(EditCommandAsync()));
-            _cuestionarioRestService = cuestionarioRestService;
-            _enfermedadRestService = enfermedadRestService;
         }
         public override Task InitializeAsync(object navigationData)
         {
@@ -368,7 +368,7 @@ namespace CefaleasApp.ViewModels
         {
             if (this.Verificado)
             {
-                ResultEntity<Cuestionario> resultModel = await _cuestionarioRestService.GetCuestionariosAsync(_paciente.IdPaciente);
+                ResultEntity<Cuestionario> resultModel = await _restService.GetCuestionariosAsync(_paciente.IdPaciente);
                 if (resultModel.IsSuccess())
                 {
                     this._idCuestionarioVerificado = this.SelectedEnfermedadVerificada + 1;
@@ -378,7 +378,7 @@ namespace CefaleasApp.ViewModels
                         IdEnfermedad = _cuestionario.IdEnfermedad,
                         IdEnfermedadVerificada = this._idCuestionarioVerificado
                     }) as Cuestionario;
-                    ResultEntity<Cuestionario> result = await _cuestionarioRestService.UpdateCuestionarioAsync(cuestionarioNew);
+                    ResultEntity<Cuestionario> result = await _restService.UpdateCuestionarioAsync(cuestionarioNew);
                     if (result.IsSuccess())
                     {
                         await DialogService.ShowAlertAsync("Verificado correctamente", "Verificado", "Aceptar");
@@ -398,13 +398,13 @@ namespace CefaleasApp.ViewModels
         }
         public async Task RefreshCuestionario()
         {
-            ResultEntity<Cuestionario> result = await _cuestionarioRestService.GetCuestionariosAsync(_paciente.IdPaciente);
+            ResultEntity<Cuestionario> result = await _restService.GetCuestionariosAsync(_paciente.IdPaciente);
             if (result.IsSuccess())
             {
                 _cuestionario = result.Entity;
                 CopyCuestionario(result.Entity, this);
                 this.SelectedEnfermedadVerificada = this._cuestionario.IdEnfermedadVerificada-1;
-                ResultEntity<Enfermedad> result2 = await _enfermedadRestService.GetEnfermedadAsync(this._cuestionario.IdEnfermedad);
+                ResultEntity<Enfermedad> result2 = await _restService.GetEnfermedadAsync(this._cuestionario.IdEnfermedad);
                 Nombre_Enfermedad = result2.Entity.Nombre_Enfermedad;
                 Tratamiento = result2.Entity.Tratamiento;
             }

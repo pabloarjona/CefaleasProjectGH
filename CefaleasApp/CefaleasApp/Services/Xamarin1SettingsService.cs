@@ -27,6 +27,5 @@ namespace CefaleasApp.Services
             set => _usuario = value;
         }
 
-
     }
 }

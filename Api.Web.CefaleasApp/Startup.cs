@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using CefaleasApp.DataAccess.SQLServer;
+using CefaleasApp.DataAccess;
 
 namespace Api.Web.CefaleasApp
 {
@@ -20,6 +21,7 @@ namespace Api.Web.CefaleasApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDataAccess(Configuration.GetConnectionString("DataBaseConnection"));
+            //services.AddDataAccess(Configuration.GetConnectionString("LocalDatabaseConnection"));
             services.AddControllers();
         }
 

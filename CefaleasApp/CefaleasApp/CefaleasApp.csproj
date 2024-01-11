@@ -24,4 +24,10 @@
     <ProjectReference Include="..\..\CefaleasApp.DataAccess\CefaleasApp.DataAccess.csproj" />
     <ProjectReference Include="..\..\CefaleasApp.Entities\CefaleasApp.Entities.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\PacienteDetailView.xaml.cs">
+      <DependentUpon>PacienteDetailView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

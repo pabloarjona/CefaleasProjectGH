@@ -19,8 +19,9 @@ namespace CefaleasApp.Services
             };
             services.AddSingleton(new SettingRestService
             {
-                UriString = "http://localhost:5000",
-                //UriString = "https://apiwebcefaleasbackend.azurewebsites.net",
+                //UriString="http://local",
+                //UriString = "http://localhost:5000",
+                UriString = "https://apiwebcefaleasbackend.azurewebsites.net",
                 JsonSeializerOptions = settings,
             });
 
@@ -40,13 +41,10 @@ namespace CefaleasApp.Services
             services.AddSingleton<AboutViewModel>();
             services.AddSingleton<LoginViewModel>();
             services.AddSingleton<PacienteViewModel>();
-            services.AddSingleton<PacienteAddViewModel>();
-            services.AddSingleton<PacienteUpdateViewModel>();
+            services.AddSingleton<PacienteDetailViewModel>();
             services.AddSingleton<SignUpViewModel>();
             services.AddSingleton<FormularioViewModel>();
             services.AddSingleton<DiagnosticoViewModel>();
-
-            
         }
     }
 }

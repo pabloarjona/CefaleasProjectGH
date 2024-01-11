@@ -5,11 +5,11 @@ namespace CefaleasApp.Models
 {
     public class CriteriosCefalea : ICriteriosCefalea
     {
-        List<string> Episodios = new List<string>();
-        List<string> Duracion = new List<string>();
-        List<string> Duracion_episodio = new List<string>();
+        private readonly List<string> Episodios = new List<string>();
+        private readonly List<string> Duracion = new List<string>();
+        private readonly List<string> Duracion_episodio = new List<string>();
 
-        public int cont { get; set; }
+        public int Cont { get; set; }
         public CriteriosCefalea()
         {
             Episodios.Add("Menos de 5");
@@ -89,16 +89,16 @@ namespace CefaleasApp.Models
         {
             if (NoObligatoriasMigraña(cuestionario))
                 return false;
-            cont = 0;
+            Cont = 0;
             //A
             if (cuestionario.Episodios != Episodios[0]) //1
-                cont++;
+                Cont++;
             //1.1
             if (cuestionario.Duracion == Duracion[0] || cuestionario.Duracion == Duracion[1]) //1.1
-                cont++;
+                Cont++;
             //B
             if (cuestionario.Duracion_episodio == Duracion_episodio[6]) //2
-                cont++;
+                Cont++;
             //C
             short cont2 = 0;
             if (cuestionario.Localizacion == "Unilateral") //3.1
@@ -110,46 +110,46 @@ namespace CefaleasApp.Models
             if (cuestionario.Actividad_fisica == "Si")  //3.4
                 cont2++;
             if (cont2 >= 2)
-                cont++;
+                Cont++;
             //D            4.1                      4.2                         4.3                                 4.4.                                   
             if (cuestionario.Nauseas == "Si" || cuestionario.Vomitos == "Si" || (cuestionario.Fotofobia == "Si" && cuestionario.Fonofobia == "Si"))  
-                cont++;
+                Cont++;
             if (cuestionario.Aura == "No")
-                cont++;
+                Cont++;
             //4.6 4.7 y 6.2 todas son validas
-            return cont==6;
+            return Cont==6;
         }
         public bool MigrañaConAura(Cuestionario cuestionario)
         {
             if (NoObligatoriasMigraña(cuestionario))
                 return false;
-            cont = 0;
+            Cont = 0;
             //A 1
             if (cuestionario.Episodios != Episodios[0]) //1
-                cont++;
+                Cont++;
             //1.1
             if (cuestionario.Duracion == Duracion[0] || cuestionario.Duracion == Duracion[1]) //1.1
-                cont++;
+                Cont++;
             if (cuestionario.Aura == "Si") //4.5
-                cont++;
+                Cont++;
             //4.6 TODAS SON VALIDAS
             //4.7 y 6.2 todas son validas
-            return cont == 3;
+            return Cont == 3;
         }
         public bool MigrañaCronica(Cuestionario cuestionario)
         {
             if (NoObligatoriasMigraña(cuestionario))
                 return false;
-            cont = 0;
+            Cont = 0;
             //1
             if (cuestionario.Episodios == Episodios[3])
-                cont++;
+                Cont++;
             //A y 1.1
             if (cuestionario.Duracion == Duracion[2])
-                cont++;
+                Cont++;
             //B
             if (cuestionario.Duracion_episodio == Duracion_episodio[6]) //2
-                cont++;
+                Cont++;
             //Criterios migraña sin aura (C)
             short cont2 = 0;
             short cont3 = 0;
@@ -172,23 +172,23 @@ namespace CefaleasApp.Models
                 cont3++;
             //4.6 4.7 y 6.2 todas son validas
             if (cont3 >= 1)
-                cont++;
-            return cont == 4;
+                Cont++;
+            return Cont == 4;
         }
         public bool CefaleaTensionEpisodica(Cuestionario cuestionario)
         {
             if (NoObligatoriasCefalea(cuestionario))
                 return false;
-            cont = 0;
+            Cont = 0;
             //A 1
             if(cuestionario.Episodios==Episodios[2] || cuestionario.Episodios == Episodios[3])
-                cont++;
+                Cont++;
             //1.1
             if (cuestionario.Duracion == Duracion[1] || cuestionario.Duracion == Duracion[0])
-                cont++;
+                Cont++;
             //B 2
             if(cuestionario.Duracion_episodio==Duracion_episodio[4] || cuestionario.Duracion_episodio == Duracion_episodio[5] || cuestionario.Duracion_episodio == Duracion_episodio[6] || cuestionario.Duracion_episodio==Duracion_episodio[7])
-                cont++;
+                Cont++;
             //C 3.1
             short cont2 = 0;
             if (cuestionario.Localizacion == "Bilateral")
@@ -203,7 +203,7 @@ namespace CefaleasApp.Models
             if (cuestionario.Actividad_fisica == "No")
                 cont2++;
             if (cont2 >= 2)
-                cont++;
+                Cont++;
             //D  4.1; 4.2
             if(cuestionario.Nauseas=="No" && cuestionario.Vomitos == "No")
             {
@@ -212,24 +212,24 @@ namespace CefaleasApp.Models
                     return false;
                 else
                     if (cuestionario.Aura == "No")
-                        cont++;
+                        Cont++;
             }
-            return cont == 5;
+            return Cont == 5;
         }
         public bool CefaleaTensionCronica(Cuestionario cuestionario)
         {
             if (NoObligatoriasCefalea(cuestionario))
                 return false;
-            cont = 0;
+            Cont = 0;
             //A 1.
             if (cuestionario.Episodios == Episodios[3])
-                cont++;
+                Cont++;
             //A 1.1
             if (cuestionario.Duracion == Duracion[2])
-                cont++;
+                Cont++;
             //B 2
             if (cuestionario.Duracion_episodio == Duracion_episodio[4] || cuestionario.Duracion_episodio == Duracion_episodio[5] || cuestionario.Duracion_episodio == Duracion_episodio[6] || cuestionario.Duracion_episodio == Duracion_episodio[7])
-                cont++;
+                Cont++;
             //C 3.1
             short cont2 = 0;
             if (cuestionario.Localizacion == "Bilateral")
@@ -244,10 +244,10 @@ namespace CefaleasApp.Models
             if (cuestionario.Actividad_fisica == "No")
                 cont2++;
             if (cont2 >= 2)
-                cont++;
+                Cont++;
             //D 4.2
             if (cuestionario.Vomitos == "No")
-                cont++;
+                Cont++;
             short cont3 = 0;
             //4.1;
             if (cuestionario.Nauseas == "Si")
@@ -259,21 +259,21 @@ namespace CefaleasApp.Models
             if (cuestionario.Fonofobia == "Si")
                 cont3++;
             if (cont3 <= 1)
-                cont++;
-            return cont == 6;   
+                Cont++;
+            return Cont == 6;   
         }
         public bool CefaleaRacimos(Cuestionario cuestionario)       
         {
             if (NoObligatoriasMigraña(cuestionario))
                 return false;
-            cont = 0;
+            Cont = 0;
             //A
             if (cuestionario.Episodios != Episodios[0]) //1
-                cont++;
+                Cont++;
             //1.1 TODAS SON VALIDAS
             //B
             if (cuestionario.Duracion_episodio == Duracion_episodio[3] || cuestionario.Duracion_episodio == Duracion_episodio[4]) //2
-                cont++;
+                Cont++;
             short cont2 = 0;
             if (cuestionario.Localizacion == "Unilateral") //3.1
                 cont2++;
@@ -283,27 +283,27 @@ namespace CefaleasApp.Models
             if (cuestionario.Actividad_fisica == "No")  //3.4
                 cont2++;
             if (cont2 == 3)
-                cont++;
+                Cont++;
             //    4.5   resto obligatorias todas son validas 
             if (cuestionario.Aura == "No")
-                cont++;
+                Cont++;
             //  4.6 y 4.7 6.2 TRIPTAN TODAS VALIDAS
             if (cuestionario.Ipsilaterales == "Si" || cuestionario.Inquietud == "Si")
-                cont++;
-            return cont == 5;
+                Cont++;
+            return Cont == 5;
         }
         public bool HemicraneaParoxistica(Cuestionario cuestionario)
         {
             if (cuestionario.Trayectoria_lineal == "Si" || cuestionario.Inicio_brusco == "Si" || cuestionario.Triptan_ergotico == "Si" || cuestionario.Tos == "Si" || cuestionario.Esfuerzo_brusco == "Si" || cuestionario.Valsalva == "Si" || cuestionario.Actividad_sexual == "Si" || cuestionario.Sueño == "Si" || cuestionario.Inicio_inconfundible == "Si" || cuestionario.Triptan_ergotico == "Si")
                 return false;
-            cont = 0;
+            Cont = 0;
             //A
             if (cuestionario.Episodios == Episodios[3]) //1
-                cont++;
+                Cont++;
             //1.1 todas son validas
             //B
             if (cuestionario.Duracion_episodio == Duracion_episodio[2] || cuestionario.Duracion_episodio == Duracion_episodio[3]) //2
-                cont++;
+                Cont++;
             short cont2 = 0;
             if (cuestionario.Localizacion == "Unilateral") //3.1
                 cont2++;
@@ -312,30 +312,30 @@ namespace CefaleasApp.Models
                 cont2++;
             //3.4  todas son validas
             if (cont2 == 2)
-                cont++;
+                Cont++;
             //  4.5   las demas todas son validas
             if (cuestionario.Aura == "No")
-                cont++;
+                Cont++;
             //C  4.6; 4.7           
             if (cuestionario.Ipsilaterales == "Si" || cuestionario.Inquietud == "Si")
-                cont++;
+                Cont++;
             //E  6.1
             if (cuestionario.Indometacina == "Si")
-                cont++;
-            return cont == 6;
+                Cont++;
+            return Cont == 6;
         }
         public bool SUNCTySUNA(Cuestionario cuestionario)
         {
             if (cuestionario.Trayectoria_lineal == "Si" || cuestionario.Inicio_brusco == "Si" || cuestionario.Indometacina == "Si" || cuestionario.Triptan_ergotico == "Si" || cuestionario.Tos == "Si" || cuestionario.Esfuerzo_brusco == "Si" || cuestionario.Valsalva == "Si" || cuestionario.Actividad_sexual == "Si" || cuestionario.Inicio_inconfundible == "Si" || cuestionario.Triptan_ergotico == "Si"  || cuestionario.Sueño == "Si")
                 return false;
-            cont = 0;
+            Cont = 0;
             //A
             if (cuestionario.Episodios == Episodios[3]) //1
-                cont++;
+                Cont++;
             //1.1 todas son validas
             //B
             if (cuestionario.Duracion_episodio == Duracion_episodio[0] || cuestionario.Duracion_episodio == Duracion_episodio[1] || cuestionario.Duracion_episodio == Duracion_episodio[2]) //2
-                cont++;
+                Cont++;
             //demas obligatorias todas son validas
             short cont2 = 0;
             if (cuestionario.Localizacion == "Unilateral") //3.1
@@ -343,232 +343,232 @@ namespace CefaleasApp.Models
             if (cuestionario.Intensidad == "Grave" || cuestionario.Intensidad=="Moderado") //3.3
                 cont2++;
             if (cont2 == 2)
-                cont++;
+                Cont++;
             //  4.5   
             if (cuestionario.Aura == "No")
-                cont++;
+                Cont++;
             //D  4.6; 4.7 todas son validas 
             if (cuestionario.Ipsilaterales == "Si")
-                cont++;
-            return cont == 5;
+                Cont++;
+            return Cont == 5;
         }
         public bool HemicraneaContinua(Cuestionario cuestionario)
         {
             if (cuestionario.Trayectoria_lineal == "Si" || cuestionario.Inicio_brusco == "Si"  || cuestionario.Triptan_ergotico == "Si" || cuestionario.Tos == "Si" || cuestionario.Esfuerzo_brusco == "Si" || cuestionario.Valsalva == "Si" || cuestionario.Actividad_sexual == "Si"  || cuestionario.Triptan_ergotico == "Si"  || cuestionario.Sueño == "Si")
                 return false;
-            cont = 0;
+            Cont = 0;
             //A todas son validas
             //1.1
             if (cuestionario.Duracion == Duracion[2]) //1.1
-                cont++;
+                Cont++;
             //B
             if (cuestionario.Duracion_episodio == Duracion_episodio[5] || cuestionario.Duracion_episodio == Duracion_episodio[6] || cuestionario.Duracion_episodio == Duracion_episodio[7]) //2
-                cont++;
+                Cont++;
             //B
             if (cuestionario.Localizacion == "Unilateral") //3.1
-                cont++;
+                Cont++;
             //  4.5   
             if (cuestionario.Aura == "No")
-                cont++;
+                Cont++;
             //D  4.6; 4.7           
             if(cuestionario.Ipsilaterales=="Si" || cuestionario.Inquietud=="Si" )   //D
-                 cont++;
+                 Cont++;
             //E 6.1 7.6 inicio incond todas validas
             if (cuestionario.Indometacina == "Si")
-                cont++;
-            return cont == 6;
+                Cont++;
+            return Cont == 6;
         }
         public bool TusigenaPrimaria(Cuestionario cuestionario)
         {
             if (cuestionario.Trayectoria_lineal == "Si" || cuestionario.Inicio_brusco == "Si" || cuestionario.Triptan_ergotico == "Si" || cuestionario.Actividad_sexual == "Si" || cuestionario.Inicio_inconfundible == "Si" || cuestionario.Triptan_ergotico == "Si" || cuestionario.Ipsilaterales == "Si"  || cuestionario.Sueño == "Si")
                 return false;
-            cont = 0;
+            Cont = 0;
             //A 1
             if (cuestionario.Episodios != Episodios[0])
-                cont++;
+                Cont++;
             //1.1 validas todas
             //D 2 
             if (cuestionario.Duracion_episodio == Duracion_episodio[0] || cuestionario.Duracion_episodio == Duracion_episodio[1] || cuestionario.Duracion_episodio == Duracion_episodio[2] || cuestionario.Duracion_episodio == Duracion_episodio[3] || cuestionario.Duracion_episodio == Duracion_episodio[4])
-                cont++;
+                Cont++;
             //todas son validas
             //  4.5   
             if (cuestionario.Aura == "No")
-                cont++;
+                Cont++;
             // 4.7inquietud 6.1 indometacina todas son validas
             //B 7.1; 7.2(todas son validas); 7.3
             if (cuestionario.Tos=="Si"  || cuestionario.Valsalva == "Si")
-                cont++;
-            return cont == 4;
+                Cont++;
+            return Cont == 4;
         }
         public bool EsfuerzoFisicoPrimaria(Cuestionario cuestionario)
         {
             if (cuestionario.Trayectoria_lineal == "Si" || cuestionario.Inicio_brusco == "Si"  || cuestionario.Triptan_ergotico == "Si" || cuestionario.Tos == "Si" || cuestionario.Valsalva == "Si" || cuestionario.Actividad_sexual == "Si" || cuestionario.Inicio_inconfundible == "Si" || cuestionario.Triptan_ergotico == "Si" || cuestionario.Ipsilaterales == "Si" ||  cuestionario.Sueño == "Si")
                 return false;
-                cont = 0;
+                Cont = 0;
             //A 1
             if (cuestionario.Episodios != Episodios[0])
-                cont++;
+                Cont++;
             //1.1 todas validas
             //D 2 
             if (cuestionario.Duracion_episodio!=Duracion_episodio[0] && cuestionario.Duracion_episodio != Duracion_episodio[7] && cuestionario.Duracion_episodio != Duracion_episodio[8])
-                cont++;
+                Cont++;
             //resto obligatorias todas son validas
             //  4.5   
             if (cuestionario.Aura == "No")
-                cont++;
+                Cont++;
             //4.7 y 6.1 todas son validas
             //B  7.2;
             if (cuestionario.Esfuerzo_brusco == "Si" )
-                cont++;           
-            return cont == 4;
+                Cont++;           
+            return Cont == 4;
         }
         public bool ActividadSexualPrimaria(Cuestionario cuestionario)
         {
-            cont = 0;
+            Cont = 0;
             if (cuestionario.Trayectoria_lineal == "Si" || cuestionario.Inicio_brusco == "Si" || cuestionario.Indometacina == "Si" || cuestionario.Triptan_ergotico == "Si" || cuestionario.Tos == "Si" || cuestionario.Esfuerzo_brusco == "Si" || cuestionario.Valsalva == "Si" || cuestionario.Inicio_inconfundible == "Si" || cuestionario.Triptan_ergotico == "Si" || cuestionario.Ipsilaterales == "Si"  || cuestionario.Sueño == "Si")
                 return false;
             //A 1
             if (cuestionario.Episodios != Episodios[0])
-                cont++;
+                Cont++;
             //1.1 todas son validas 
             //D 2 
             if (cuestionario.Duracion_episodio != Duracion_episodio[0] && cuestionario.Duracion_episodio != Duracion_episodio[7] && cuestionario.Duracion_episodio != Duracion_episodio[8])
-                cont++;
+                Cont++;
             //demas obligatorias todas son validas
             //  4.5 
             if (cuestionario.Aura == "No")
-                cont++;
+                Cont++;
             //4.7 todas son validas   
             //B  7.4;
             if (cuestionario.Actividad_sexual == "Si")
-                cont++;
-            return cont == 4;
+                Cont++;
+            return Cont == 4;
         }
         public bool CefaleaTruenoPrimaria(Cuestionario cuestionario)
         {
             if (cuestionario.Indometacina == "Si" || cuestionario.Triptan_ergotico == "Si" || cuestionario.Tos == "Si" || cuestionario.Esfuerzo_brusco == "Si" || cuestionario.Valsalva == "Si" || cuestionario.Actividad_sexual == "Si" || cuestionario.Inicio_inconfundible == "Si" || cuestionario.Triptan_ergotico == "Si" || cuestionario.Sueño == "Si")
                 return false;
-            cont = 0;
+            Cont = 0;
             //A 1
             if (cuestionario.Episodios != Episodios[0])
-                cont++;
+                Cont++;
             //1.1 todas son validas
             //D 2 
             if (cuestionario.Duracion_episodio != Duracion_episodio[0] && cuestionario.Duracion_episodio != Duracion_episodio[1] && cuestionario.Duracion_episodio != Duracion_episodio[8])
-                cont++;
+                Cont++;
             //B todas las demas obligatorias son validas
             if (cuestionario.Intensidad == "Grave") //3.3
-                cont++;
+                Cont++;
             //  4.5   
             if (cuestionario.Aura == "No")
-                cont++;
+                Cont++;
             //4.6 4.7 4.8 todas son validas
             //B 5
             if (cuestionario.Inicio_brusco == "Si")
-                cont++;
-            return cont == 5;
+                Cont++;
+            return Cont == 5;
         }
         public bool CefaleaPunzantePrimaria(Cuestionario cuestionario)
         {
             if (cuestionario.Trayectoria_lineal == "Si" || cuestionario.Inicio_brusco == "Si" || cuestionario.Triptan_ergotico == "Si" || cuestionario.Tos == "Si" || cuestionario.Esfuerzo_brusco == "Si" || cuestionario.Valsalva == "Si" || cuestionario.Actividad_sexual == "Si" || cuestionario.Inicio_inconfundible == "Si" || cuestionario.Triptan_ergotico == "Si" || cuestionario.Ipsilaterales == "Si" || cuestionario.Inquietud == "Si" || cuestionario.Sueño == "Si")
                 return false;
-            cont = 0;
+            Cont = 0;
             //A 1
             if (cuestionario.Episodios == Episodios[3])
-                cont++;
+                Cont++;
             //1.1 todas son validas
             //D 2 
             if (cuestionario.Duracion_episodio == Duracion_episodio[0])
-                cont++;
+                Cont++;
             //las demas obligatorias todas son validas
             if (cuestionario.Dolor == "Otro") //3.2 C
-                cont++;
+                Cont++;
             //   4.5   
             if (cuestionario.Aura == "No")
-                cont++;
+                Cont++;
             //6.1 todas son validas
-            return cont == 4;
+            return Cont == 4;
         }
         public bool CefaleaNumular(Cuestionario cuestionario)
         {
             if (cuestionario.Trayectoria_lineal == "Si" || cuestionario.Inicio_brusco == "Si" || cuestionario.Indometacina == "Si" || cuestionario.Triptan_ergotico == "Si" || cuestionario.Tos == "Si" || cuestionario.Esfuerzo_brusco == "Si" || cuestionario.Valsalva == "Si" || cuestionario.Actividad_sexual == "Si" || cuestionario.Inicio_inconfundible == "Si" || cuestionario.Triptan_ergotico == "Si" || cuestionario.Ipsilaterales == "Si" || cuestionario.Inquietud == "Si" || cuestionario.Sueño=="Si")
                 return false;
-            cont = 0;
+            Cont = 0;
             //A 1 y 1.1 todas son validas
             //D 2 
             if (cuestionario.Duracion_episodio != Duracion_episodio[8] && cuestionario.Duracion_episodio != Duracion_episodio[0])
-                cont++;
+                Cont++;
             //B
             if (cuestionario.Localizacion == "En área de cuero cabelludo") //3.1
-                cont++;
+                Cont++;
             //   4.5   resto obligatorias todas son validas
             if (cuestionario.Aura == "No")
-                cont++;
-            return cont == 3;
+                Cont++;
+            return Cont == 3;
         }
         public bool CefaleaHipnicaPrimaria(Cuestionario cuestionario)
         {
             if (cuestionario.Trayectoria_lineal == "Si" || cuestionario.Inicio_brusco == "Si" || cuestionario.Indometacina == "Si" || cuestionario.Triptan_ergotico == "Si" || cuestionario.Tos == "Si" || cuestionario.Esfuerzo_brusco == "Si" || cuestionario.Valsalva == "Si" || cuestionario.Actividad_sexual == "Si" || cuestionario.Inicio_inconfundible == "Si" || cuestionario.Triptan_ergotico == "Si" || cuestionario.Ipsilaterales == "Si" || cuestionario.Inquietud == "Si")
                 return false;
-            cont = 0;
+            Cont = 0;
             //A 1
             if (cuestionario.Episodios == Episodios[3])
-                cont++;
+                Cont++;
             //1.1
             if (cuestionario.Duracion == Duracion[1] || cuestionario.Duracion == Duracion[2]) //1.1
-                cont++;
+                Cont++;
             //D 2 
             if (cuestionario.Duracion_episodio == Duracion_episodio[3] || cuestionario.Duracion_episodio == Duracion_episodio[4] || cuestionario.Duracion_episodio == Duracion_episodio[5])
-                cont++;
+                Cont++;
             //resto obligatorias todas son validas
             //B 7.5
             if (cuestionario.Sueño == "Si")
-                cont++;
-            return cont == 4;
+                Cont++;
+            return Cont == 4;
         }
         public bool CefaleaDiariaPersistente(Cuestionario cuestionario)
         {
             if (cuestionario.Trayectoria_lineal == "Si" || cuestionario.Inicio_brusco == "Si" || cuestionario.Indometacina == "Si" || cuestionario.Triptan_ergotico == "Si" || cuestionario.Tos == "Si" || cuestionario.Esfuerzo_brusco == "Si" || cuestionario.Valsalva == "Si" || cuestionario.Actividad_sexual == "Si" || cuestionario.Sueño == "Si" || cuestionario.Triptan_ergotico == "Si" || cuestionario.Ipsilaterales == "Si" || cuestionario.Inquietud == "Si")
                 return false;
-                cont = 0;
+                Cont = 0;
             //A 1 todas son validas
             //1.1
             if (cuestionario.Duracion == Duracion[2]) //1.1
-                cont++;
+                Cont++;
             //D 2 
             if (cuestionario.Duracion_episodio == Duracion_episodio[6] || cuestionario.Duracion_episodio == Duracion_episodio[7])
-                cont++;
+                Cont++;
             //demás obligatorias todas son validas
             //C 7.6
             if (cuestionario.Inicio_inconfundible =="Si")
-                cont++;
+                Cont++;
 
-            return cont == 3;
+            return Cont == 3;
         }
         public bool EpicraniaFugax(Cuestionario cuestionario)
         {
             if (cuestionario.Inicio_brusco == "Si" || cuestionario.Indometacina == "Si" || cuestionario.Tos == "Si" || cuestionario.Esfuerzo_brusco == "Si" || cuestionario.Valsalva == "Si" || cuestionario.Actividad_sexual == "Si" || cuestionario.Sueño == "Si" || cuestionario.Inicio_inconfundible == "Si" || cuestionario.Triptan_ergotico == "Si")
                 return false;
-                cont = 0;
+                Cont = 0;
             //1
             if (cuestionario.Episodios != Episodios[0])
-                cont++;
+                Cont++;
             //1.1. todas son validas
             if (cuestionario.Duracion_episodio == Duracion_episodio[0])
-                cont++;
+                Cont++;
             //3.1
             if(cuestionario.Localizacion== "En área de cuero cabelludo")
             //A 3.2
             if (cuestionario.Dolor == "Otro")
-                cont++;
+                Cont++;
             //4.5  las demas todas validas
             if (cuestionario.Aura == "No")
-                cont++;
+                Cont++;
             //4.7 todas son validas
             //4.8
             if (cuestionario.Trayectoria_lineal == "Si")
-                cont++;
-            return cont == 5;
+                Cont++;
+            return Cont == 5;
         }
 
     }

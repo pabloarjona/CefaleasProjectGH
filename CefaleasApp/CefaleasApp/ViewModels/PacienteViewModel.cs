@@ -76,7 +76,43 @@ namespace CefaleasApp.ViewModels
 
         public override Task InitializeAsync(object navigationData)
         {
-            DoTask(RefreshCommandAsync());
+            if (_cefaleasRestService.DEVELOPMENT_ENVIROMENT.Equals(EnvironmentDevelopment.LOCAL))
+            {
+                navigationData = _settingsService.Usuario;
+                Paciente paciente = new Paciente {
+                    IdUsuario = _settingsService.Usuario.IdUsuario,
+                    Edad = 12,
+                    Iniciales = "P.P.P",
+                    Sexo = 'M',
+                    IdPaciente = 1,
+                    FechaConsulta = new System.DateTime(2023, 12, 12)
+                };
+                List<Paciente> list = new List<Paciente> {paciente};
+                
+                if (list.Count() != 0)
+                {
+                    DoAction(() =>
+                    {
+                        Listapac.Clear();
+                        Listapac.AddRange(list);
+                        //Listapac.OrderByDescending(x => x.FechaConsulta).ToList();
+                        ListaPacientes.Clear();
+                        ListaPacientes.AddRange(list);
+                    });
+                    this.TotalPacientes = ListaPacientes.Count;
+                    UserDialogs.Instance.HideLoading();
+                }
+                else
+                {
+                    ListaPacientes.Clear();
+                    Listapac.Clear();
+                    UserDialogs.Instance.HideLoading();
+                }
+            }
+            else
+            {
+                DoTask(RefreshCommandAsync());
+            }
             return base.InitializeAsync(navigationData);
         }
         private async Task RefreshCommandAsync()
@@ -91,8 +127,10 @@ namespace CefaleasApp.ViewModels
                     {
                         Listapac.Clear();
                         Listapac.AddRange(result.Entities);
+                        Listapac.OrderBy(x => x.FechaConsulta).ToList();
                         ListaPacientes.Clear();
                         ListaPacientes.AddRange(result.Entities);
+                        ListaPacientes.OrderBy(x => x.FechaConsulta).ToList();
                     });
                     this.TotalPacientes = ListaPacientes.Count;
                     UserDialogs.Instance.HideLoading();
@@ -111,10 +149,18 @@ namespace CefaleasApp.ViewModels
 
             }
         }
-        private Task AddCommandFormExecute()=> NavigationService.NavigateToAsync<FormularioViewModel>(PacienteSelected);
+        private async Task AddCommandFormExecute()
+        {
+            ResultEntity<Cuestionario> result =await _cefaleasRestService.GetCuestionariosAsync(_pacienteSelected.IdPaciente);
+            if (result.IsSuccess())
+            {
+                PacienteSelected.Cuestionario = result.Entity;
+            }
+            await NavigationService.NavigateToAsync<FormularioViewModel>(PacienteSelected);
+        } 
         
-        private Task AddCommandExecute() => NavigationService.NavigateToAsync<PacienteAddViewModel>(_settingsService.Usuario.IdUsuario);
-        private Task UpdateCommandExecute() => NavigationService.NavigateToAsync<PacienteUpdateViewModel>(PacienteSelected);
+        private Task AddCommandExecute() => NavigationService.NavigateToAsync<PacienteDetailViewModel>(_settingsService.Usuario.IdUsuario);
+        private Task UpdateCommandExecute() => NavigationService.NavigateToAsync<PacienteDetailViewModel>(PacienteSelected);
         private async Task DeleteCommandExecuteAsync()
         {
             UserDialogs.Instance.ShowLoading("Cargando...");
