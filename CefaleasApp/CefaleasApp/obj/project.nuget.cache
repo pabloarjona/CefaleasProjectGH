@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ly/GC92IZDyLGv3RO3TWzwaOmqGqUR+rUZQKQhhSfkMepY+00swbFggUNX2rx871lOgOe7PpkyPA3WMu8T0xSg==",
+  "dgSpecHash": "fYjcxbQqgTKGz9MEGyMPw6NqjKDFCbLlYAW2YP3oSg3xsE5PJABFr/45dzY7Y4vr5xKim+j+eRHZ4c/sePHpkA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pablo\\git\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj",
+  "projectFilePath": "C:\\Users\\pablo\\git\\CefaleasProjectGH\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pablo\\.nuget\\packages\\acr.userdialogs\\7.1.0.514\\acr.userdialogs.7.1.0.514.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",

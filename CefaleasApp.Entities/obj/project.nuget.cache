@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zbnm3eilmz1VsxsHUOB8holgmE+ZZqr3Tyx0t/uQeiCR0YntwbNPGi9JyvDPSM8/i4bnjJLWPq3OqKpqHmrqpQ==",
+  "dgSpecHash": "ULVLijqEmD5hkjg12Ok4f2Pp3sC6nX+h/Hvpk3e3OTBqvXefQRholUKU+yPgJd40dP8XKy6PGYssi5IyzTFVoA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pablo\\git\\CefaleasProjectLVX\\CefaleasApp.Entities\\CefaleasApp.Entities.csproj",
+  "projectFilePath": "C:\\Users\\pablo\\git\\CefaleasProjectGH\\CefaleasApp.Entities\\CefaleasApp.Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pablo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

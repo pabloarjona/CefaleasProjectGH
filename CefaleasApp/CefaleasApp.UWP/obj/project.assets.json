@@ -15653,11 +15653,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pablo\\git\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.UWP\\CefaleasApp.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\pablo\\git\\CefaleasProjectGH\\CefaleasApp\\CefaleasApp.UWP\\CefaleasApp.UWP.csproj",
       "projectName": "CefaleasApp.UWP",
-      "projectPath": "C:\\Users\\pablo\\git\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.UWP\\CefaleasApp.UWP.csproj",
+      "projectPath": "C:\\Users\\pablo\\git\\CefaleasProjectGH\\CefaleasApp\\CefaleasApp.UWP\\CefaleasApp.UWP.csproj",
       "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pablo\\git\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp.UWP\\obj\\",
+      "outputPath": "C:\\Users\\pablo\\git\\CefaleasProjectGH\\CefaleasApp\\CefaleasApp.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -15679,8 +15679,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\pablo\\git\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj": {
-              "projectPath": "C:\\Users\\pablo\\git\\CefaleasProjectLVX\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj"
+            "C:\\Users\\pablo\\git\\CefaleasProjectGH\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj": {
+              "projectPath": "C:\\Users\\pablo\\git\\CefaleasProjectGH\\CefaleasApp\\CefaleasApp\\CefaleasApp.csproj"
             }
           }
         }
