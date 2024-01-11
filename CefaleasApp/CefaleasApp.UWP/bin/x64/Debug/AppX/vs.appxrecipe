@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>ec0cc741-fd3e-485c-81be-68815c480690</PackageIdentityName>
     <PackageIdentityPublisher>CN=E5F61FE3-0FFC-424D-9125-E3A761C69086</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>63950304A7CCEACC17039ABB2D62BE0FA4BDBC7AB9BEA8F39F4438FC0D3AEC0A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>CC604D9E-269E-4EDB-8389-A2A3A9032FBF_1.0.0.0_x64__6c59hcn16gdqa</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>CC604D9E-269E-4EDB-8389-A2A3A9032FBF_6c59hcn16gdqa!App</RegisteredUserModeAppID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-01-11T17:13:36.580</Modified>
+      <Modified>2024-01-11T19:41:00.861</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\CefaleasApp.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\CefaleasApp.UWP.exe">
       <PackagePath>entrypoint\CefaleasApp.UWP.exe</PackagePath>
-      <Modified>2024-01-11T17:03:23.031</Modified>
+      <Modified>2024-01-11T19:40:58.262</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\acr.userdialogs\7.1.0.514\lib\uap10.0.16299\Acr.UserDialogs.dll">
       <PackagePath>Acr.UserDialogs.dll</PackagePath>
@@ -162,17 +162,17 @@
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
       <Modified>2023-11-09T13:18:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\bin\Debug\netstandard2.0\CefaleasApp.dll">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp\bin\Debug\netstandard2.0\CefaleasApp.dll">
       <PackagePath>CefaleasApp.dll</PackagePath>
-      <Modified>2024-01-11T17:13:27.477</Modified>
+      <Modified>2024-01-11T19:40:44.866</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\bin\Debug\netstandard2.0\CefaleasApp.Entities.dll">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp\bin\Debug\netstandard2.0\CefaleasApp.Entities.dll">
       <PackagePath>CefaleasApp.Entities.dll</PackagePath>
-      <Modified>2023-12-12T18:43:33.060</Modified>
+      <Modified>2024-01-11T19:36:54.770</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp\bin\Debug\netstandard2.0\CefaleasApp.DataAccess.dll">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp\bin\Debug\netstandard2.0\CefaleasApp.DataAccess.dll">
       <PackagePath>CefaleasApp.DataAccess.dll</PackagePath>
-      <Modified>2023-12-13T17:55:05.799</Modified>
+      <Modified>2024-01-11T19:36:55.373</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -198,315 +198,315 @@
       <PackagePath>Coding4Fun.Toolkit.Controls\Themes\Generic.xbf</PackagePath>
       <Modified>2016-05-12T15:21:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\LargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.903</Modified>
+      <Modified>2024-01-11T19:24:52.541</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\LargeTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\LargeTile.scale-125.png">
       <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.903</Modified>
+      <Modified>2024-01-11T19:24:52.541</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\LargeTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\LargeTile.scale-150.png">
       <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.541</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\LargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.541</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\LargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.541</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.541</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\SmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\SmallTile.scale-125.png">
       <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.541</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\SmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\SmallTile.scale-150.png">
       <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.541</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\SmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.541</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\SmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.541</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.541</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\SplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\SplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square150x150Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square150x150Logo.scale-125.png">
       <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square150x150Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square150x150Logo.scale-150.png">
       <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.919</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.scale-125.png">
       <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.scale-150.png">
       <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\StoreLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\StoreLogo.scale-125.png">
       <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\StoreLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\StoreLogo.scale-150.png">
       <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\StoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\StoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Wide310x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Wide310x150Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Wide310x150Logo.scale-125.png">
       <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Wide310x150Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Wide310x150Logo.scale-150.png">
       <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Assets\Wide310x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\cefaleaslogotipo.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\cefaleaslogotipo.png">
       <PackagePath>cefaleaslogotipo.png</PackagePath>
-      <Modified>2023-11-29T17:38:51.409</Modified>
+      <Modified>2024-01-11T19:24:53.122</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\add.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Icons\add.png">
       <PackagePath>Icons\add.png</PackagePath>
-      <Modified>2023-11-30T17:00:45.411</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\cancel.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Icons\cancel.png">
       <PackagePath>Icons\cancel.png</PackagePath>
-      <Modified>2023-11-30T17:00:59.353</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\correct.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Icons\correct.png">
       <PackagePath>Icons\correct.png</PackagePath>
-      <Modified>2023-11-29T17:38:50.935</Modified>
+      <Modified>2024-01-11T19:24:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\home.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Icons\home.png">
       <PackagePath>Icons\home.png</PackagePath>
-      <Modified>2023-11-29T17:38:50.950</Modified>
+      <Modified>2024-01-11T19:24:52.588</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\delete.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Icons\delete.png">
       <PackagePath>Icons\delete.png</PackagePath>
-      <Modified>2023-11-29T17:38:50.950</Modified>
+      <Modified>2024-01-11T19:24:52.588</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\refresh.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Icons\refresh.png">
       <PackagePath>Icons\refresh.png</PackagePath>
-      <Modified>2023-11-29T17:38:50.950</Modified>
+      <Modified>2024-01-11T19:24:52.588</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\form.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Icons\form.png">
       <PackagePath>Icons\form.png</PackagePath>
-      <Modified>2023-11-29T17:38:50.950</Modified>
+      <Modified>2024-01-11T19:24:52.588</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\edit.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Icons\edit.png">
       <PackagePath>Icons\edit.png</PackagePath>
-      <Modified>2023-11-29T17:38:50.950</Modified>
+      <Modified>2024-01-11T19:24:52.588</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Icons\save.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Icons\save.png">
       <PackagePath>Icons\save.png</PackagePath>
-      <Modified>2023-11-29T17:38:50.950</Modified>
+      <Modified>2024-01-11T19:24:52.588</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\LogoLogin.png">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\LogoLogin.png">
       <PackagePath>LogoLogin.png</PackagePath>
-      <Modified>2023-11-29T17:38:50.950</Modified>
+      <Modified>2024-01-11T19:24:52.588</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2023-11-29T17:38:50.950</Modified>
+      <Modified>2024-01-11T19:24:52.588</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\CefaleasApp.UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\CefaleasApp.UWP.xr.xml">
       <PackagePath>CefaleasApp.UWP.xr.xml</PackagePath>
-      <Modified>2023-11-29T17:38:51.441</Modified>
+      <Modified>2024-01-11T19:24:53.153</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2024-01-11T17:13:35.526</Modified>
+      <Modified>2024-01-11T19:40:58.073</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2024-01-11T17:13:35.526</Modified>
+      <Modified>2024-01-11T19:40:58.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.22621.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -520,13 +520,13 @@
       <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
       <Modified>2020-07-10T00:07:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-11-30T16:05:36.858</Modified>
+      <Modified>2024-01-11T19:40:59.274</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectLVX\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\Core\CefaleasApp.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\Core\CefaleasApp.UWP.exe">
       <PackagePath>CefaleasApp.UWP.exe</PackagePath>
-      <Modified>2024-01-11T17:13:36.575</Modified>
+      <Modified>2024-01-11T19:41:00.856</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
