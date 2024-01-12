@@ -21,7 +21,7 @@ namespace CefaleasApp.Services
             {
                 //UriString="http://local",
                 //UriString = "http://localhost:5000",
-                UriString = "https://apiwebcefaleasbackend.azurewebsites.net",
+                UriString = "https://apiwebcefaleas-2.azurewebsites.net",
                 JsonSeializerOptions = settings,
             });
 
