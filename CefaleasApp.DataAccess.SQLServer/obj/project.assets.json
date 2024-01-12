@@ -2810,7 +2810,6 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "CefaleasApp.DataAccess >= 1.0.0",
-      "CefaleasApp.Entities >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.13",
       "Pitasoft.Result >= 5.1.0"
     ]
@@ -2850,9 +2849,6 @@
           "projectReferences": {
             "C:\\Users\\pablo\\git\\CefaleasProjectGH\\CefaleasApp.DataAccess\\CefaleasApp.DataAccess.csproj": {
               "projectPath": "C:\\Users\\pablo\\git\\CefaleasProjectGH\\CefaleasApp.DataAccess\\CefaleasApp.DataAccess.csproj"
-            },
-            "C:\\Users\\pablo\\git\\CefaleasProjectGH\\CefaleasApp.Entities\\CefaleasApp.Entities.csproj": {
-              "projectPath": "C:\\Users\\pablo\\git\\CefaleasProjectGH\\CefaleasApp.Entities\\CefaleasApp.Entities.csproj"
             }
           }
         }

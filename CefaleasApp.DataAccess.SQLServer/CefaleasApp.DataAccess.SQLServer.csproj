@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CefaleasApp.DataAccess\CefaleasApp.DataAccess.csproj" />
-    <ProjectReference Include="..\CefaleasApp.Entities\CefaleasApp.Entities.csproj" />
   </ItemGroup>
 
 </Project>

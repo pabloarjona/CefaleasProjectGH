@@ -35,9 +35,6 @@
             "projectReferences": {
               "C:\\Users\\pablo\\git\\CefaleasProjectGH\\CefaleasApp.DataAccess\\CefaleasApp.DataAccess.csproj": {
                 "projectPath": "C:\\Users\\pablo\\git\\CefaleasProjectGH\\CefaleasApp.DataAccess\\CefaleasApp.DataAccess.csproj"
-              },
-              "C:\\Users\\pablo\\git\\CefaleasProjectGH\\CefaleasApp.Entities\\CefaleasApp.Entities.csproj": {
-                "projectPath": "C:\\Users\\pablo\\git\\CefaleasProjectGH\\CefaleasApp.Entities\\CefaleasApp.Entities.csproj"
               }
             }
           }

@@ -9,7 +9,6 @@
       "CefaleasApp.DataAccess.SQLServer/1.0.0": {
         "dependencies": {
           "CefaleasApp.DataAccess": "1.0.0",
-          "CefaleasApp.Entities": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13",
           "Pitasoft.Result": "5.1.0"
         },
