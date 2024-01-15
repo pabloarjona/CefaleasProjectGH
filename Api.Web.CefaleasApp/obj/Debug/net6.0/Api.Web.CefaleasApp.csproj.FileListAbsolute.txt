@@ -378,3 +378,5 @@ C:\Users\pablo\git\CefaleasProjectGH\Api.Web.CefaleasApp\obj\Debug\net6.0\refint
 C:\Users\pablo\git\CefaleasProjectGH\Api.Web.CefaleasApp\obj\Debug\net6.0\Api.Web.CefaleasApp.pdb
 C:\Users\pablo\git\CefaleasProjectGH\Api.Web.CefaleasApp\obj\Debug\net6.0\Api.Web.CefaleasApp.genruntimeconfig.cache
 C:\Users\pablo\git\CefaleasProjectGH\Api.Web.CefaleasApp\obj\Debug\net6.0\ref\Api.Web.CefaleasApp.dll
+C:\Users\pablo\git\CefaleasProjectGH\Api.Web.CefaleasApp\obj\Debug\net6.0\Api.Web.CefaleasApp.Properties.Resources.resources
+C:\Users\pablo\git\CefaleasProjectGH\Api.Web.CefaleasApp\obj\Debug\net6.0\Api.Web.CefaleasApp.csproj.GenerateResource.cache
