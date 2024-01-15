@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using CefaleasApp.DataAccess.SQLServer;
 using CefaleasApp.DataAccess;
+using Microsoft.OpenApi.Models;
 
 namespace Api.Web.CefaleasApp
 {
@@ -20,6 +21,10 @@ namespace Api.Web.CefaleasApp
         // This method gets called by the runtime. Use this method to add services to the container
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API Name", Version = "v1" });
+            });
             var myHierarchicalConfig = Configuration["My:Hierarchical:Config:Data"];
             services.AddDataAccess(Configuration.GetConnectionString("DataBaseConnection"));
             //services.AddDataAccess(Configuration.GetConnectionString("LocalDatabaseConnection"));
@@ -34,7 +39,11 @@ namespace Api.Web.CefaleasApp
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Cefaleas API v1");
+            });
             app.UseRouting();
 
             app.UseAuthorization();

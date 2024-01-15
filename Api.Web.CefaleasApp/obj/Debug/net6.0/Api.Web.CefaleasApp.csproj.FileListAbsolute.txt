@@ -380,3 +380,8 @@ C:\Users\pablo\git\CefaleasProjectGH\Api.Web.CefaleasApp\obj\Debug\net6.0\Api.We
 C:\Users\pablo\git\CefaleasProjectGH\Api.Web.CefaleasApp\obj\Debug\net6.0\ref\Api.Web.CefaleasApp.dll
 C:\Users\pablo\git\CefaleasProjectGH\Api.Web.CefaleasApp\obj\Debug\net6.0\Api.Web.CefaleasApp.Properties.Resources.resources
 C:\Users\pablo\git\CefaleasProjectGH\Api.Web.CefaleasApp\obj\Debug\net6.0\Api.Web.CefaleasApp.csproj.GenerateResource.cache
+C:\Users\pablo\git\CefaleasProjectGH\Api.Web.CefaleasApp\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\pablo\git\CefaleasProjectGH\Api.Web.CefaleasApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\pablo\git\CefaleasProjectGH\Api.Web.CefaleasApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\pablo\git\CefaleasProjectGH\Api.Web.CefaleasApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\pablo\git\CefaleasProjectGH\Api.Web.CefaleasApp\obj\Debug\net6.0\Api.Web.CefaleasApp.MvcApplicationPartsAssemblyInfo.cs
