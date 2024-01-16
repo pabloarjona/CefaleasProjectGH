@@ -13,10 +13,10 @@ namespace Api.Web.CefaleasApp
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfiguration _configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container
         public void ConfigureServices(IServiceCollection services)
@@ -25,8 +25,7 @@ namespace Api.Web.CefaleasApp
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API Name", Version = "v1" });
             });
-            var myHierarchicalConfig = Configuration["My:Hierarchical:Config:Data"];
-            services.AddDataAccess(Configuration.GetConnectionString("DataBaseConnection"));
+            services.AddDataAccess(_configuration.GetConnectionString("DataBaseConnections"));
             //services.AddDataAccess(Configuration.GetConnectionString("LocalDatabaseConnection"));
             services.AddControllers();
         }
