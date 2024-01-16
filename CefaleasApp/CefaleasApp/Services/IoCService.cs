@@ -6,6 +6,9 @@ using System.Text.Json;
 using CefaleasApp.Models;
 using CefaleasApp.Services.Interfaces;
 using CefaleasApp.ViewModels;
+using Microsoft.Extensions.Configuration;
+using System.Runtime.InteropServices.ComTypes;
+using System;
 
 namespace CefaleasApp.Services
 {
@@ -13,15 +16,22 @@ namespace CefaleasApp.Services
     {
         protected override void ConfigureServices(IServiceCollection services)
         {
+            var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            string apiUrl;
+            if(environment == "Development") {
+                apiUrl = Configuration["ApiUrls:Development"];
+            }
+            else
+            {
+                apiUrl = Configuration["ApiUrls:Production"];
+            }
             JsonSerializerOptions settings = new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true,
             };
             services.AddSingleton(new SettingRestService
             {
-                //UriString="http://local",
-                //UriString = "http://localhost:5000",
-                UriString = "https://apiwebcefaleasapp2.azurewebsites.net",
+                UriString = apiUrl,
                 JsonSeializerOptions = settings,
             });
 

@@ -13,20 +13,19 @@ namespace Api.Web.CefaleasApp
     {
         public Startup(IConfiguration configuration)
         {
-            _configuration = configuration;
+            Configuration = configuration;
         }
 
-        public IConfiguration _configuration { get; }
+        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API Name", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Cefaleas API v1", Version = "v1" });
             });
-            services.AddDataAccess(_configuration.GetConnectionString("DataBaseConnections"));
-            //services.AddDataAccess(Configuration.GetConnectionString("LocalDatabaseConnection"));
+            services.AddDataAccess(Configuration.GetConnectionString("DataBaseConnection"));
             services.AddControllers();
         }
 
