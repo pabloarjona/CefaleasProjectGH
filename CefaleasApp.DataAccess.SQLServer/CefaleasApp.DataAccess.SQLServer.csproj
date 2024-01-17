@@ -8,7 +8,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.13" />
-    <PackageReference Include="Pitasoft.Result" Version="5.1.0" />
+    <PackageReference Include="Pitasoft.Client" Version="5.2.0" />
+    <PackageReference Include="Pitasoft.Result" Version="5.3.0" />
   </ItemGroup>
 
   <ItemGroup>

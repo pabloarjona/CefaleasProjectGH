@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+      "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Threading.Tasks.Extensions": "4.5.4"
@@ -42,10 +42,10 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Pitasoft.Error/3.0.1": {
+      "Pitasoft.Error/3.1.0": {
         "type": "package",
         "dependencies": {
-          "System.Text.Json": "7.0.3"
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Error.dll": {}
@@ -54,11 +54,11 @@
           "lib/netstandard2.0/Pitasoft.Error.dll": {}
         }
       },
-      "Pitasoft.Result/5.1.0": {
+      "Pitasoft.Result/5.3.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Error": "3.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Result.dll": {}
@@ -109,7 +109,7 @@
           }
         }
       },
-      "System.Numerics.Vectors/4.5.0": {
+      "System.Numerics.Vectors/4.4.0": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Numerics.Vectors.dll": {
@@ -135,7 +135,7 @@
           }
         }
       },
-      "System.Text.Encodings.Web/7.0.0": {
+      "System.Text.Encodings.Web/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
@@ -153,15 +153,14 @@
           }
         }
       },
-      "System.Text.Json/7.0.3": {
+      "System.Text.Json/8.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Numerics.Vectors": "4.5.0",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
-          "System.Text.Encodings.Web": "7.0.0",
+          "System.Text.Encodings.Web": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -210,15 +209,16 @@
     }
   },
   "libraries": {
-    "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
-      "sha512": "3aeMZ1N0lJoSyzqiP03hqemtb1BijhsJADdobn/4nsMJ8V1H+CrpuduUe4hlRdx+ikBQju1VGjMD1GJ3Sk05Eg==",
+    "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
+      "sha512": "3WA9q9yVqJp222P3x1wYIGDAkpjAku0TMUaaQV22g6L67AI0LdOIrVS7Ht2vJfLHGSPVuqN94vIr15qn+HEkHw==",
       "type": "package",
-      "path": "microsoft.bcl.asyncinterfaces/7.0.0",
+      "path": "microsoft.bcl.asyncinterfaces/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
+        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/Microsoft.Bcl.AsyncInterfaces.targets",
         "buildTransitive/net462/_._",
@@ -228,7 +228,7 @@
         "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
         "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
         "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
-        "microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
         "microsoft.bcl.asyncinterfaces.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -377,10 +377,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Pitasoft.Error/3.0.1": {
-      "sha512": "1qb5K5RMHOL8XGyVudy8co8uQAJeiK1F9pT5BVAw2BO1KeHBnMfbt3EZmZJ7tYKU3DN1hxUdBESNdehXLsUojw==",
+    "Pitasoft.Error/3.1.0": {
+      "sha512": "Z4ObHfbl3h7ys6H8ePIYZTBlGlADO5FSTiT/m7lOZtaPV+VwxrzwzE8gTnySRWqCKbATXly15kjyqxbQfKH1HA==",
       "type": "package",
-      "path": "pitasoft.error/3.0.1",
+      "path": "pitasoft.error/3.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -388,15 +388,16 @@
         "lib/net462/Pitasoft.Error.dll",
         "lib/net6.0/Pitasoft.Error.dll",
         "lib/net7.0/Pitasoft.Error.dll",
+        "lib/net8.0/Pitasoft.Error.dll",
         "lib/netstandard2.0/Pitasoft.Error.dll",
-        "pitasoft.error.3.0.1.nupkg.sha512",
+        "pitasoft.error.3.1.0.nupkg.sha512",
         "pitasoft.error.nuspec"
       ]
     },
-    "Pitasoft.Result/5.1.0": {
-      "sha512": "I5UE5P5BQEUQ863DMH0gBgVR3TaPjZnmewP0V6gkTaXCYThC67P9U00wbJxhUh7mg10yUTiCUiYr6u7VEDoYUQ==",
+    "Pitasoft.Result/5.3.0": {
+      "sha512": "szdcFWnDX7qR0hKC77TP+QqVNV3JRnFcm92gaPLx7Z2kF+H/FD+nx5BGMoDppvdRpG+k/hSnQqgx9NzMySNK8Q==",
       "type": "package",
-      "path": "pitasoft.result/5.1.0",
+      "path": "pitasoft.result/5.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -404,8 +405,9 @@
         "lib/net462/Pitasoft.Result.dll",
         "lib/net6.0/Pitasoft.Result.dll",
         "lib/net7.0/Pitasoft.Result.dll",
+        "lib/net8.0/Pitasoft.Result.dll",
         "lib/netstandard2.0/Pitasoft.Result.dll",
-        "pitasoft.result.5.1.0.nupkg.sha512",
+        "pitasoft.result.5.3.0.nupkg.sha512",
         "pitasoft.result.nuspec"
       ]
     },
@@ -553,10 +555,10 @@
         "version.txt"
       ]
     },
-    "System.Numerics.Vectors/4.5.0": {
-      "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+    "System.Numerics.Vectors/4.4.0": {
+      "sha512": "UiLzLW+Lw6HLed1Hcg+8jSRttrbuXv7DANVj0DkL9g6EnnzbL75EB7EWsw5uRbhxd/4YdG8li5XizGWepmG3PQ==",
       "type": "package",
-      "path": "system.numerics.vectors/4.5.0",
+      "path": "system.numerics.vectors/4.4.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -573,15 +575,12 @@
         "lib/netstandard2.0/System.Numerics.Vectors.xml",
         "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
         "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
-        "lib/uap10.0.16299/_._",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
-        "ref/net45/System.Numerics.Vectors.dll",
-        "ref/net45/System.Numerics.Vectors.xml",
         "ref/net46/System.Numerics.Vectors.dll",
         "ref/net46/System.Numerics.Vectors.xml",
         "ref/netcoreapp2.0/_._",
@@ -589,12 +588,11 @@
         "ref/netstandard1.0/System.Numerics.Vectors.xml",
         "ref/netstandard2.0/System.Numerics.Vectors.dll",
         "ref/netstandard2.0/System.Numerics.Vectors.xml",
-        "ref/uap10.0.16299/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.numerics.vectors.4.5.0.nupkg.sha512",
+        "system.numerics.vectors.4.4.0.nupkg.sha512",
         "system.numerics.vectors.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -625,10 +623,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Encodings.Web/7.0.0": {
-      "sha512": "OP6umVGxc0Z0MvZQBVigj4/U31Pw72ITihDWP9WiWDm+q5aoe0GaJivsfYGq53o6dxH7DcXWiCTl7+0o2CGdmg==",
+    "System.Text.Encodings.Web/8.0.0": {
+      "sha512": "yev/k9GHAEGx2Rg3/tU6MQh4HGBXJs70y7j1LaM1i/ER9po+6nnQ6RRqTJn1E7Xu0fbIFK80Nh5EoODxrbxwBQ==",
       "type": "package",
-      "path": "system.text.encodings.web/7.0.0",
+      "path": "system.text.encodings.web/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -645,27 +643,31 @@
         "lib/net6.0/System.Text.Encodings.Web.xml",
         "lib/net7.0/System.Text.Encodings.Web.dll",
         "lib/net7.0/System.Text.Encodings.Web.xml",
+        "lib/net8.0/System.Text.Encodings.Web.dll",
+        "lib/net8.0/System.Text.Encodings.Web.xml",
         "lib/netstandard2.0/System.Text.Encodings.Web.dll",
         "lib/netstandard2.0/System.Text.Encodings.Web.xml",
         "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll",
         "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.xml",
         "runtimes/browser/lib/net7.0/System.Text.Encodings.Web.dll",
         "runtimes/browser/lib/net7.0/System.Text.Encodings.Web.xml",
-        "system.text.encodings.web.7.0.0.nupkg.sha512",
+        "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll",
+        "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.xml",
+        "system.text.encodings.web.8.0.0.nupkg.sha512",
         "system.text.encodings.web.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Json/7.0.3": {
-      "sha512": "AyjhwXN1zTFeIibHimfJn6eAsZ7rTBib79JQpzg8WAuR/HKDu9JGNHTuu3nbbXQ/bgI+U4z6HtZmCHNXB1QXrQ==",
+    "System.Text.Json/8.0.0": {
+      "sha512": "OdrZO2WjkiEG6ajEFRABTRCi/wuXQPxeV6g8xvUJqdxMvvuCCEk86zPla8UiIQJz3durtUEbNyY/3lIhS0yZvQ==",
       "type": "package",
-      "path": "system.text.json/7.0.3",
+      "path": "system.text.json/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
-        "README.md",
+        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "analyzers/dotnet/roslyn3.11/cs/System.Text.Json.SourceGeneration.dll",
         "analyzers/dotnet/roslyn3.11/cs/cs/System.Text.Json.SourceGeneration.resources.dll",
@@ -720,9 +722,11 @@
         "lib/net6.0/System.Text.Json.xml",
         "lib/net7.0/System.Text.Json.dll",
         "lib/net7.0/System.Text.Json.xml",
+        "lib/net8.0/System.Text.Json.dll",
+        "lib/net8.0/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.7.0.3.nupkg.sha512",
+        "system.text.json.8.0.0.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -774,7 +778,7 @@
     ".NETStandard,Version=v2.0": [
       "CefaleasApp.Entities >= 1.0.0",
       "NETStandard.Library >= 2.0.3",
-      "Pitasoft.Result >= 5.1.0"
+      "Pitasoft.Result >= 5.3.0"
     ]
   },
   "packageFolders": {
@@ -834,7 +838,7 @@
           },
           "Pitasoft.Result": {
             "target": "Package",
-            "version": "[5.1.0, )"
+            "version": "[5.3.0, )"
           }
         },
         "imports": [

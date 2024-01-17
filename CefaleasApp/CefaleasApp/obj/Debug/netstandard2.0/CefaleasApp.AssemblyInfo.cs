@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CefaleasApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4267a503a118c765fc6d8b225841bc0e470c143")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+408cf2f5b93d8b75dda48a06491446290146b88d")]
 [assembly: System.Reflection.AssemblyProductAttribute("CefaleasApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CefaleasApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

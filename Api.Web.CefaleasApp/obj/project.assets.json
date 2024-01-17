@@ -653,7 +653,20 @@
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
         }
       },
-      "Pitasoft.Error/3.0.1": {
+      "Pitasoft.Client/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Pitasoft.Error": "3.1.0",
+          "Pitasoft.Result": "5.3.0"
+        },
+        "compile": {
+          "lib/net6.0/Pitasoft.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Pitasoft.Client.dll": {}
+        }
+      },
+      "Pitasoft.Error/3.1.0": {
         "type": "package",
         "compile": {
           "lib/net6.0/Pitasoft.Error.dll": {}
@@ -662,10 +675,10 @@
           "lib/net6.0/Pitasoft.Error.dll": {}
         }
       },
-      "Pitasoft.Result/5.1.0": {
+      "Pitasoft.Result/5.3.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Error": "3.0.1"
+          "Pitasoft.Error": "3.1.0"
         },
         "compile": {
           "lib/net6.0/Pitasoft.Result.dll": {}
@@ -1175,7 +1188,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Result": "5.1.0"
+          "Pitasoft.Result": "5.3.0"
         },
         "compile": {
           "bin/placeholder/CefaleasApp.DataAccess.dll": {}
@@ -1190,7 +1203,8 @@
         "dependencies": {
           "CefaleasApp.DataAccess": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13",
-          "Pitasoft.Result": "5.1.0"
+          "Pitasoft.Client": "5.2.0",
+          "Pitasoft.Result": "5.3.0"
         },
         "compile": {
           "bin/placeholder/CefaleasApp.DataAccess.SQLServer.dll": {}
@@ -2366,10 +2380,27 @@
         "mono.texttemplating.nuspec"
       ]
     },
-    "Pitasoft.Error/3.0.1": {
-      "sha512": "1qb5K5RMHOL8XGyVudy8co8uQAJeiK1F9pT5BVAw2BO1KeHBnMfbt3EZmZJ7tYKU3DN1hxUdBESNdehXLsUojw==",
+    "Pitasoft.Client/5.2.0": {
+      "sha512": "7d1SQmrjH24cA887vqWDYl8lDeU7RWZD8wVaEPIiv3qcATfCeyyzG4REVhhiJTgXlKAK+knpAXyeC2zXBA3eTw==",
       "type": "package",
-      "path": "pitasoft.error/3.0.1",
+      "path": "pitasoft.client/5.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Pitasoft-icon-128.png",
+        "lib/net462/Pitasoft.Client.dll",
+        "lib/net6.0/Pitasoft.Client.dll",
+        "lib/net7.0/Pitasoft.Client.dll",
+        "lib/net8.0/Pitasoft.Client.dll",
+        "lib/netstandard2.0/Pitasoft.Client.dll",
+        "pitasoft.client.5.2.0.nupkg.sha512",
+        "pitasoft.client.nuspec"
+      ]
+    },
+    "Pitasoft.Error/3.1.0": {
+      "sha512": "Z4ObHfbl3h7ys6H8ePIYZTBlGlADO5FSTiT/m7lOZtaPV+VwxrzwzE8gTnySRWqCKbATXly15kjyqxbQfKH1HA==",
+      "type": "package",
+      "path": "pitasoft.error/3.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2377,15 +2408,16 @@
         "lib/net462/Pitasoft.Error.dll",
         "lib/net6.0/Pitasoft.Error.dll",
         "lib/net7.0/Pitasoft.Error.dll",
+        "lib/net8.0/Pitasoft.Error.dll",
         "lib/netstandard2.0/Pitasoft.Error.dll",
-        "pitasoft.error.3.0.1.nupkg.sha512",
+        "pitasoft.error.3.1.0.nupkg.sha512",
         "pitasoft.error.nuspec"
       ]
     },
-    "Pitasoft.Result/5.1.0": {
-      "sha512": "I5UE5P5BQEUQ863DMH0gBgVR3TaPjZnmewP0V6gkTaXCYThC67P9U00wbJxhUh7mg10yUTiCUiYr6u7VEDoYUQ==",
+    "Pitasoft.Result/5.3.0": {
+      "sha512": "szdcFWnDX7qR0hKC77TP+QqVNV3JRnFcm92gaPLx7Z2kF+H/FD+nx5BGMoDppvdRpG+k/hSnQqgx9NzMySNK8Q==",
       "type": "package",
-      "path": "pitasoft.result/5.1.0",
+      "path": "pitasoft.result/5.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2393,8 +2425,9 @@
         "lib/net462/Pitasoft.Result.dll",
         "lib/net6.0/Pitasoft.Result.dll",
         "lib/net7.0/Pitasoft.Result.dll",
+        "lib/net8.0/Pitasoft.Result.dll",
         "lib/netstandard2.0/Pitasoft.Result.dll",
-        "pitasoft.result.5.1.0.nupkg.sha512",
+        "pitasoft.result.5.3.0.nupkg.sha512",
         "pitasoft.result.nuspec"
       ]
     },

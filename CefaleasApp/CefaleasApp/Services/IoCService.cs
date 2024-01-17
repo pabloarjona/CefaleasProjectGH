@@ -1,14 +1,12 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using CefaleasApp.Models;
+using CefaleasApp.Services.Interfaces;
+using CefaleasApp.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
 using Pitasoft.Client;
 using Pitasoft.Shell.Services;
 using Pitasoft.Shell.Xamarin.Services;
-using System.Text.Json;
-using CefaleasApp.Models;
-using CefaleasApp.Services.Interfaces;
-using CefaleasApp.ViewModels;
-using Microsoft.Extensions.Configuration;
-using System.Runtime.InteropServices.ComTypes;
 using System;
+using System.Text.Json;
 
 namespace CefaleasApp.Services
 {
@@ -16,15 +14,7 @@ namespace CefaleasApp.Services
     {
         protected override void ConfigureServices(IServiceCollection services)
         {
-            var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-            string apiUrl;
-            if(environment == "Development") {
-                apiUrl = Configuration["ApiUrls:Development"];
-            }
-            else
-            {
-                apiUrl = Configuration["ApiUrls:Production"];
-            }
+            string apiUrl= Configuration["ApiUrls:Production"];
             JsonSerializerOptions settings = new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true,

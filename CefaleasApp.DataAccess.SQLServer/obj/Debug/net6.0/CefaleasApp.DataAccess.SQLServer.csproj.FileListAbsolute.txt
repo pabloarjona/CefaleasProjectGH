@@ -61,6 +61,7 @@ C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp.DataAccess.SQLServer\obj\Debug\
 C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp.DataAccess.SQLServer\obj\Debug\net6.0\CefaleasApp.DataAccess.SQLServer.AssemblyInfoInputs.cache
 C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp.DataAccess.SQLServer\obj\Debug\net6.0\CefaleasApp.DataAccess.SQLServer.AssemblyInfo.cs
 C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp.DataAccess.SQLServer\obj\Debug\net6.0\CefaleasApp.DataAccess.SQLServer.csproj.CoreCompileInputs.cache
+C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp.DataAccess.SQLServer\obj\Debug\net6.0\CefaleasApp.DataAccess.SQLServer.sourcelink.json
 C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp.DataAccess.SQLServer\obj\Debug\net6.0\CefaleasApp.DataAccess.SQLServer.csproj.CopyComplete
 C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp.DataAccess.SQLServer\obj\Debug\net6.0\CefaleasApp.DataAccess.SQLServer.dll
 C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp.DataAccess.SQLServer\obj\Debug\net6.0\refint\CefaleasApp.DataAccess.SQLServer.dll

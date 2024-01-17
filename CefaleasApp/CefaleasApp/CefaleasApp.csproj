@@ -13,11 +13,11 @@
 
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs" Version="7.1.0.514" />
-    <PackageReference Include="Pitasoft.Client" Version="5.0.0" />
+    <PackageReference Include="Pitasoft.Client" Version="5.2.0" />
     <PackageReference Include="Pitasoft.Collections" Version="1.2.0" />
     <PackageReference Include="Pitasoft.Shell.Xamarin" Version="1.1.8" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2622" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.8.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
   </ItemGroup>
 
   <ItemGroup>

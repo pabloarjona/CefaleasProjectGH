@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>63950304A7CCEACC17039ABB2D62BE0FA4BDBC7AB9BEA8F39F4438FC0D3AEC0A</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>D02E3F360FC3A4DA80BBB9D528175B464718CE78179BABEFFED5BC545BBA36F4</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>CC604D9E-269E-4EDB-8389-A2A3A9032FBF_1.0.0.0_x64__6c59hcn16gdqa</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>CC604D9E-269E-4EDB-8389-A2A3A9032FBF_6c59hcn16gdqa!App</RegisteredUserModeAppID>
     <RegisteredPackageID>CC604D9E-269E-4EDB-8389-A2A3A9032FBF</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-01-16T11:26:09.110</Modified>
+      <Modified>2024-01-17T14:24:15.545</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\CefaleasApp.UWP.exe">
       <PackagePath>entrypoint\CefaleasApp.UWP.exe</PackagePath>
-      <Modified>2024-01-11T19:40:58.262</Modified>
+      <Modified>2024-01-17T14:21:15.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\acr.userdialogs\7.1.0.514\lib\uap10.0.16299\Acr.UserDialogs.dll">
       <PackagePath>Acr.UserDialogs.dll</PackagePath>
@@ -50,9 +50,9 @@
       <PackagePath>Coding4Fun.Toolkit.dll</PackagePath>
       <Modified>2016-05-12T15:21:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\microsoft.bcl.asyncinterfaces\7.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
+    <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\microsoft.bcl.asyncinterfaces\8.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
       <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
-      <Modified>2022-10-18T16:20:12.000</Modified>
+      <Modified>2023-10-31T15:00:26.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\microsoft.extensions.configuration\5.0.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
@@ -78,9 +78,9 @@
       <PackagePath>Pitasoft.dll</PackagePath>
       <Modified>2020-12-14T18:26:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\pitasoft.client\5.0.0\lib\netstandard2.0\Pitasoft.Client.dll">
+    <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\pitasoft.client\5.2.0\lib\netstandard2.0\Pitasoft.Client.dll">
       <PackagePath>Pitasoft.Client.dll</PackagePath>
-      <Modified>2023-09-08T10:08:18.000</Modified>
+      <Modified>2023-11-20T22:21:42.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\pitasoft.collections\1.2.0\lib\netstandard2.0\Pitasoft.Collections.dll">
       <PackagePath>Pitasoft.Collections.dll</PackagePath>
@@ -90,17 +90,17 @@
       <PackagePath>Pitasoft.Commands.dll</PackagePath>
       <Modified>2020-01-19T11:06:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\pitasoft.error\3.0.1\lib\netstandard2.0\Pitasoft.Error.dll">
+    <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\pitasoft.error\3.1.0\lib\netstandard2.0\Pitasoft.Error.dll">
       <PackagePath>Pitasoft.Error.dll</PackagePath>
-      <Modified>2023-10-23T10:31:42.000</Modified>
+      <Modified>2023-11-20T22:06:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\pitasoft.mvvm\1.0.6\lib\netstandard2.0\Pitasoft.MVVM.dll">
       <PackagePath>Pitasoft.MVVM.dll</PackagePath>
       <Modified>2020-12-14T19:14:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\pitasoft.result\5.1.0\lib\netstandard2.0\Pitasoft.Result.dll">
+    <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\pitasoft.result\5.3.0\lib\netstandard2.0\Pitasoft.Result.dll">
       <PackagePath>Pitasoft.Result.dll</PackagePath>
-      <Modified>2023-10-23T10:37:34.000</Modified>
+      <Modified>2023-11-20T22:17:08.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\pitasoft.shell\1.1.8\lib\netstandard2.0\Pitasoft.Shell.dll">
       <PackagePath>Pitasoft.Shell.dll</PackagePath>
@@ -118,9 +118,9 @@
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2022-06-10T22:23:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\system.net.http.json\7.0.1\lib\netstandard2.0\System.Net.Http.Json.dll">
+    <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\system.net.http.json\8.0.0\lib\netstandard2.0\System.Net.Http.Json.dll">
       <PackagePath>System.Net.Http.Json.dll</PackagePath>
-      <Modified>2023-02-16T00:45:36.000</Modified>
+      <Modified>2023-10-31T15:09:24.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\system.reactive\5.0.0\lib\uap10.0.16299\System.Reactive.dll">
       <PackagePath>System.Reactive.dll</PackagePath>
@@ -130,21 +130,21 @@
       <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
       <Modified>2021-10-22T23:40:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\system.text.encodings.web\7.0.0\lib\netstandard2.0\System.Text.Encodings.Web.dll">
+    <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\system.text.encodings.web\8.0.0\lib\netstandard2.0\System.Text.Encodings.Web.dll">
       <PackagePath>System.Text.Encodings.Web.dll</PackagePath>
-      <Modified>2022-10-18T16:31:50.000</Modified>
+      <Modified>2023-10-31T15:01:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\system.text.json\7.0.3\lib\netstandard2.0\System.Text.Json.dll">
+    <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\system.text.json\8.0.0\lib\netstandard2.0\System.Text.Json.dll">
       <PackagePath>System.Text.Json.dll</PackagePath>
-      <Modified>2023-05-24T14:46:26.000</Modified>
+      <Modified>2023-10-31T15:09:16.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\win2d.uwp\1.20.0\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
       <Modified>2016-11-30T02:58:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\xamarin.essentials\1.8.0\lib\uap10.0.16299\Xamarin.Essentials.dll">
+    <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\xamarin.essentials\1.8.1\lib\uap10.0.16299\Xamarin.Essentials.dll">
       <PackagePath>Xamarin.Essentials.dll</PackagePath>
-      <Modified>2023-08-10T17:57:06.000</Modified>
+      <Modified>2023-12-15T12:23:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\xamarin.forms\5.0.0.2622\lib\uap10.0.16299\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
@@ -164,15 +164,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp\bin\Debug\netstandard2.0\CefaleasApp.dll">
       <PackagePath>CefaleasApp.dll</PackagePath>
-      <Modified>2024-01-12T14:53:27.204</Modified>
+      <Modified>2024-01-17T14:24:09.561</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp\bin\Debug\netstandard2.0\CefaleasApp.Entities.dll">
       <PackagePath>CefaleasApp.Entities.dll</PackagePath>
-      <Modified>2024-01-11T19:36:54.770</Modified>
+      <Modified>2024-01-16T18:31:11.335</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp\bin\Debug\netstandard2.0\CefaleasApp.DataAccess.dll">
       <PackagePath>CefaleasApp.DataAccess.dll</PackagePath>
-      <Modified>2024-01-11T19:36:55.373</Modified>
+      <Modified>2024-01-16T18:31:12.239</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -180,7 +180,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.22621.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
-      <Modified>2023-05-11T22:54:58.000</Modified>
+      <Modified>2023-09-30T01:17:28.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\acr.userdialogs\7.1.0.514\lib\uap10.0.16299\Acr.UserDialogs\Acr.UserDialogs.xr.xml">
       <PackagePath>Acr.UserDialogs\Acr.UserDialogs.xr.xml</PackagePath>
@@ -502,19 +502,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2024-01-16T11:26:06.843</Modified>
+      <Modified>2024-01-17T14:24:14.523</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2024-01-16T11:26:06.843</Modified>
+      <Modified>2024-01-17T14:24:14.523</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.22621.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
-      <Modified>2023-05-11T22:55:38.000</Modified>
+      <Modified>2023-09-29T19:47:08.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.22621.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2023-05-12T01:38:22.000</Modified>
+      <Modified>2023-09-30T04:03:44.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
@@ -522,11 +522,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-01-11T19:40:59.274</Modified>
+      <Modified>2024-01-17T14:21:15.749</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp\CefaleasApp.UWP\bin\x64\Debug\Core\CefaleasApp.UWP.exe">
       <PackagePath>CefaleasApp.UWP.exe</PackagePath>
-      <Modified>2024-01-16T11:26:09.103</Modified>
+      <Modified>2024-01-17T14:24:15.541</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

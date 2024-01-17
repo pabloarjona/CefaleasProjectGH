@@ -47,6 +47,7 @@ C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp.DataAccess\obj\Debug\netstandar
 C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp.DataAccess\obj\Debug\netstandard2.0\CefaleasApp.DataAccess.AssemblyInfoInputs.cache
 C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp.DataAccess\obj\Debug\netstandard2.0\CefaleasApp.DataAccess.AssemblyInfo.cs
 C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp.DataAccess\obj\Debug\netstandard2.0\CefaleasApp.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp.DataAccess\obj\Debug\netstandard2.0\CefaleasApp.DataAccess.sourcelink.json
 C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp.DataAccess\obj\Debug\netstandard2.0\CefaleasApp.DataAccess.csproj.CopyComplete
 C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp.DataAccess\obj\Debug\netstandard2.0\CefaleasApp.DataAccess.dll
 C:\Users\pablo\git\CefaleasProjectGH\CefaleasApp.DataAccess\obj\Debug\netstandard2.0\CefaleasApp.DataAccess.pdb

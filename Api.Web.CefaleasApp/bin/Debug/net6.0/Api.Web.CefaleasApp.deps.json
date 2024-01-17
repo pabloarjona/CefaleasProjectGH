@@ -441,22 +441,34 @@
           }
         }
       },
-      "Pitasoft.Error/3.0.1": {
+      "Pitasoft.Client/5.2.0": {
+        "dependencies": {
+          "Pitasoft.Error": "3.1.0",
+          "Pitasoft.Result": "5.3.0"
+        },
         "runtime": {
-          "lib/net6.0/Pitasoft.Error.dll": {
-            "assemblyVersion": "3.0.1.0",
-            "fileVersion": "3.0.1.0"
+          "lib/net6.0/Pitasoft.Client.dll": {
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         }
       },
-      "Pitasoft.Result/5.1.0": {
+      "Pitasoft.Error/3.1.0": {
+        "runtime": {
+          "lib/net6.0/Pitasoft.Error.dll": {
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.1.0.0"
+          }
+        }
+      },
+      "Pitasoft.Result/5.3.0": {
         "dependencies": {
-          "Pitasoft.Error": "3.0.1"
+          "Pitasoft.Error": "3.1.0"
         },
         "runtime": {
           "lib/net6.0/Pitasoft.Result.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.3.0.0",
+            "fileVersion": "5.3.0.0"
           }
         }
       },
@@ -703,7 +715,7 @@
       "CefaleasApp.DataAccess/1.0.0": {
         "dependencies": {
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Result": "5.1.0"
+          "Pitasoft.Result": "5.3.0"
         },
         "runtime": {
           "CefaleasApp.DataAccess.dll": {}
@@ -713,7 +725,8 @@
         "dependencies": {
           "CefaleasApp.DataAccess": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13",
-          "Pitasoft.Result": "5.1.0"
+          "Pitasoft.Client": "5.2.0",
+          "Pitasoft.Result": "5.3.0"
         },
         "runtime": {
           "CefaleasApp.DataAccess.SQLServer.dll": {}
@@ -1001,19 +1014,26 @@
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
     },
-    "Pitasoft.Error/3.0.1": {
+    "Pitasoft.Client/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1qb5K5RMHOL8XGyVudy8co8uQAJeiK1F9pT5BVAw2BO1KeHBnMfbt3EZmZJ7tYKU3DN1hxUdBESNdehXLsUojw==",
-      "path": "pitasoft.error/3.0.1",
-      "hashPath": "pitasoft.error.3.0.1.nupkg.sha512"
+      "sha512": "sha512-7d1SQmrjH24cA887vqWDYl8lDeU7RWZD8wVaEPIiv3qcATfCeyyzG4REVhhiJTgXlKAK+knpAXyeC2zXBA3eTw==",
+      "path": "pitasoft.client/5.2.0",
+      "hashPath": "pitasoft.client.5.2.0.nupkg.sha512"
     },
-    "Pitasoft.Result/5.1.0": {
+    "Pitasoft.Error/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-I5UE5P5BQEUQ863DMH0gBgVR3TaPjZnmewP0V6gkTaXCYThC67P9U00wbJxhUh7mg10yUTiCUiYr6u7VEDoYUQ==",
-      "path": "pitasoft.result/5.1.0",
-      "hashPath": "pitasoft.result.5.1.0.nupkg.sha512"
+      "sha512": "sha512-Z4ObHfbl3h7ys6H8ePIYZTBlGlADO5FSTiT/m7lOZtaPV+VwxrzwzE8gTnySRWqCKbATXly15kjyqxbQfKH1HA==",
+      "path": "pitasoft.error/3.1.0",
+      "hashPath": "pitasoft.error.3.1.0.nupkg.sha512"
+    },
+    "Pitasoft.Result/5.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-szdcFWnDX7qR0hKC77TP+QqVNV3JRnFcm92gaPLx7Z2kF+H/FD+nx5BGMoDppvdRpG+k/hSnQqgx9NzMySNK8Q==",
+      "path": "pitasoft.result/5.3.0",
+      "hashPath": "pitasoft.result.5.3.0.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.5.0": {
       "type": "package",

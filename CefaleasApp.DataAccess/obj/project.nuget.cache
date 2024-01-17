@@ -1,21 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "aTWaxtABeBLEOACk+wXwKSrWa2oc0nYS8wrWeXpbh+Bx/tkux0cwkJ2yytp17atGzffRyGpDHF6KAI1XbRUq/w==",
+  "dgSpecHash": "M8YxMn7MtWRketU/jNbFT+VPb7HoNWib/NBQzRaExK5R8eTp7uhrDo6mRv8rywMZHANC5/I9oiqmT2sW90HpOA==",
   "success": true,
   "projectFilePath": "C:\\Users\\pablo\\git\\CefaleasProjectGH\\CefaleasApp.DataAccess\\CefaleasApp.DataAccess.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\pablo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
+    "C:\\Users\\pablo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\pablo\\.nuget\\packages\\pitasoft.error\\3.0.1\\pitasoft.error.3.0.1.nupkg.sha512",
-    "C:\\Users\\pablo\\.nuget\\packages\\pitasoft.result\\5.1.0\\pitasoft.result.5.1.0.nupkg.sha512",
+    "C:\\Users\\pablo\\.nuget\\packages\\pitasoft.error\\3.1.0\\pitasoft.error.3.1.0.nupkg.sha512",
+    "C:\\Users\\pablo\\.nuget\\packages\\pitasoft.result\\5.3.0\\pitasoft.result.5.3.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
-    "C:\\Users\\pablo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\pablo\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\pablo\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\pablo\\.nuget\\packages\\system.text.json\\7.0.3\\system.text.json.7.0.3.nupkg.sha512",
+    "C:\\Users\\pablo\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
+    "C:\\Users\\pablo\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
   "logs": []

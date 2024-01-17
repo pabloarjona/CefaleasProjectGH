@@ -21,7 +21,6 @@ namespace CefaleasApp.ViewModels
     {
         public static List<Paciente> Listapac { get; set; } = new List<Paciente>{};
         private readonly IXamarin1SettingsService _settingsService;
-        private static ObservableCollection<Paciente> Pacientes { get; set; }
         private readonly CefaleasRestService _cefaleasRestService;
         private ObservableCollection<Paciente> _listaPacientes;
         public ObservableCollection<Paciente> ListaPacientes 
@@ -76,44 +75,8 @@ namespace CefaleasApp.ViewModels
 
         public override Task InitializeAsync(object navigationData)
         {
-            if (_cefaleasRestService.DEVELOPMENT_ENVIROMENT.Equals(EnvironmentDevelopment.LOCAL))
-            {
-                navigationData = _settingsService.Usuario;
-                Paciente paciente = new Paciente {
-                    IdUsuario = _settingsService.Usuario.IdUsuario,
-                    Edad = 12,
-                    Iniciales = "P.P.P",
-                    Sexo = 'M',
-                    IdPaciente = 1,
-                    FechaConsulta = new System.DateTime(2023, 12, 12)
-                };
-                List<Paciente> list = new List<Paciente> {paciente};
-                
-                if (list.Count() != 0)
-                {
-                    DoAction(() =>
-                    {
-                        Listapac.Clear();
-                        Listapac.AddRange(list);
-                        //Listapac.OrderByDescending(x => x.FechaConsulta).ToList();
-                        ListaPacientes.Clear();
-                        ListaPacientes.AddRange(list);
-                    });
-                    this.TotalPacientes = ListaPacientes.Count;
-                    UserDialogs.Instance.HideLoading();
-                }
-                else
-                {
-                    ListaPacientes.Clear();
-                    Listapac.Clear();
-                    UserDialogs.Instance.HideLoading();
-                }
-            }
-            else
-            {
-                DoTask(RefreshCommandAsync());
-            }
-            return base.InitializeAsync(navigationData);
+           DoTask(RefreshCommandAsync());
+           return base.InitializeAsync(navigationData);
         }
         private async Task RefreshCommandAsync()
         {

@@ -13,10 +13,10 @@
           "CefaleasApp.DataAccess": "1.0.0",
           "CefaleasApp.Entities": "1.0.0",
           "NETStandard.Library": "2.0.3",
-          "Pitasoft.Client": "5.0.0",
+          "Pitasoft.Client": "5.2.0",
           "Pitasoft.Collections": "1.2.0",
           "Pitasoft.Shell.Xamarin": "1.1.8",
-          "Xamarin.Essentials": "1.8.0",
+          "Xamarin.Essentials": "1.8.1",
           "Xamarin.Forms": "5.0.0.2622"
         },
         "runtime": {
@@ -31,14 +31,14 @@
           }
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+      "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
         "dependencies": {
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.22.51805"
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
           }
         }
       },
@@ -67,7 +67,7 @@
       },
       "Microsoft.Extensions.DependencyInjection/5.0.1": {
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
@@ -117,16 +117,17 @@
           }
         }
       },
-      "Pitasoft.Client/5.0.0": {
+      "Pitasoft.Client/5.2.0": {
         "dependencies": {
-          "Pitasoft.Result": "5.1.0",
-          "System.Net.Http.Json": "7.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "Pitasoft.Result": "5.3.0",
+          "System.Net.Http.Json": "8.0.0",
+          "System.Text.Json": "8.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/Pitasoft.Client.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         }
       },
@@ -146,14 +147,14 @@
           }
         }
       },
-      "Pitasoft.Error/3.0.1": {
+      "Pitasoft.Error/3.1.0": {
         "dependencies": {
-          "System.Text.Json": "7.0.3"
+          "System.Text.Json": "8.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/Pitasoft.Error.dll": {
-            "assemblyVersion": "3.0.1.0",
-            "fileVersion": "3.0.1.0"
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.1.0.0"
           }
         }
       },
@@ -168,15 +169,15 @@
           }
         }
       },
-      "Pitasoft.Result/5.1.0": {
+      "Pitasoft.Result/5.3.0": {
         "dependencies": {
-          "Pitasoft.Error": "3.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "System.Text.Json": "8.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/Pitasoft.Result.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.3.0.0",
+            "fileVersion": "5.3.0.0"
           }
         }
       },
@@ -247,17 +248,17 @@
           }
         }
       },
-      "System.Net.Http.Json/7.0.1": {
+      "System.Net.Http.Json/8.0.0": {
         "dependencies": {
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Text.Json": "7.0.3",
+          "System.Text.Json": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "runtime": {
           "lib/netstandard2.0/System.Net.Http.Json.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.423.11508"
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
           }
         }
       },
@@ -306,7 +307,7 @@
           }
         }
       },
-      "System.Text.Encodings.Web/7.0.0": {
+      "System.Text.Encodings.Web/8.0.0": {
         "dependencies": {
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
@@ -314,25 +315,24 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.22.51805"
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
           }
         }
       },
-      "System.Text.Json/7.0.3": {
+      "System.Text.Json/8.0.0": {
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Numerics.Vectors": "4.5.0",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
-          "System.Text.Encodings.Web": "7.0.0",
+          "System.Text.Encodings.Web": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Json.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.723.27404"
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
           }
         }
       },
@@ -347,7 +347,7 @@
           }
         }
       },
-      "Xamarin.Essentials/1.8.0": {
+      "Xamarin.Essentials/1.8.1": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
@@ -377,7 +377,7 @@
       "CefaleasApp.DataAccess/1.0.0": {
         "dependencies": {
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Result": "5.1.0"
+          "Pitasoft.Result": "5.3.0"
         },
         "runtime": {
           "CefaleasApp.DataAccess.dll": {}
@@ -406,12 +406,12 @@
       "path": "acr.userdialogs/7.1.0.514",
       "hashPath": "acr.userdialogs.7.1.0.514.nupkg.sha512"
     },
-    "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+    "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3aeMZ1N0lJoSyzqiP03hqemtb1BijhsJADdobn/4nsMJ8V1H+CrpuduUe4hlRdx+ikBQju1VGjMD1GJ3Sk05Eg==",
-      "path": "microsoft.bcl.asyncinterfaces/7.0.0",
-      "hashPath": "microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512"
+      "sha512": "sha512-3WA9q9yVqJp222P3x1wYIGDAkpjAku0TMUaaQV22g6L67AI0LdOIrVS7Ht2vJfLHGSPVuqN94vIr15qn+HEkHw==",
+      "path": "microsoft.bcl.asyncinterfaces/8.0.0",
+      "hashPath": "microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/5.0.0": {
       "type": "package",
@@ -476,12 +476,12 @@
       "path": "pitasoft/1.0.4",
       "hashPath": "pitasoft.1.0.4.nupkg.sha512"
     },
-    "Pitasoft.Client/5.0.0": {
+    "Pitasoft.Client/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-DSy/yb/JJng/NDUG1xe7iGFWzXJ6rbpsY1U3vBbxcqxSwpHzzuusbm/OtjRm1BvPOupY3wcfoQ5EIy87+prHxw==",
-      "path": "pitasoft.client/5.0.0",
-      "hashPath": "pitasoft.client.5.0.0.nupkg.sha512"
+      "sha512": "sha512-7d1SQmrjH24cA887vqWDYl8lDeU7RWZD8wVaEPIiv3qcATfCeyyzG4REVhhiJTgXlKAK+knpAXyeC2zXBA3eTw==",
+      "path": "pitasoft.client/5.2.0",
+      "hashPath": "pitasoft.client.5.2.0.nupkg.sha512"
     },
     "Pitasoft.Collections/1.2.0": {
       "type": "package",
@@ -497,12 +497,12 @@
       "path": "pitasoft.commands/1.0.0",
       "hashPath": "pitasoft.commands.1.0.0.nupkg.sha512"
     },
-    "Pitasoft.Error/3.0.1": {
+    "Pitasoft.Error/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1qb5K5RMHOL8XGyVudy8co8uQAJeiK1F9pT5BVAw2BO1KeHBnMfbt3EZmZJ7tYKU3DN1hxUdBESNdehXLsUojw==",
-      "path": "pitasoft.error/3.0.1",
-      "hashPath": "pitasoft.error.3.0.1.nupkg.sha512"
+      "sha512": "sha512-Z4ObHfbl3h7ys6H8ePIYZTBlGlADO5FSTiT/m7lOZtaPV+VwxrzwzE8gTnySRWqCKbATXly15kjyqxbQfKH1HA==",
+      "path": "pitasoft.error/3.1.0",
+      "hashPath": "pitasoft.error.3.1.0.nupkg.sha512"
     },
     "Pitasoft.MVVM/1.0.6": {
       "type": "package",
@@ -511,12 +511,12 @@
       "path": "pitasoft.mvvm/1.0.6",
       "hashPath": "pitasoft.mvvm.1.0.6.nupkg.sha512"
     },
-    "Pitasoft.Result/5.1.0": {
+    "Pitasoft.Result/5.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-I5UE5P5BQEUQ863DMH0gBgVR3TaPjZnmewP0V6gkTaXCYThC67P9U00wbJxhUh7mg10yUTiCUiYr6u7VEDoYUQ==",
-      "path": "pitasoft.result/5.1.0",
-      "hashPath": "pitasoft.result.5.1.0.nupkg.sha512"
+      "sha512": "sha512-szdcFWnDX7qR0hKC77TP+QqVNV3JRnFcm92gaPLx7Z2kF+H/FD+nx5BGMoDppvdRpG+k/hSnQqgx9NzMySNK8Q==",
+      "path": "pitasoft.result/5.3.0",
+      "hashPath": "pitasoft.result.5.3.0.nupkg.sha512"
     },
     "Pitasoft.Shell/1.1.8": {
       "type": "package",
@@ -560,12 +560,12 @@
       "path": "system.memory/4.5.5",
       "hashPath": "system.memory.4.5.5.nupkg.sha512"
     },
-    "System.Net.Http.Json/7.0.1": {
+    "System.Net.Http.Json/8.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ni8+BJnndbJI9AXme/qCYXg1s4RpdRJx3gKp5WzcWuLt4l3syuscgk5Becis6x4E7HbQk4z6A7FNXFQD75F+wQ==",
-      "path": "system.net.http.json/7.0.1",
-      "hashPath": "system.net.http.json.7.0.1.nupkg.sha512"
+      "sha512": "sha512-48Bxrd6zcGeQzS4GMEDVjuqCcAw/9wcEWnIu48FQJ5IzfKPiMR1nGtz9LrvGzU4+3TLbx/9FDlGmCUeLin1Eqg==",
+      "path": "system.net.http.json/8.0.0",
+      "hashPath": "system.net.http.json.8.0.0.nupkg.sha512"
     },
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",
@@ -602,19 +602,19 @@
       "path": "system.runtime.interopservices.windowsruntime/4.3.0",
       "hashPath": "system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512"
     },
-    "System.Text.Encodings.Web/7.0.0": {
+    "System.Text.Encodings.Web/8.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OP6umVGxc0Z0MvZQBVigj4/U31Pw72ITihDWP9WiWDm+q5aoe0GaJivsfYGq53o6dxH7DcXWiCTl7+0o2CGdmg==",
-      "path": "system.text.encodings.web/7.0.0",
-      "hashPath": "system.text.encodings.web.7.0.0.nupkg.sha512"
+      "sha512": "sha512-yev/k9GHAEGx2Rg3/tU6MQh4HGBXJs70y7j1LaM1i/ER9po+6nnQ6RRqTJn1E7Xu0fbIFK80Nh5EoODxrbxwBQ==",
+      "path": "system.text.encodings.web/8.0.0",
+      "hashPath": "system.text.encodings.web.8.0.0.nupkg.sha512"
     },
-    "System.Text.Json/7.0.3": {
+    "System.Text.Json/8.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-AyjhwXN1zTFeIibHimfJn6eAsZ7rTBib79JQpzg8WAuR/HKDu9JGNHTuu3nbbXQ/bgI+U4z6HtZmCHNXB1QXrQ==",
-      "path": "system.text.json/7.0.3",
-      "hashPath": "system.text.json.7.0.3.nupkg.sha512"
+      "sha512": "sha512-OdrZO2WjkiEG6ajEFRABTRCi/wuXQPxeV6g8xvUJqdxMvvuCCEk86zPla8UiIQJz3durtUEbNyY/3lIhS0yZvQ==",
+      "path": "system.text.json/8.0.0",
+      "hashPath": "system.text.json.8.0.0.nupkg.sha512"
     },
     "System.Threading.Tasks.Extensions/4.5.4": {
       "type": "package",
@@ -623,12 +623,12 @@
       "path": "system.threading.tasks.extensions/4.5.4",
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
     },
-    "Xamarin.Essentials/1.8.0": {
+    "Xamarin.Essentials/1.8.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-g1yB0CkX7BVOx84P0SLm8guypbEfigqjddZsI9KgJzba6yRRcekBqDp6YTT1hO8ZcFcW8VZbsymejTJftJoQyg==",
-      "path": "xamarin.essentials/1.8.0",
-      "hashPath": "xamarin.essentials.1.8.0.nupkg.sha512"
+      "sha512": "sha512-IzfRGrCrRuytgdQU+Im17Cepib6qUyLj1xfMjn+sDPTfmhmcZotsQCm5Dblm4Vxo9/SGFTdm1OgJUKWzu+dfjw==",
+      "path": "xamarin.essentials/1.8.1",
+      "hashPath": "xamarin.essentials.1.8.1.nupkg.sha512"
     },
     "Xamarin.Forms/5.0.0.2622": {
       "type": "package",

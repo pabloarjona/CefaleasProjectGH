@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Api.Web.CefaleasApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba500b69748ccaa4b2499bf12a2884d7d35421ff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+408cf2f5b93d8b75dda48a06491446290146b88d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Api.Web.CefaleasApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Api.Web.CefaleasApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

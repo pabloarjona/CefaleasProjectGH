@@ -37,7 +37,7 @@
           }
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+      "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Threading.Tasks.Extensions": "4.5.4"
@@ -640,12 +640,13 @@
           "lib/netstandard2.0/Pitasoft.dll": {}
         }
       },
-      "Pitasoft.Client/5.0.0": {
+      "Pitasoft.Client/5.2.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Result": "5.0.0",
-          "System.Net.Http.Json": "7.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "Pitasoft.Result": "5.3.0",
+          "System.Net.Http.Json": "8.0.0",
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Client.dll": {}
@@ -672,10 +673,10 @@
           "lib/netstandard2.0/Pitasoft.Commands.dll": {}
         }
       },
-      "Pitasoft.Error/3.0.1": {
+      "Pitasoft.Error/3.1.0": {
         "type": "package",
         "dependencies": {
-          "System.Text.Json": "7.0.3"
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Error.dll": {}
@@ -696,11 +697,11 @@
           "lib/netstandard2.0/Pitasoft.MVVM.dll": {}
         }
       },
-      "Pitasoft.Result/5.1.0": {
+      "Pitasoft.Result/5.3.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Error": "3.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Result.dll": {}
@@ -875,12 +876,12 @@
           }
         }
       },
-      "System.Net.Http.Json/7.0.1": {
+      "System.Net.Http.Json/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Text.Json": "7.0.2",
+          "System.Text.Json": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -892,15 +893,6 @@
           "lib/netstandard2.0/System.Net.Http.Json.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "System.Numerics.Vectors/4.5.0": {
-        "type": "package",
-        "compile": {
-          "ref/uap10.0.16299/_._": {}
-        },
-        "runtime": {
-          "lib/uap10.0.16299/_._": {}
         }
       },
       "System.Reactive/5.0.0": {
@@ -932,7 +924,7 @@
           }
         }
       },
-      "System.Text.Encodings.Web/7.0.0": {
+      "System.Text.Encodings.Web/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
@@ -950,15 +942,14 @@
           }
         }
       },
-      "System.Text.Json/7.0.3": {
+      "System.Text.Json/8.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Numerics.Vectors": "4.5.0",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
-          "System.Text.Encodings.Web": "7.0.0",
+          "System.Text.Encodings.Web": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -1018,7 +1009,7 @@
           }
         }
       },
-      "Xamarin.Essentials/1.8.0": {
+      "Xamarin.Essentials/1.8.1": {
         "type": "package",
         "compile": {
           "lib/uap10.0.16299/Xamarin.Essentials.dll": {
@@ -1077,10 +1068,10 @@
           "Acr.UserDialogs": "7.1.0.514",
           "CefaleasApp.DataAccess": "1.0.0",
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Client": "5.0.0",
+          "Pitasoft.Client": "5.2.0",
           "Pitasoft.Collections": "1.2.0",
           "Pitasoft.Shell.Xamarin": "1.1.8",
-          "Xamarin.Essentials": "1.8.0",
+          "Xamarin.Essentials": "1.8.1",
           "Xamarin.Forms": "5.0.0.2622"
         },
         "compile": {
@@ -1095,7 +1086,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Result": "5.1.0"
+          "Pitasoft.Result": "5.3.0"
         },
         "compile": {
           "bin/placeholder/CefaleasApp.DataAccess.dll": {}
@@ -1154,7 +1145,7 @@
           }
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+      "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Threading.Tasks.Extensions": "4.5.4"
@@ -1758,12 +1749,13 @@
           "lib/netstandard2.0/Pitasoft.dll": {}
         }
       },
-      "Pitasoft.Client/5.0.0": {
+      "Pitasoft.Client/5.2.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Result": "5.0.0",
-          "System.Net.Http.Json": "7.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "Pitasoft.Result": "5.3.0",
+          "System.Net.Http.Json": "8.0.0",
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Client.dll": {}
@@ -1790,10 +1782,10 @@
           "lib/netstandard2.0/Pitasoft.Commands.dll": {}
         }
       },
-      "Pitasoft.Error/3.0.1": {
+      "Pitasoft.Error/3.1.0": {
         "type": "package",
         "dependencies": {
-          "System.Text.Json": "7.0.3"
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Error.dll": {}
@@ -1814,11 +1806,11 @@
           "lib/netstandard2.0/Pitasoft.MVVM.dll": {}
         }
       },
-      "Pitasoft.Result/5.1.0": {
+      "Pitasoft.Result/5.3.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Error": "3.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Result.dll": {}
@@ -2171,12 +2163,12 @@
           }
         }
       },
-      "System.Net.Http.Json/7.0.1": {
+      "System.Net.Http.Json/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Text.Json": "7.0.2",
+          "System.Text.Json": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -2188,15 +2180,6 @@
           "lib/netstandard2.0/System.Net.Http.Json.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "System.Numerics.Vectors/4.5.0": {
-        "type": "package",
-        "compile": {
-          "ref/uap10.0.16299/_._": {}
-        },
-        "runtime": {
-          "lib/uap10.0.16299/_._": {}
         }
       },
       "System.Reactive/5.0.0": {
@@ -2228,7 +2211,7 @@
           }
         }
       },
-      "System.Text.Encodings.Web/7.0.0": {
+      "System.Text.Encodings.Web/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
@@ -2246,15 +2229,14 @@
           }
         }
       },
-      "System.Text.Json/7.0.3": {
+      "System.Text.Json/8.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Numerics.Vectors": "4.5.0",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
-          "System.Text.Encodings.Web": "7.0.0",
+          "System.Text.Encodings.Web": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -2303,7 +2285,7 @@
           "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
-      "Xamarin.Essentials/1.8.0": {
+      "Xamarin.Essentials/1.8.1": {
         "type": "package",
         "compile": {
           "lib/uap10.0.16299/Xamarin.Essentials.dll": {
@@ -2362,10 +2344,10 @@
           "Acr.UserDialogs": "7.1.0.514",
           "CefaleasApp.DataAccess": "1.0.0",
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Client": "5.0.0",
+          "Pitasoft.Client": "5.2.0",
           "Pitasoft.Collections": "1.2.0",
           "Pitasoft.Shell.Xamarin": "1.1.8",
-          "Xamarin.Essentials": "1.8.0",
+          "Xamarin.Essentials": "1.8.1",
           "Xamarin.Forms": "5.0.0.2622"
         },
         "compile": {
@@ -2380,7 +2362,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Result": "5.1.0"
+          "Pitasoft.Result": "5.3.0"
         },
         "compile": {
           "bin/placeholder/CefaleasApp.DataAccess.dll": {}
@@ -2439,7 +2421,7 @@
           }
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+      "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Threading.Tasks.Extensions": "4.5.4"
@@ -3043,12 +3025,13 @@
           "lib/netstandard2.0/Pitasoft.dll": {}
         }
       },
-      "Pitasoft.Client/5.0.0": {
+      "Pitasoft.Client/5.2.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Result": "5.0.0",
-          "System.Net.Http.Json": "7.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "Pitasoft.Result": "5.3.0",
+          "System.Net.Http.Json": "8.0.0",
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Client.dll": {}
@@ -3075,10 +3058,10 @@
           "lib/netstandard2.0/Pitasoft.Commands.dll": {}
         }
       },
-      "Pitasoft.Error/3.0.1": {
+      "Pitasoft.Error/3.1.0": {
         "type": "package",
         "dependencies": {
-          "System.Text.Json": "7.0.3"
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Error.dll": {}
@@ -3099,11 +3082,11 @@
           "lib/netstandard2.0/Pitasoft.MVVM.dll": {}
         }
       },
-      "Pitasoft.Result/5.1.0": {
+      "Pitasoft.Result/5.3.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Error": "3.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Result.dll": {}
@@ -3457,12 +3440,12 @@
           }
         }
       },
-      "System.Net.Http.Json/7.0.1": {
+      "System.Net.Http.Json/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Text.Json": "7.0.2",
+          "System.Text.Json": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -3474,15 +3457,6 @@
           "lib/netstandard2.0/System.Net.Http.Json.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "System.Numerics.Vectors/4.5.0": {
-        "type": "package",
-        "compile": {
-          "ref/uap10.0.16299/_._": {}
-        },
-        "runtime": {
-          "lib/uap10.0.16299/_._": {}
         }
       },
       "System.Reactive/5.0.0": {
@@ -3514,7 +3488,7 @@
           }
         }
       },
-      "System.Text.Encodings.Web/7.0.0": {
+      "System.Text.Encodings.Web/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
@@ -3532,15 +3506,14 @@
           }
         }
       },
-      "System.Text.Json/7.0.3": {
+      "System.Text.Json/8.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Numerics.Vectors": "4.5.0",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
-          "System.Text.Encodings.Web": "7.0.0",
+          "System.Text.Encodings.Web": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -3589,7 +3562,7 @@
           "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
-      "Xamarin.Essentials/1.8.0": {
+      "Xamarin.Essentials/1.8.1": {
         "type": "package",
         "compile": {
           "lib/uap10.0.16299/Xamarin.Essentials.dll": {
@@ -3648,10 +3621,10 @@
           "Acr.UserDialogs": "7.1.0.514",
           "CefaleasApp.DataAccess": "1.0.0",
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Client": "5.0.0",
+          "Pitasoft.Client": "5.2.0",
           "Pitasoft.Collections": "1.2.0",
           "Pitasoft.Shell.Xamarin": "1.1.8",
-          "Xamarin.Essentials": "1.8.0",
+          "Xamarin.Essentials": "1.8.1",
           "Xamarin.Forms": "5.0.0.2622"
         },
         "compile": {
@@ -3666,7 +3639,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Result": "5.1.0"
+          "Pitasoft.Result": "5.3.0"
         },
         "compile": {
           "bin/placeholder/CefaleasApp.DataAccess.dll": {}
@@ -3725,7 +3698,7 @@
           }
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+      "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Threading.Tasks.Extensions": "4.5.4"
@@ -4329,12 +4302,13 @@
           "lib/netstandard2.0/Pitasoft.dll": {}
         }
       },
-      "Pitasoft.Client/5.0.0": {
+      "Pitasoft.Client/5.2.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Result": "5.0.0",
-          "System.Net.Http.Json": "7.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "Pitasoft.Result": "5.3.0",
+          "System.Net.Http.Json": "8.0.0",
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Client.dll": {}
@@ -4361,10 +4335,10 @@
           "lib/netstandard2.0/Pitasoft.Commands.dll": {}
         }
       },
-      "Pitasoft.Error/3.0.1": {
+      "Pitasoft.Error/3.1.0": {
         "type": "package",
         "dependencies": {
-          "System.Text.Json": "7.0.3"
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Error.dll": {}
@@ -4385,11 +4359,11 @@
           "lib/netstandard2.0/Pitasoft.MVVM.dll": {}
         }
       },
-      "Pitasoft.Result/5.1.0": {
+      "Pitasoft.Result/5.3.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Error": "3.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Result.dll": {}
@@ -4743,12 +4717,12 @@
           }
         }
       },
-      "System.Net.Http.Json/7.0.1": {
+      "System.Net.Http.Json/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Text.Json": "7.0.2",
+          "System.Text.Json": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -4760,15 +4734,6 @@
           "lib/netstandard2.0/System.Net.Http.Json.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "System.Numerics.Vectors/4.5.0": {
-        "type": "package",
-        "compile": {
-          "ref/uap10.0.16299/_._": {}
-        },
-        "runtime": {
-          "lib/uap10.0.16299/_._": {}
         }
       },
       "System.Reactive/5.0.0": {
@@ -4800,7 +4765,7 @@
           }
         }
       },
-      "System.Text.Encodings.Web/7.0.0": {
+      "System.Text.Encodings.Web/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
@@ -4818,15 +4783,14 @@
           }
         }
       },
-      "System.Text.Json/7.0.3": {
+      "System.Text.Json/8.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Numerics.Vectors": "4.5.0",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
-          "System.Text.Encodings.Web": "7.0.0",
+          "System.Text.Encodings.Web": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -4872,7 +4836,7 @@
           }
         }
       },
-      "Xamarin.Essentials/1.8.0": {
+      "Xamarin.Essentials/1.8.1": {
         "type": "package",
         "compile": {
           "lib/uap10.0.16299/Xamarin.Essentials.dll": {
@@ -4931,10 +4895,10 @@
           "Acr.UserDialogs": "7.1.0.514",
           "CefaleasApp.DataAccess": "1.0.0",
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Client": "5.0.0",
+          "Pitasoft.Client": "5.2.0",
           "Pitasoft.Collections": "1.2.0",
           "Pitasoft.Shell.Xamarin": "1.1.8",
-          "Xamarin.Essentials": "1.8.0",
+          "Xamarin.Essentials": "1.8.1",
           "Xamarin.Forms": "5.0.0.2622"
         },
         "compile": {
@@ -4949,7 +4913,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Result": "5.1.0"
+          "Pitasoft.Result": "5.3.0"
         },
         "compile": {
           "bin/placeholder/CefaleasApp.DataAccess.dll": {}
@@ -5008,7 +4972,7 @@
           }
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+      "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Threading.Tasks.Extensions": "4.5.4"
@@ -5612,12 +5576,13 @@
           "lib/netstandard2.0/Pitasoft.dll": {}
         }
       },
-      "Pitasoft.Client/5.0.0": {
+      "Pitasoft.Client/5.2.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Result": "5.0.0",
-          "System.Net.Http.Json": "7.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "Pitasoft.Result": "5.3.0",
+          "System.Net.Http.Json": "8.0.0",
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Client.dll": {}
@@ -5644,10 +5609,10 @@
           "lib/netstandard2.0/Pitasoft.Commands.dll": {}
         }
       },
-      "Pitasoft.Error/3.0.1": {
+      "Pitasoft.Error/3.1.0": {
         "type": "package",
         "dependencies": {
-          "System.Text.Json": "7.0.3"
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Error.dll": {}
@@ -5668,11 +5633,11 @@
           "lib/netstandard2.0/Pitasoft.MVVM.dll": {}
         }
       },
-      "Pitasoft.Result/5.1.0": {
+      "Pitasoft.Result/5.3.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Error": "3.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Result.dll": {}
@@ -6025,12 +5990,12 @@
           }
         }
       },
-      "System.Net.Http.Json/7.0.1": {
+      "System.Net.Http.Json/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Text.Json": "7.0.2",
+          "System.Text.Json": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -6042,15 +6007,6 @@
           "lib/netstandard2.0/System.Net.Http.Json.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "System.Numerics.Vectors/4.5.0": {
-        "type": "package",
-        "compile": {
-          "ref/uap10.0.16299/_._": {}
-        },
-        "runtime": {
-          "lib/uap10.0.16299/_._": {}
         }
       },
       "System.Reactive/5.0.0": {
@@ -6082,7 +6038,7 @@
           }
         }
       },
-      "System.Text.Encodings.Web/7.0.0": {
+      "System.Text.Encodings.Web/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
@@ -6100,15 +6056,14 @@
           }
         }
       },
-      "System.Text.Json/7.0.3": {
+      "System.Text.Json/8.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Numerics.Vectors": "4.5.0",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
-          "System.Text.Encodings.Web": "7.0.0",
+          "System.Text.Encodings.Web": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -6157,7 +6112,7 @@
           "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
-      "Xamarin.Essentials/1.8.0": {
+      "Xamarin.Essentials/1.8.1": {
         "type": "package",
         "compile": {
           "lib/uap10.0.16299/Xamarin.Essentials.dll": {
@@ -6216,10 +6171,10 @@
           "Acr.UserDialogs": "7.1.0.514",
           "CefaleasApp.DataAccess": "1.0.0",
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Client": "5.0.0",
+          "Pitasoft.Client": "5.2.0",
           "Pitasoft.Collections": "1.2.0",
           "Pitasoft.Shell.Xamarin": "1.1.8",
-          "Xamarin.Essentials": "1.8.0",
+          "Xamarin.Essentials": "1.8.1",
           "Xamarin.Forms": "5.0.0.2622"
         },
         "compile": {
@@ -6234,7 +6189,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Result": "5.1.0"
+          "Pitasoft.Result": "5.3.0"
         },
         "compile": {
           "bin/placeholder/CefaleasApp.DataAccess.dll": {}
@@ -6293,7 +6248,7 @@
           }
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+      "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Threading.Tasks.Extensions": "4.5.4"
@@ -6897,12 +6852,13 @@
           "lib/netstandard2.0/Pitasoft.dll": {}
         }
       },
-      "Pitasoft.Client/5.0.0": {
+      "Pitasoft.Client/5.2.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Result": "5.0.0",
-          "System.Net.Http.Json": "7.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "Pitasoft.Result": "5.3.0",
+          "System.Net.Http.Json": "8.0.0",
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Client.dll": {}
@@ -6929,10 +6885,10 @@
           "lib/netstandard2.0/Pitasoft.Commands.dll": {}
         }
       },
-      "Pitasoft.Error/3.0.1": {
+      "Pitasoft.Error/3.1.0": {
         "type": "package",
         "dependencies": {
-          "System.Text.Json": "7.0.3"
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Error.dll": {}
@@ -6953,11 +6909,11 @@
           "lib/netstandard2.0/Pitasoft.MVVM.dll": {}
         }
       },
-      "Pitasoft.Result/5.1.0": {
+      "Pitasoft.Result/5.3.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Error": "3.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Result.dll": {}
@@ -7311,12 +7267,12 @@
           }
         }
       },
-      "System.Net.Http.Json/7.0.1": {
+      "System.Net.Http.Json/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Text.Json": "7.0.2",
+          "System.Text.Json": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -7328,15 +7284,6 @@
           "lib/netstandard2.0/System.Net.Http.Json.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "System.Numerics.Vectors/4.5.0": {
-        "type": "package",
-        "compile": {
-          "ref/uap10.0.16299/_._": {}
-        },
-        "runtime": {
-          "lib/uap10.0.16299/_._": {}
         }
       },
       "System.Reactive/5.0.0": {
@@ -7368,7 +7315,7 @@
           }
         }
       },
-      "System.Text.Encodings.Web/7.0.0": {
+      "System.Text.Encodings.Web/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
@@ -7386,15 +7333,14 @@
           }
         }
       },
-      "System.Text.Json/7.0.3": {
+      "System.Text.Json/8.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Numerics.Vectors": "4.5.0",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
-          "System.Text.Encodings.Web": "7.0.0",
+          "System.Text.Encodings.Web": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -7443,7 +7389,7 @@
           "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
-      "Xamarin.Essentials/1.8.0": {
+      "Xamarin.Essentials/1.8.1": {
         "type": "package",
         "compile": {
           "lib/uap10.0.16299/Xamarin.Essentials.dll": {
@@ -7502,10 +7448,10 @@
           "Acr.UserDialogs": "7.1.0.514",
           "CefaleasApp.DataAccess": "1.0.0",
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Client": "5.0.0",
+          "Pitasoft.Client": "5.2.0",
           "Pitasoft.Collections": "1.2.0",
           "Pitasoft.Shell.Xamarin": "1.1.8",
-          "Xamarin.Essentials": "1.8.0",
+          "Xamarin.Essentials": "1.8.1",
           "Xamarin.Forms": "5.0.0.2622"
         },
         "compile": {
@@ -7520,7 +7466,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Result": "5.1.0"
+          "Pitasoft.Result": "5.3.0"
         },
         "compile": {
           "bin/placeholder/CefaleasApp.DataAccess.dll": {}
@@ -7579,7 +7525,7 @@
           }
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+      "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Threading.Tasks.Extensions": "4.5.4"
@@ -8183,12 +8129,13 @@
           "lib/netstandard2.0/Pitasoft.dll": {}
         }
       },
-      "Pitasoft.Client/5.0.0": {
+      "Pitasoft.Client/5.2.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Result": "5.0.0",
-          "System.Net.Http.Json": "7.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "Pitasoft.Result": "5.3.0",
+          "System.Net.Http.Json": "8.0.0",
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Client.dll": {}
@@ -8215,10 +8162,10 @@
           "lib/netstandard2.0/Pitasoft.Commands.dll": {}
         }
       },
-      "Pitasoft.Error/3.0.1": {
+      "Pitasoft.Error/3.1.0": {
         "type": "package",
         "dependencies": {
-          "System.Text.Json": "7.0.3"
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Error.dll": {}
@@ -8239,11 +8186,11 @@
           "lib/netstandard2.0/Pitasoft.MVVM.dll": {}
         }
       },
-      "Pitasoft.Result/5.1.0": {
+      "Pitasoft.Result/5.3.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Error": "3.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Result.dll": {}
@@ -8596,12 +8543,12 @@
           }
         }
       },
-      "System.Net.Http.Json/7.0.1": {
+      "System.Net.Http.Json/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Text.Json": "7.0.2",
+          "System.Text.Json": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -8613,15 +8560,6 @@
           "lib/netstandard2.0/System.Net.Http.Json.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "System.Numerics.Vectors/4.5.0": {
-        "type": "package",
-        "compile": {
-          "ref/uap10.0.16299/_._": {}
-        },
-        "runtime": {
-          "lib/uap10.0.16299/_._": {}
         }
       },
       "System.Reactive/5.0.0": {
@@ -8653,7 +8591,7 @@
           }
         }
       },
-      "System.Text.Encodings.Web/7.0.0": {
+      "System.Text.Encodings.Web/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
@@ -8671,15 +8609,14 @@
           }
         }
       },
-      "System.Text.Json/7.0.3": {
+      "System.Text.Json/8.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Numerics.Vectors": "4.5.0",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
-          "System.Text.Encodings.Web": "7.0.0",
+          "System.Text.Encodings.Web": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -8728,7 +8665,7 @@
           "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
-      "Xamarin.Essentials/1.8.0": {
+      "Xamarin.Essentials/1.8.1": {
         "type": "package",
         "compile": {
           "lib/uap10.0.16299/Xamarin.Essentials.dll": {
@@ -8787,10 +8724,10 @@
           "Acr.UserDialogs": "7.1.0.514",
           "CefaleasApp.DataAccess": "1.0.0",
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Client": "5.0.0",
+          "Pitasoft.Client": "5.2.0",
           "Pitasoft.Collections": "1.2.0",
           "Pitasoft.Shell.Xamarin": "1.1.8",
-          "Xamarin.Essentials": "1.8.0",
+          "Xamarin.Essentials": "1.8.1",
           "Xamarin.Forms": "5.0.0.2622"
         },
         "compile": {
@@ -8805,7 +8742,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Result": "5.1.0"
+          "Pitasoft.Result": "5.3.0"
         },
         "compile": {
           "bin/placeholder/CefaleasApp.DataAccess.dll": {}
@@ -8864,7 +8801,7 @@
           }
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+      "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Threading.Tasks.Extensions": "4.5.4"
@@ -9468,12 +9405,13 @@
           "lib/netstandard2.0/Pitasoft.dll": {}
         }
       },
-      "Pitasoft.Client/5.0.0": {
+      "Pitasoft.Client/5.2.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Result": "5.0.0",
-          "System.Net.Http.Json": "7.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "Pitasoft.Result": "5.3.0",
+          "System.Net.Http.Json": "8.0.0",
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Client.dll": {}
@@ -9500,10 +9438,10 @@
           "lib/netstandard2.0/Pitasoft.Commands.dll": {}
         }
       },
-      "Pitasoft.Error/3.0.1": {
+      "Pitasoft.Error/3.1.0": {
         "type": "package",
         "dependencies": {
-          "System.Text.Json": "7.0.3"
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Error.dll": {}
@@ -9524,11 +9462,11 @@
           "lib/netstandard2.0/Pitasoft.MVVM.dll": {}
         }
       },
-      "Pitasoft.Result/5.1.0": {
+      "Pitasoft.Result/5.3.0": {
         "type": "package",
         "dependencies": {
-          "Pitasoft.Error": "3.0.1",
-          "System.Text.Json": "7.0.3"
+          "Pitasoft.Error": "3.1.0",
+          "System.Text.Json": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Pitasoft.Result.dll": {}
@@ -9882,12 +9820,12 @@
           }
         }
       },
-      "System.Net.Http.Json/7.0.1": {
+      "System.Net.Http.Json/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Text.Json": "7.0.2",
+          "System.Text.Json": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -9899,15 +9837,6 @@
           "lib/netstandard2.0/System.Net.Http.Json.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "System.Numerics.Vectors/4.5.0": {
-        "type": "package",
-        "compile": {
-          "ref/uap10.0.16299/_._": {}
-        },
-        "runtime": {
-          "lib/uap10.0.16299/_._": {}
         }
       },
       "System.Reactive/5.0.0": {
@@ -9939,7 +9868,7 @@
           }
         }
       },
-      "System.Text.Encodings.Web/7.0.0": {
+      "System.Text.Encodings.Web/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
@@ -9957,15 +9886,14 @@
           }
         }
       },
-      "System.Text.Json/7.0.3": {
+      "System.Text.Json/8.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.5",
-          "System.Numerics.Vectors": "4.5.0",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
-          "System.Text.Encodings.Web": "7.0.0",
+          "System.Text.Encodings.Web": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -10014,7 +9942,7 @@
           "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
-      "Xamarin.Essentials/1.8.0": {
+      "Xamarin.Essentials/1.8.1": {
         "type": "package",
         "compile": {
           "lib/uap10.0.16299/Xamarin.Essentials.dll": {
@@ -10073,10 +10001,10 @@
           "Acr.UserDialogs": "7.1.0.514",
           "CefaleasApp.DataAccess": "1.0.0",
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Client": "5.0.0",
+          "Pitasoft.Client": "5.2.0",
           "Pitasoft.Collections": "1.2.0",
           "Pitasoft.Shell.Xamarin": "1.1.8",
-          "Xamarin.Essentials": "1.8.0",
+          "Xamarin.Essentials": "1.8.1",
           "Xamarin.Forms": "5.0.0.2622"
         },
         "compile": {
@@ -10091,7 +10019,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "CefaleasApp.Entities": "1.0.0",
-          "Pitasoft.Result": "5.1.0"
+          "Pitasoft.Result": "5.3.0"
         },
         "compile": {
           "bin/placeholder/CefaleasApp.DataAccess.dll": {}
@@ -10192,15 +10120,16 @@
         "lib/wpa81/Coding4Fun.Toolkit.pri"
       ]
     },
-    "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
-      "sha512": "3aeMZ1N0lJoSyzqiP03hqemtb1BijhsJADdobn/4nsMJ8V1H+CrpuduUe4hlRdx+ikBQju1VGjMD1GJ3Sk05Eg==",
+    "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
+      "sha512": "3WA9q9yVqJp222P3x1wYIGDAkpjAku0TMUaaQV22g6L67AI0LdOIrVS7Ht2vJfLHGSPVuqN94vIr15qn+HEkHw==",
       "type": "package",
-      "path": "microsoft.bcl.asyncinterfaces/7.0.0",
+      "path": "microsoft.bcl.asyncinterfaces/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
+        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/Microsoft.Bcl.AsyncInterfaces.targets",
         "buildTransitive/net462/_._",
@@ -10210,7 +10139,7 @@
         "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
         "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
         "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
-        "microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
         "microsoft.bcl.asyncinterfaces.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -10875,10 +10804,10 @@
         "pitasoft.nuspec"
       ]
     },
-    "Pitasoft.Client/5.0.0": {
-      "sha512": "DSy/yb/JJng/NDUG1xe7iGFWzXJ6rbpsY1U3vBbxcqxSwpHzzuusbm/OtjRm1BvPOupY3wcfoQ5EIy87+prHxw==",
+    "Pitasoft.Client/5.2.0": {
+      "sha512": "7d1SQmrjH24cA887vqWDYl8lDeU7RWZD8wVaEPIiv3qcATfCeyyzG4REVhhiJTgXlKAK+knpAXyeC2zXBA3eTw==",
       "type": "package",
-      "path": "pitasoft.client/5.0.0",
+      "path": "pitasoft.client/5.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -10886,8 +10815,9 @@
         "lib/net462/Pitasoft.Client.dll",
         "lib/net6.0/Pitasoft.Client.dll",
         "lib/net7.0/Pitasoft.Client.dll",
+        "lib/net8.0/Pitasoft.Client.dll",
         "lib/netstandard2.0/Pitasoft.Client.dll",
-        "pitasoft.client.5.0.0.nupkg.sha512",
+        "pitasoft.client.5.2.0.nupkg.sha512",
         "pitasoft.client.nuspec"
       ]
     },
@@ -10920,10 +10850,10 @@
         "pitasoft.commands.nuspec"
       ]
     },
-    "Pitasoft.Error/3.0.1": {
-      "sha512": "1qb5K5RMHOL8XGyVudy8co8uQAJeiK1F9pT5BVAw2BO1KeHBnMfbt3EZmZJ7tYKU3DN1hxUdBESNdehXLsUojw==",
+    "Pitasoft.Error/3.1.0": {
+      "sha512": "Z4ObHfbl3h7ys6H8ePIYZTBlGlADO5FSTiT/m7lOZtaPV+VwxrzwzE8gTnySRWqCKbATXly15kjyqxbQfKH1HA==",
       "type": "package",
-      "path": "pitasoft.error/3.0.1",
+      "path": "pitasoft.error/3.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -10931,8 +10861,9 @@
         "lib/net462/Pitasoft.Error.dll",
         "lib/net6.0/Pitasoft.Error.dll",
         "lib/net7.0/Pitasoft.Error.dll",
+        "lib/net8.0/Pitasoft.Error.dll",
         "lib/netstandard2.0/Pitasoft.Error.dll",
-        "pitasoft.error.3.0.1.nupkg.sha512",
+        "pitasoft.error.3.1.0.nupkg.sha512",
         "pitasoft.error.nuspec"
       ]
     },
@@ -10949,10 +10880,10 @@
         "pitasoft.mvvm.nuspec"
       ]
     },
-    "Pitasoft.Result/5.1.0": {
-      "sha512": "I5UE5P5BQEUQ863DMH0gBgVR3TaPjZnmewP0V6gkTaXCYThC67P9U00wbJxhUh7mg10yUTiCUiYr6u7VEDoYUQ==",
+    "Pitasoft.Result/5.3.0": {
+      "sha512": "szdcFWnDX7qR0hKC77TP+QqVNV3JRnFcm92gaPLx7Z2kF+H/FD+nx5BGMoDppvdRpG+k/hSnQqgx9NzMySNK8Q==",
       "type": "package",
-      "path": "pitasoft.result/5.1.0",
+      "path": "pitasoft.result/5.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -10960,8 +10891,9 @@
         "lib/net462/Pitasoft.Result.dll",
         "lib/net6.0/Pitasoft.Result.dll",
         "lib/net7.0/Pitasoft.Result.dll",
+        "lib/net8.0/Pitasoft.Result.dll",
         "lib/netstandard2.0/Pitasoft.Result.dll",
-        "pitasoft.result.5.1.0.nupkg.sha512",
+        "pitasoft.result.5.3.0.nupkg.sha512",
         "pitasoft.result.nuspec"
       ]
     },
@@ -15074,15 +15006,16 @@
         "version.txt"
       ]
     },
-    "System.Net.Http.Json/7.0.1": {
-      "sha512": "ni8+BJnndbJI9AXme/qCYXg1s4RpdRJx3gKp5WzcWuLt4l3syuscgk5Becis6x4E7HbQk4z6A7FNXFQD75F+wQ==",
+    "System.Net.Http.Json/8.0.0": {
+      "sha512": "48Bxrd6zcGeQzS4GMEDVjuqCcAw/9wcEWnIu48FQJ5IzfKPiMR1nGtz9LrvGzU4+3TLbx/9FDlGmCUeLin1Eqg==",
       "type": "package",
-      "path": "system.net.http.json/7.0.1",
+      "path": "system.net.http.json/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
+        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/System.Net.Http.Json.targets",
         "buildTransitive/net462/_._",
@@ -15094,58 +15027,13 @@
         "lib/net6.0/System.Net.Http.Json.xml",
         "lib/net7.0/System.Net.Http.Json.dll",
         "lib/net7.0/System.Net.Http.Json.xml",
+        "lib/net8.0/System.Net.Http.Json.dll",
+        "lib/net8.0/System.Net.Http.Json.xml",
         "lib/netstandard2.0/System.Net.Http.Json.dll",
         "lib/netstandard2.0/System.Net.Http.Json.xml",
-        "system.net.http.json.7.0.1.nupkg.sha512",
+        "system.net.http.json.8.0.0.nupkg.sha512",
         "system.net.http.json.nuspec",
         "useSharedDesignerContext.txt"
-      ]
-    },
-    "System.Numerics.Vectors/4.5.0": {
-      "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
-      "type": "package",
-      "path": "system.numerics.vectors/4.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Numerics.Vectors.dll",
-        "lib/net46/System.Numerics.Vectors.xml",
-        "lib/netcoreapp2.0/_._",
-        "lib/netstandard1.0/System.Numerics.Vectors.dll",
-        "lib/netstandard1.0/System.Numerics.Vectors.xml",
-        "lib/netstandard2.0/System.Numerics.Vectors.dll",
-        "lib/netstandard2.0/System.Numerics.Vectors.xml",
-        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
-        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
-        "lib/uap10.0.16299/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/System.Numerics.Vectors.dll",
-        "ref/net45/System.Numerics.Vectors.xml",
-        "ref/net46/System.Numerics.Vectors.dll",
-        "ref/net46/System.Numerics.Vectors.xml",
-        "ref/netcoreapp2.0/_._",
-        "ref/netstandard1.0/System.Numerics.Vectors.dll",
-        "ref/netstandard1.0/System.Numerics.Vectors.xml",
-        "ref/netstandard2.0/System.Numerics.Vectors.dll",
-        "ref/netstandard2.0/System.Numerics.Vectors.xml",
-        "ref/uap10.0.16299/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.numerics.vectors.4.5.0.nupkg.sha512",
-        "system.numerics.vectors.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
       ]
     },
     "System.Reactive/5.0.0": {
@@ -15202,10 +15090,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Encodings.Web/7.0.0": {
-      "sha512": "OP6umVGxc0Z0MvZQBVigj4/U31Pw72ITihDWP9WiWDm+q5aoe0GaJivsfYGq53o6dxH7DcXWiCTl7+0o2CGdmg==",
+    "System.Text.Encodings.Web/8.0.0": {
+      "sha512": "yev/k9GHAEGx2Rg3/tU6MQh4HGBXJs70y7j1LaM1i/ER9po+6nnQ6RRqTJn1E7Xu0fbIFK80Nh5EoODxrbxwBQ==",
       "type": "package",
-      "path": "system.text.encodings.web/7.0.0",
+      "path": "system.text.encodings.web/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -15222,27 +15110,31 @@
         "lib/net6.0/System.Text.Encodings.Web.xml",
         "lib/net7.0/System.Text.Encodings.Web.dll",
         "lib/net7.0/System.Text.Encodings.Web.xml",
+        "lib/net8.0/System.Text.Encodings.Web.dll",
+        "lib/net8.0/System.Text.Encodings.Web.xml",
         "lib/netstandard2.0/System.Text.Encodings.Web.dll",
         "lib/netstandard2.0/System.Text.Encodings.Web.xml",
         "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll",
         "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.xml",
         "runtimes/browser/lib/net7.0/System.Text.Encodings.Web.dll",
         "runtimes/browser/lib/net7.0/System.Text.Encodings.Web.xml",
-        "system.text.encodings.web.7.0.0.nupkg.sha512",
+        "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll",
+        "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.xml",
+        "system.text.encodings.web.8.0.0.nupkg.sha512",
         "system.text.encodings.web.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Json/7.0.3": {
-      "sha512": "AyjhwXN1zTFeIibHimfJn6eAsZ7rTBib79JQpzg8WAuR/HKDu9JGNHTuu3nbbXQ/bgI+U4z6HtZmCHNXB1QXrQ==",
+    "System.Text.Json/8.0.0": {
+      "sha512": "OdrZO2WjkiEG6ajEFRABTRCi/wuXQPxeV6g8xvUJqdxMvvuCCEk86zPla8UiIQJz3durtUEbNyY/3lIhS0yZvQ==",
       "type": "package",
-      "path": "system.text.json/7.0.3",
+      "path": "system.text.json/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
-        "README.md",
+        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "analyzers/dotnet/roslyn3.11/cs/System.Text.Json.SourceGeneration.dll",
         "analyzers/dotnet/roslyn3.11/cs/cs/System.Text.Json.SourceGeneration.resources.dll",
@@ -15297,9 +15189,11 @@
         "lib/net6.0/System.Text.Json.xml",
         "lib/net7.0/System.Text.Json.dll",
         "lib/net7.0/System.Text.Json.xml",
+        "lib/net8.0/System.Text.Json.dll",
+        "lib/net8.0/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.7.0.3.nupkg.sha512",
+        "system.text.json.8.0.0.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -15361,10 +15255,10 @@
         "win2d.uwp.nuspec"
       ]
     },
-    "Xamarin.Essentials/1.8.0": {
-      "sha512": "g1yB0CkX7BVOx84P0SLm8guypbEfigqjddZsI9KgJzba6yRRcekBqDp6YTT1hO8ZcFcW8VZbsymejTJftJoQyg==",
+    "Xamarin.Essentials/1.8.1": {
+      "sha512": "IzfRGrCrRuytgdQU+Im17Cepib6qUyLj1xfMjn+sDPTfmhmcZotsQCm5Dblm4Vxo9/SGFTdm1OgJUKWzu+dfjw==",
       "type": "package",
-      "path": "xamarin.essentials/1.8.0",
+      "path": "xamarin.essentials/1.8.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -15399,7 +15293,7 @@
         "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
         "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.8.0.nupkg.sha512",
+        "xamarin.essentials.1.8.1.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
@@ -15641,7 +15535,7 @@
     "UAP,Version=v10.0.16299": [
       "CefaleasApp >= 1.0.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.14",
-      "Xamarin.Essentials >= 1.8.0",
+      "Xamarin.Essentials >= 1.8.1",
       "Xamarin.Forms >= 5.0.0.2622"
     ]
   },
@@ -15695,7 +15589,7 @@
           },
           "Xamarin.Essentials": {
             "target": "Package",
-            "version": "[1.8.0, )"
+            "version": "[1.8.1, )"
           },
           "Xamarin.Forms": {
             "target": "Package",

@@ -126,6 +126,9 @@
   <data name="SerializationConverterOnAttributeInvalid" xml:space="preserve">
     <value>The converter specified on '{0}' does not derive from JsonConverter or have a public parameterless constructor.</value>
   </data>
+  <data name="ExtensionDataConflictsWithUnmappedMemberHandling" xml:space="preserve">
+    <value>The type '{0}' is marked 'JsonUnmappedMemberHandling.Disallow' which conflicts with extension data property '{1}'.</value>
+  </data>
   <data name="MetadataStandaloneValuesProperty" xml:space="preserve">
     <value>A '$values' metadata property must always be preceded by other metadata properties, such as '$id' or '$type'.</value>
   </data>
@@ -139,7 +142,7 @@
     <value>The type '{0}' is not supported.</value>
   </data>
   <data name="Polymorphism_DerivedTypeIsNotSupported" xml:space="preserve">
-    <value>Specified type '{0}' is not a supported derived type for the polymorphic type '{1}'. Derived types must be assignable to the base type, must not be generic and cannot be abstact classes or interfaces unless 'JsonUnknownDerivedTypeHandling.FallBackToNearestAncestor' is specified.</value>
+    <value>Specified type '{0}' is not a supported derived type for the polymorphic type '{1}'. Derived types must be assignable to the base type, must not be generic and cannot be abstract classes or interfaces unless 'JsonUnknownDerivedTypeHandling.FallBackToNearestAncestor' is specified.</value>
   </data>
   <data name="DepthTooLarge" xml:space="preserve">
     <value>CurrentDepth ({0}) is equal to or larger than the maximum allowed depth of {1}. Cannot write the next JSON object or array.</value>
@@ -158,6 +161,9 @@
   </data>
   <data name="CannotPopulateCollection" xml:space="preserve">
     <value>The collection type '{0}' is abstract, an interface, or is read only, and could not be instantiated and populated.</value>
+  </data>
+  <data name="JsonSerializerOptionsNoTypeInfoResolverSpecified" xml:space="preserve">
+    <value>JsonSerializerOptions instance must specify a TypeInfoResolver setting before being marked as read-only.</value>
   </data>
   <data name="CannotSerializeInvalidType" xml:space="preserve">
     <value>The type '{0}' is invalid for serialization or deserialization because it is a pointer type, is a ref struct, or contains generic parameters that have not been replaced by specific types.</value>
@@ -201,9 +207,6 @@
   <data name="InvalidCharacterAfterEscapeWithinString" xml:space="preserve">
     <value>'{0}' is an invalid escapable character within a JSON string. The string should be correctly escaped.</value>
   </data>
-  <data name="SerializerOptionsImmutable" xml:space="preserve">
-    <value>This JsonSerializerOptions instance is read-only or has already been used in serialization or deserialization.</value>
-  </data>
   <data name="NodeValueNotAllowed" xml:space="preserve">
     <value>A JsonNode cannot be used as a value.</value>
   </data>
@@ -214,7 +217,7 @@
     <value>Deserialization of types without a parameterless constructor, a singular parameterized constructor, or a parameterized constructor annotated with '{0}' is not supported. Type '{1}'.</value>
   </data>
   <data name="NoMetadataForType" xml:space="preserve">
-    <value>Metadata for type '{0}' was not provided by TypeInfoResolver of type '{1}'. If using source generation, ensure that all root types passed to the serializer have been indicated with 'JsonSerializableAttribute', along with any types that might be serialized polymorphically.</value>
+    <value>JsonTypeInfo metadata for type '{0}' was not provided by TypeInfoResolver of type '{1}'. If using source generation, ensure that all root types passed to the serializer have been annotated with 'JsonSerializableAttribute', along with any types that might be serialized polymorphically.</value>
   </data>
   <data name="InvalidLeadingZeroInNumber" xml:space="preserve">
     <value>Invalid leading zero before '{0}'.</value>
@@ -258,14 +261,11 @@
   <data name="SerializerPropertyNameConflict" xml:space="preserve">
     <value>The JSON property name for '{0}.{1}' collides with another property.</value>
   </data>
-  <data name="JsonIncludeOnNonPublicInvalid" xml:space="preserve">
-    <value>The non-public property '{0}' on type '{1}' is annotated with 'JsonIncludeAttribute' which is invalid.</value>
-  </data>
   <data name="SerializationDataExtensionPropertyInvalid" xml:space="preserve">
     <value>The extension data property '{0}.{1}' is invalid. It must implement 'IDictionary&lt;string, JsonElement&gt;' or 'IDictionary&lt;string, object&gt;', or be 'JsonObject'.</value>
   </data>
   <data name="ConstructorContainsNullParameterNames" xml:space="preserve">
-    <value>The deserialization constructor for type '{0}' contains parameters with null names. This might happen because the parameter names have been trimmed by the linker. Consider using the source generated serializer instead.</value>
+    <value>The deserialization constructor for type '{0}' contains parameters with null names. This might happen because the parameter names have been trimmed by ILLink. Consider using the source generated serializer instead.</value>
   </data>
   <data name="RequiredDigitNotFoundAfterDecimal" xml:space="preserve">
     <value>'{0}' is invalid within a number, immediately after a decimal point ('.'). Expected a digit ('0'-'9').</value>
@@ -279,11 +279,14 @@
   <data name="SerializationDuplicateTypeAttribute" xml:space="preserve">
     <value>The type '{0}' cannot have more than one member that has the attribute '{1}'.</value>
   </data>
-  <data name="TypeInfoResolverImmutable" xml:space="preserve">
-    <value>Cannot add callbacks to the 'Modifiers' property after the resolver has been used for the first time.</value>
+  <data name="SerializerOptionsReadOnly" xml:space="preserve">
+    <value>This JsonSerializerOptions instance is read-only or has already been used in serialization or deserialization.</value>
   </data>
   <data name="ZeroDepthAtEnd" xml:space="preserve">
     <value>Expected depth to be zero at the end of the JSON payload. There is an open JSON object or array that should be closed.</value>
+  </data>
+  <data name="UnmappedJsonProperty" xml:space="preserve">
+    <value>The JSON property '{0}' could not be mapped to any .NET member contained in type '{1}'.</value>
   </data>
   <data name="IgnoreConditionOnValueTypeInvalid" xml:space="preserve">
     <value>The ignore condition 'JsonIgnoreCondition.WhenWritingNull' is not valid on value-type member '{0}' on type '{1}'. Consider using 'JsonIgnoreCondition.WhenWritingDefault'.</value>
@@ -332,6 +335,12 @@
   <data name="NodeJsonObjectCustomConverterNotAllowedOnExtensionProperty" xml:space="preserve">
     <value>A custom converter for JsonObject is not allowed on an extension property.</value>
   </data>
+  <data name="SerializerConverterFactoryInvalidArgument" xml:space="preserve">
+    <value>The type '{0}' is not supported by the current JsonConverterFactory.</value>
+  </data>
+  <data name="ObjectCreationHandlingPropertyCannotAllowReferenceHandling" xml:space="preserve">
+    <value>JsonObjectCreationHandling.Populate is incompatible with reference handling.</value>
+  </data>
   <data name="ExpectedNextDigitEValueNotFound" xml:space="preserve">
     <value>'{0}' is an invalid end of a number. Expected 'E' or 'e'.</value>
   </data>
@@ -371,9 +380,6 @@
   <data name="MetadataInvalidPropertyInArrayMetadata" xml:space="preserve">
     <value>A JSON object containing metadata for a nested array includes a non-metadata property '{0}'.</value>
   </data>
-  <data name="PropertyInfoImmutable" xml:space="preserve">
-    <value>This JsonTypeInfo instance is marked read-only or has already been used in serialization or deserialization.</value>
-  </data>
   <data name="CannotSerializeInvalidMember" xml:space="preserve">
     <value>The type '{0}' of property '{1}' on type '{2}' is invalid for serialization or deserialization because it is a pointer type, is a ref struct, or contains generic parameters that have not been replaced by specific types.</value>
   </data>
@@ -384,16 +390,31 @@
     <value>The '$values' metadata property must be a JSON array. Current token type is '{0}'.</value>
   </data>
   <data name="SerializeTypeInstanceNotSupported" xml:space="preserve">
-    <value>Serialization and deserialization of '{0}' instances are not supported.</value>
+    <value>Serialization and deserialization of '{0}' instances is not supported.</value>
   </data>
   <data name="CannotWriteValueAfterPrimitiveOrClose" xml:space="preserve">
     <value>Cannot write a JSON value after a single JSON value or outside of an existing closed object/array. Current token type is '{0}'.</value>
+  </data>
+  <data name="TypeInfoResolverChainImmutable" xml:space="preserve">
+    <value>The specified IJsonTypeInfoResolver chain cannot be modified.</value>
+  </data>
+  <data name="ObjectCreationHandlingPropertyCannotAllowReadOnlyMember" xml:space="preserve">
+    <value>Property '{0}' on type '{1}' is marked with JsonObjectCreationHandling.Populate but it is a read-only member and JsonSerializerOptions has IgnoreReadOnlyProperties or IgnoreReadOnlyFields set.</value>
+  </data>
+  <data name="ObjectCreationHandlingPropertyValueTypeMustHaveASetter" xml:space="preserve">
+    <value>Property '{0}' on type '{1}' is marked with JsonObjectCreationHandling.Populate but is a value type that doesn't have a setter.</value>
   </data>
   <data name="ExtensionDataCannotBindToCtorParam" xml:space="preserve">
     <value>The extension data property '{0}' on type '{1}' cannot bind with a parameter in the deserialization constructor.</value>
   </data>
   <data name="UnexpectedEndOfDataWhileReadingComment" xml:space="preserve">
     <value>Unexpected end of data while reading a comment.</value>
+  </data>
+  <data name="FormatUInt128" xml:space="preserve">
+    <value>Either the JSON value is not in a supported format, or is out of bounds for an UInt128.</value>
+  </data>
+  <data name="SerializerOptions_InvalidChainedResolver" xml:space="preserve">
+    <value>Cannot insert the values of 'TypeInfoResolver' or 'TypeInfoResolverChain' to 'TypeInfoResolverChain'.</value>
   </data>
   <data name="CannotStartObjectArrayAfterPrimitiveOrClose" xml:space="preserve">
     <value>Cannot write the start of an object/array after a single JSON value or outside of an existing closed object/array. Current token type is '{0}'.</value>
@@ -407,8 +428,8 @@
   <data name="FormatByte" xml:space="preserve">
     <value>Either the JSON value is not in a supported format, or is out of bounds for an unsigned byte.</value>
   </data>
-  <data name="NoMetadataForTypeCtorParams" xml:space="preserve">
-    <value>TypeInfoResolver '{0}' did not provide constructor parameter metadata for type '{1}'.</value>
+  <data name="FormatHalf" xml:space="preserve">
+    <value>Either the JSON value is not in a supported format, or is out of bounds for a Half.</value>
   </data>
   <data name="MetadataIdIsNotFirstProperty" xml:space="preserve">
     <value>The metadata property '$id' must be the first reference preservation property in the JSON object.</value>
@@ -424,9 +445,6 @@
   </data>
   <data name="SerializerConverterFactoryReturnsNull" xml:space="preserve">
     <value>The converter '{0}' cannot return a null value.</value>
-  </data>
-  <data name="SerializerContextOptionsImmutable" xml:space="preserve">
-    <value>JsonSerializerOptions instances cannot be modified once encapsulated by a JsonSerializerContext. Such encapsulation can happen either when calling 'JsonSerializerOptions.AddContext' or when passing the options instance to a JsonSerializerContext constructor.</value>
   </data>
   <data name="FormatInt64" xml:space="preserve">
     <value>Either the JSON value is not in a supported format, or is out of bounds for an Int64.</value>
@@ -446,8 +464,8 @@
   <data name="DeserializeUnableToAssignValue" xml:space="preserve">
     <value>Unable to cast object of type '{0}' to type '{1}'.</value>
   </data>
-  <data name="ConstructorMaxOf64Parameters" xml:space="preserve">
-    <value>The deserialization constructor on type '{0}' may not have more than 64 parameters for deserialization.</value>
+  <data name="InvalidEnumTypeWithSpecialChar" xml:space="preserve">
+    <value>Enum type '{0}' uses unsupported identifer name '{1}'.</value>
   </data>
   <data name="MaxDepthMustBePositive" xml:space="preserve">
     <value>Max depth must be positive.</value>
@@ -497,6 +515,9 @@
   <data name="ExpectedOneCompleteToken" xml:space="preserve">
     <value>The input does not contain any complete JSON tokens. Expected the input to have at least one valid, complete, JSON token.</value>
   </data>
+  <data name="FormatInt128" xml:space="preserve">
+    <value>Either the JSON value is not in a supported format, or is out of bounds for an Int128.</value>
+  </data>
   <data name="FSharpDiscriminatedUnionsNotSupported" xml:space="preserve">
     <value>F# discriminated union serialization is not supported. Consider authoring a custom converter for the type.</value>
   </data>
@@ -505,6 +526,9 @@
   </data>
   <data name="SerializationInvalidBufferSize" xml:space="preserve">
     <value>The value must be greater than zero.</value>
+  </data>
+  <data name="AmbiguousMetadataForType" xml:space="preserve">
+    <value>Ambiguous matches when resolving JsonTypeInfo metadata for type '{0}': '{1}', '{2}'. Consider either explicitly providing metadata for the type or removing one of its interface implementations.</value>
   </data>
   <data name="FailedToGetLargerSpan" xml:space="preserve">
     <value>The 'IBufferWriter' could not provide an output buffer that is large enough to continue writing.</value>
@@ -523,6 +547,9 @@
   </data>
   <data name="Polymorphism_TypeDicriminatorIdIsAlreadySpecified" xml:space="preserve">
     <value>The polymorphic type '{0}' has already specified a type discriminator '{1}'.</value>
+  </data>
+  <data name="SerializerContextOptionsReadOnly" xml:space="preserve">
+    <value>JsonSerializerOptions instances cannot be modified once encapsulated by a JsonSerializerContext. Such encapsulation can happen either when calling 'JsonSerializerOptions.AddContext' or when passing the options instance to a JsonSerializerContext constructor.</value>
   </data>
   <data name="CannotTranscodeInvalidUtf16" xml:space="preserve">
     <value>Cannot transcode invalid UTF-16 string to UTF-8 JSON text.</value>
@@ -578,6 +605,9 @@
   <data name="DeserializeUnableToConvertValue" xml:space="preserve">
     <value>The JSON value could not be converted to {0}.</value>
   </data>
+  <data name="ObjectCreationHandlingPopulateNotSupportedByConverter" xml:space="preserve">
+    <value>Property '{0}' on type '{1}' is marked with JsonObjectCreationHandling.Populate but it doesn't support populating. This can be either because the property type is immutable or it could use a custom converter.</value>
+  </data>
   <data name="TypeRequiresAsyncSerialization" xml:space="preserve">
     <value>The type '{0}' can only be serialized using async serialization methods.</value>
   </data>
@@ -596,6 +626,9 @@
   <data name="Polymorphism_DerivedTypeIsAlreadySpecified" xml:space="preserve">
     <value>The polymorphic type '{0}' has already specified derived type '{1}'.</value>
   </data>
+  <data name="ObjectCreationHandlingPropertyCannotAllowPolymorphicDeserialization" xml:space="preserve">
+    <value>Property '{0}' on type '{1}' is marked with JsonObjectCreationHandling.Populate but its type allows polymorphic deserialization.</value>
+  </data>
   <data name="Polymorphism_InvalidCustomTypeDiscriminatorPropertyName" xml:space="preserve">
     <value>The metadata property names '$id', '$ref', and '$values' are reserved and cannot be used as custom type discriminator property names.</value>
   </data>
@@ -611,11 +644,11 @@
   <data name="DeserializeWrongType" xml:space="preserve">
     <value>The specified type {0} must derive from the specific value's type {1}.</value>
   </data>
+  <data name="ObjectCreationHandlingPropertyMustHaveAGetter" xml:space="preserve">
+    <value>Property '{0}' on type '{1}' is marked with JsonObjectCreationHandling.Populate but it doesn't have a getter.</value>
+  </data>
   <data name="ExpectedValueAfterPropertyNameNotFound" xml:space="preserve">
     <value>Expected a value, but instead reached end of data.</value>
-  </data>
-  <data name="CombineOneOfResolversIsNull" xml:space="preserve">
-    <value>One of the provided resolvers is null.</value>
   </data>
   <data name="NumberHandlingOnPropertyInvalid" xml:space="preserve">
     <value>'JsonNumberHandlingAttribute' is only valid on a number or a collection of numbers when applied to a property or field. See member '{0}' on type '{1}'.</value>
@@ -653,17 +686,29 @@
   <data name="InvalidComparison" xml:space="preserve">
     <value>Cannot compare the value of a token type '{0}' to text.</value>
   </data>
-  <data name="JsonTypeInfoUsedButTypeInfoResolverNotSet" xml:space="preserve">
-    <value>JsonTypeInfo metadata references a JsonSerializerOptions instance that doesn't specify a TypeInfoResolver.</value>
-  </data>
   <data name="JsonSerializerDoesNotSupportComments" xml:space="preserve">
     <value>Comments cannot be stored when deserializing objects, only the Skip and Disallow comment handling modes are supported.</value>
   </data>
   <data name="JsonPropertyRequiredAndExtensionData" xml:space="preserve">
     <value>JsonPropertyInfo '{0}' defined in type '{1}' is marked both as required and as an extension data property. This combination is not supported.</value>
   </data>
+  <data name="NodeParentWrongType" xml:space="preserve">
+    <value>The node must have a parent node of type '{0}'.</value>
+  </data>
+  <data name="DefaultTypeInfoResolverImmutable" xml:space="preserve">
+    <value>Cannot add callbacks to the 'Modifiers' property after the resolver has been used for the first time.</value>
+  </data>
   <data name="Polymorphism_TypeDoesNotSupportPolymorphism" xml:space="preserve">
     <value>Specified type '{0}' does not support polymorphism. Polymorphic types cannot be structs, sealed types, generic types or System.Object.</value>
+  </data>
+  <data name="JsonIncludeOnInaccessibleProperty" xml:space="preserve">
+    <value>The property '{0}' on type '{1}' which is annotated with 'JsonIncludeAttribute' is not accesible by the source generator.</value>
+  </data>
+  <data name="JsonSerializerIsReflectionDisabled" xml:space="preserve">
+    <value>Reflection-based serialization has been disabled for this application. Either use the source generator APIs or explicitly configure the 'JsonSerializerOptions.TypeInfoResolver' property.</value>
+  </data>
+  <data name="ObjectCreationHandlingPropertyDoesNotSupportParameterizedConstructors" xml:space="preserve">
+    <value>JsonObjectCreationHandling.Populate is currently not supported in types with parameterized constructors.</value>
   </data>
   <data name="Polymorphism_RuntimeTypeNotSupported" xml:space="preserve">
     <value>Runtime type '{0}' is not supported by polymorphic type '{1}'.</value>

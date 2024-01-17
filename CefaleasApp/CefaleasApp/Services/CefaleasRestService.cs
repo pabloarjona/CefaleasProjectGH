@@ -10,18 +10,8 @@ namespace CefaleasApp.Services
 {
     public class CefaleasRestService : RestServiceBase, IEnfermedadRestService, ICuestionarioRestService, IPacienteRestService, IUsuarioRestService
     {
-        public EnvironmentDevelopment DEVELOPMENT_ENVIROMENT;
         
-        public CefaleasRestService(SettingRestService setting) : base(setting) {
-
-            if (setting.UriString.Contains("localhost"))
-                DEVELOPMENT_ENVIROMENT = EnvironmentDevelopment.DEVELOPMENT;
-            else if (setting.UriString.Contains("azurewebsites"))
-                DEVELOPMENT_ENVIROMENT = EnvironmentDevelopment.PRODUCTION;
-            else
-                DEVELOPMENT_ENVIROMENT = EnvironmentDevelopment.LOCAL;
-
-        }
+        public CefaleasRestService(SettingRestService setting) : base(setting) {}
         //POST
         public Task<ResultEntity<Enfermedad>> AddEnfermedadAsync(Enfermedad enfermedad) => PostAsync("/api/Enfermedad", enfermedad);
         //DELETE
